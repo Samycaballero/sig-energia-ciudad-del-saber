@@ -1,0 +1,11 @@
+=== BITÁCORA DE MANTENIMIENTO ELÉCTRICO Y HVAC - FUNDACIÓN CIUDAD DEL SABER (2025) ===
+
+[2025-03-12 a 2025-03-21] EDIFICIO=CDS-208 | SEVERIDAD=ALTA | DESVIACION_ESTIMADA=+32% | REPORTE_TECNICO: Fuga de refrigerante en Chiller #2 y falla de válvula de bypass en laboratorios de biología molecular.
+[2025-04-08 a 2025-04-14] EDIFICIO=CDS-184 | SEVERIDAD=ALTA | DESVIACION_ESTIMADA=+48% | REPORTE_TECNICO: Congreso Internacional de Energía + climatización encendida 24h sin programación BMS.
+[2025-08-18 a 2025-08-29] EDIFICIO=CDS-227 | SEVERIDAD=ALTA | DESVIACION_ESTIMADA=+36% | REPORTE_TECNICO: Falla en sensor de retorno de manejadora AHU-03; enfriamiento continuo durante fines de semana.
+[2025-10-04 a 2025-10-13] EDIFICIO=CDS-PLZ | SEVERIDAD=ALTA | DESVIACION_ESTIMADA=+29% | REPORTE_TECNICO: Compresor de cuarto frío en área gastronómica operando en ciclo continuo por termostato dañado.
+[2025-06-10 a 2025-06-17] EDIFICIO=CDS-205 | SEVERIDAD=ALTA | DESVIACION_ESTIMADA=+27% | REPORTE_TECNICO: Desconfiguración del temporizador de iluminación y chillers tras mantenimiento eléctrico programado.
+[2025-05-03] EDIFICIO=CDS-DRM | SEVERIDAD=BAJA | REPORTE_TECNICO: Limpieza preventiva de paneles solares térmicos en Dormitorios LEED Platinum; eficiencia óptima 98%.
+[2025-07-19] EDIFICIO=CDS-128 | SEVERIDAD=BAJA | REPORTE_TECNICO: Calibración semestral del sistema BMS en Casa de la ONU; ahorro sostenido en horario nocturno.
+[2025-09-11] EDIFICIO=CDS-208 | SEVERIDAD=MEDIA | REPORTE_TECNICO: Banco de capacitores en subestación de INDICASAT-AIP presenta degradación en 2 celdas; factor de potencia debajo de 0.90.
+[2025-11-05] EDIFICIO=CDS-184 | SEVERIDAD=MEDIA | REPORTE_TECNICO: Se recomienda instalar variadores de frecuencia (VFD) en bombas secundarias del Centro de Convenciones para mitigar picos de demanda.

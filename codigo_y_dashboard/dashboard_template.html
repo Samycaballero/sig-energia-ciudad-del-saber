@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SIG Energía · Dashboard Gerencial - Fundación Ciudad del Saber</title>
+<style>
+  :root {
+    --bg: #0b1623; --card: #132238; --border: #203654; --text: #e2e8f0;
+    --muted: #94a3b8; --teal: #14b8a6; --emerald: #10b981; --amber: #f59e0b;
+    --red: #ef4444; --blue: #38bdf8; --purple: #a78bfa;
+  }
+  * { box-sizing: border-box; font-family: 'Segoe UI', system-ui, sans-serif; }
+  body { margin: 0; background: var(--bg); color: var(--text); padding: 20px 28px; }
+  header { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 12px;
+           border-bottom: 1px solid var(--border); padding-bottom: 14px; margin-bottom: 20px; }
+  h1 { margin: 0; font-size: 1.35rem; color: #fff; }
+  .subtitle { color: var(--muted); font-size: 0.88rem; margin-top: 4px; }
+  .filters { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+  .filters label { font-size: 0.75rem; color: var(--muted); display: flex; flex-direction: column; gap: 3px; }
+  select, button { background: var(--card); color: #fff; border: 1px solid var(--border);
+                   padding: 8px 12px; border-radius: 8px; font-size: 0.85rem; cursor: pointer; }
+  button.primary { background: #0f766e; border-color: #14b8a6; font-weight: 600; align-self: flex-end; }
+  .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-bottom: 20px; }
+  .kpi { background: var(--card); border: 1px solid var(--border); border-left: 4px solid var(--teal);
+         border-radius: 10px; padding: 14px 16px; }
+  .kpi.amber { border-left-color: var(--amber); } .kpi.blue { border-left-color: var(--blue); }
+  .kpi.purple { border-left-color: var(--purple); }
+  .kpi-label { font-size: 0.75rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
+  .kpi-val { font-size: 1.55rem; font-weight: 700; margin: 4px 0; color: #fff; }
+  .kpi-sub { font-size: 0.8rem; color: var(--teal); }
+  .grid2 { display: grid; grid-template-columns: 1.35fr 1fr; gap: 16px; margin-bottom: 18px; }
+  @media (max-width: 980px) { .grid2 { grid-template-columns: 1fr; } }
+  .panel { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 18px; }
+  .panel h2 { margin: 0 0 12px 0; font-size: 1rem; color: #f8fafc; display: flex; justify-content: space-between; gap: 8px; }
+  .bar-row { display: grid; grid-template-columns: 195px 1fr 125px; align-items: center; gap: 10px; margin-bottom: 8px; font-size: 0.82rem; }
+  .bar-track { background: #0b1623; height: 18px; border-radius: 6px; overflow: hidden; }
+  .bar-fill { height: 100%; border-radius: 6px; transition: width 0.35s ease; }
+  .badge { padding: 2px 8px; border-radius: 99px; font-size: 0.72rem; font-weight: 600; }
+  .b-crit { background: rgba(239,68,68,0.2); color: #fca5a5; }
+  .b-warn { background: rgba(245,158,11,0.2); color: #fcd34d; }
+  .b-ok { background: rgba(16,185,129,0.2); color: #6ee7b7; }
+  .ai-box { background: linear-gradient(135deg, #1b1e3d, #132238); border: 1px solid #6d28d9; border-radius: 12px; padding: 16px 18px; }
+  .ai-box h2 { color: #c4b5fd; font-size: 0.95rem; margin: 0 0 8px 0; }
+  .ai-box h3 { color: #a5b4fc; font-size: 0.82rem; margin: 14px 0 6px 0; }
+  .ai-item { margin-bottom: 8px; font-size: 0.85rem; line-height: 1.45; border-left: 3px solid #8b5cf6; padding-left: 10px; }
+  .note { font-size: 0.74rem; color: var(--muted); margin: 6px 0; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--border); }
+  th { color: var(--muted); font-weight: 600; font-size: 0.76rem; text-transform: uppercase; }
+  tr:hover { background: rgba(255,255,255,0.03); }
+  canvas { width: 100%; height: 240px; display: block; }
+  footer { margin-top: 22px; color: var(--muted); font-size: 0.76rem; line-height: 1.5; }
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <h1>⚡ SIG de Gestión y Eficiencia Energética · Fundación Ciudad del Saber</h1>
+    <div class="subtitle">Prototipo con <b>datos sintéticos</b> 2025 (12 edificios del catálogo) · Pipeline Python + SQLite · MongoDB, S3 y LLM opcionales</div>
+  </div>
+  <div class="filters">
+    <label>Edificio<select id="filterBldg"></select></label>
+    <label>Certificación<select id="filterLeed">
+      <option value="ALL">Todos</option><option value="LEED">Solo LEED</option><option value="NO_LEED">Sin LEED</option>
+    </select></label>
+    <label>Mes desde<select id="monthFrom"></select></label>
+    <label>Mes hasta<select id="monthTo"></select></label>
+    <label>Ordenar por<select id="metricMode">
+      <option value="kwh">Consumo total (kWh)</option>
+      <option value="eui">EUI anualizado (kWh/m²)</option>
+      <option value="costo">Costo total (USD)</option>
+      <option value="pctOff">% fuera de horario</option>
+    </select></label>
+    <button class="primary" id="btnReset">Restablecer</button>
+  </div>
+</header>
+
+<section class="kpis" id="kpiCards"></section>
+
+<section class="grid2">
+  <div class="panel">
+    <h2><span>Ranking de Consumo Eléctrico por Edificio</span><span id="subCount" style="color:var(--muted);font-size:0.8rem"></span></h2>
+    <div id="rankingBars"></div>
+  </div>
+  <div class="ai-box">
+    <h2 id="aiTitle"></h2>
+    <div id="aiPipeline"></div>
+    <h3>Resumen dinámico de la selección (plantilla en el navegador, sin IA)</h3>
+    <div id="aiDynamic"></div>
+  </div>
+</section>
+
+<section class="grid2">
+  <div class="panel">
+    <h2><span>Tendencia Mensual de Consumo (MWh) vs. Temperatura Exterior (°C)</span><span id="trendNote" style="color:var(--muted);font-size:0.75rem"></span></h2>
+    <canvas id="trendCanvas" width="700" height="240"></canvas>
+  </div>
+  <div class="panel">
+    <h2><span>Alertas de anomalía (z-score ≥ umbral)</span><span id="alertCount" style="color:var(--muted);font-size:0.8rem"></span></h2>
+    <div style="max-height:240px;overflow-y:auto;">
+      <table>
+        <thead><tr><th>Fecha</th><th>Edificio</th><th>Desv.</th><th>Causa registrada en bitácora</th></tr></thead>
+        <tbody id="alertsBody"></tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="panel">
+  <h2><span>Detalle Comparativo por Edificio (selección actual)</span></h2>
+  <div style="overflow-x:auto;">
+    <table>
+      <thead>
+        <tr><th>ID</th><th>Edificio</th><th>Categoría</th><th>LEED</th><th>Consumo (kWh)</th><th>EUI anualizado</th>
+            <th>Demanda pico</th><th>Factor pot.</th><th>% fuera hor.</th><th>Costo (USD)</th><th>Estado</th></tr>
+      </thead>
+      <tbody id="detailBody"></tbody>
+    </table>
+  </div>
+</section>
+
+<footer>
+  <div id="footAviso"></div>
+  <div id="footSupuestos"></div>
+  <div>Universidad Tecnológica de Panamá · FISC · Sistemas de Información Gerencial · Equipo: Laura Saucedo (CTO), Samir Caballero (Ing. Datos), Orianis Castro (Operaciones), Javier Valdés (Finanzas/ESG)</div>
+</footer>
+
+<script>
+const SUMMARY = __SUMMARY_JSON__;
+const META = SUMMARY.ranking_edificios;            // metadatos por edificio
+const ROWS = SUMMARY.detalle_mensual;              // edificio x mes
+const ALERTAS = SUMMARY.alertas;
+const SUP = SUMMARY.supuestos;
+const MESES = SUMMARY.tendencia_mensual.map(m => m.mes_nombre);
+
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const fmt = (n, d = 0) => Number(n).toLocaleString('en-US', {minimumFractionDigits: d, maximumFractionDigits: d});
+const isLeed = b => b.cert_leed.includes('LEED');
+
+function initControls() {
+  $('filterBldg').innerHTML = '<option value="ALL">Todos los edificios</option>' +
+    META.map(b => `<option value="${esc(b.building_id)}">${esc(b.building_id)} · ${esc(b.nombre)}</option>`).join('');
+  const opts = MESES.map((m, i) => `<option value="${i + 1}">${m}</option>`).join('');
+  $('monthFrom').innerHTML = opts; $('monthTo').innerHTML = opts;
+  resetValues();
+  ['filterBldg', 'filterLeed', 'monthFrom', 'monthTo', 'metricMode'].forEach(id => $(id).addEventListener('change', render));
+  $('btnReset').addEventListener('click', () => { resetValues(); render(); });
+}
+function resetValues() {
+  $('filterBldg').value = 'ALL'; $('filterLeed').value = 'ALL'; $('monthFrom').value = '1';
+  $('monthTo').value = String(MESES.length); $('metricMode').value = 'kwh';
+}
+
+function state() {
+  let m1 = +$('monthFrom').value, m2 = +$('monthTo').value;
+  if (m1 > m2) [m1, m2] = [m2, m1];
+  return {bldg: $('filterBldg').value, leed: $('filterLeed').value, m1, m2, metric: $('metricMode').value};
+}
+function bldgOk(b, f) {
+  return (f.bldg === 'ALL' || b.building_id === f.bldg) &&
+         (f.leed === 'ALL' || (f.leed === 'LEED') === isLeed(b));
+}
+
+// Agrega edificio x mes en el rango -> una fila por edificio seleccionado
+function aggregate(f) {
+  const nM = f.m2 - f.m1 + 1, out = [];
+  META.filter(b => bldgOk(b, f)).forEach(b => {
+    const rs = ROWS.filter(r => r.building_id === b.building_id && r.mes >= f.m1 && r.mes <= f.m2);
+    if (!rs.length) return;
+    const sum = k => rs.reduce((s, r) => s + r[k], 0);
+    const kwh = sum('kwh_mes');
+    out.push({b, kwh, costo: sum('costo_total_usd'), costoE: sum('costo_energia_usd'), costoD: sum('costo_demanda_usd'),
+      penal: sum('penalizacion_fp_usd'), co2: sum('emisiones_kg_co2') / 1000, area: b.area_m2,
+      eui: kwh * (12 / nM) / b.area_m2, pctOff: sum('kwh_fuera_horario') * 100 / sum('kwh_diario'),
+      dem: Math.max(...rs.map(r => r.demanda_maxima_kw)), fp: sum('fp_mensual') / rs.length, anom: sum('dias_anomalia')});
+  });
+  return out;
+}
+
+function render() {
+  const f = state();
+  const list = aggregate(f).sort((a, b) => b[f.metric] - a[f.metric]);
+  const totKwh = list.reduce((s, x) => s + x.kwh, 0), totCost = list.reduce((s, x) => s + x.costo, 0);
+  const totArea = list.reduce((s, x) => s + x.area, 0), totPenal = list.reduce((s, x) => s + x.penal, 0);
+  const totDem = list.reduce((s, x) => s + x.costoD, 0), nM = f.m2 - f.m1 + 1;
+  const avgEui = totArea > 0 ? totKwh * (12 / nM) / totArea : 0;
+  const A = k => SUP.ahorro[k].valor;
+  const top3E = [...list].sort((a, b) => b.kwh - a.kwh).slice(0, 3).reduce((s, x) => s + x.costoE, 0);
+  const ahorro = totCost * A('bms_cargas_fantasma_pct') + totDem * A('peak_shaving_demanda_pct') +
+                 totPenal * A('eliminacion_penalizacion_fp_pct') + top3E * A('retrofit_hvac_top3_pct');
+  const full = f.bldg === 'ALL' && f.leed === 'ALL' && f.m1 === 1 && f.m2 === MESES.length;
+  const fin = SUMMARY.impacto_financiero_proyectado;
+  const periodo = `${MESES[f.m1 - 1]}–${MESES[f.m2 - 1]}`;
+
+  $('kpiCards').innerHTML = `
+    <div class="kpi blue"><div class="kpi-label">Consumo eléctrico (${list.length} edif. · ${periodo})</div>
+      <div class="kpi-val">${fmt(totKwh / 1000, 1)} MWh</div><div class="kpi-sub">${fmt(totKwh)} kWh · Área: ${fmt(totArea)} m²</div></div>
+    <div class="kpi amber"><div class="kpi-label">Costo facturado del período</div>
+      <div class="kpi-val">${fmt(totCost, 0)} USD</div><div class="kpi-sub">Penalización FP: ${fmt(totPenal, 0)} USD</div></div>
+    <div class="kpi"><div class="kpi-label">Intensidad energética (EUI anualizado)</div>
+      <div class="kpi-val">${fmt(avgEui, 1)} kWh/m²</div><div class="kpi-sub">Ref. LEED Platinum: ${SUMMARY.kpis_globales.eui_benchmark_leed_platinum} kWh/m²</div></div>
+    <div class="kpi purple"><div class="kpi-label">Ahorro proyectado (supuestos del equipo)</div>
+      <div class="kpi-val">${fmt(ahorro, 0)} USD</div>
+      <div class="kpi-sub">${full ? `Payback: ${fin.payback_meses} m · ROI 3a: ${fin.roi_3_anios_pct}%` : 'Payback/ROI solo con campus completo y 12 meses'}</div></div>`;
+
+  $('subCount').textContent = `${list.length} edificios visibles`;
+  const maxVal = Math.max(...list.map(x => x[f.metric]), 1);
+  $('rankingBars').innerHTML = list.length ? list.map(x => {
+    const color = x.eui >= 265 ? '#ef4444' : (x.eui >= 210 ? '#f59e0b' : '#10b981');
+    const lab = f.metric === 'kwh' ? `${fmt(x.kwh / 1000, 0)} MWh` : f.metric === 'eui' ? `${fmt(x.eui, 1)} kWh/m²` :
+                f.metric === 'costo' ? `${fmt(x.costo / 1000, 1)}k USD` : `${fmt(x.pctOff, 1)}%`;
+    return `<div class="bar-row"><div style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;" title="${esc(x.b.nombre)}">${esc(x.b.building_id)} · ${esc(x.b.nombre.split(' - ').pop())}</div>
+      <div class="bar-track"><div class="bar-fill" style="width:${x[f.metric] / maxVal * 100}%;background:${color}"></div></div>
+      <div style="text-align:right;font-weight:600;">${lab}</div></div>`;
+  }).join('') : '<div class="note">Sin edificios para la combinación de filtros.</div>';
+
+  renderAI(list, f, ahorro, periodo);
+
+  $('detailBody').innerHTML = list.map(x => {
+    const cls = x.eui >= 265 ? 'b-crit' : (x.eui >= 210 ? 'b-warn' : 'b-ok');
+    const st = x.eui >= 265 ? 'Crítico' : (x.eui >= 210 ? 'Alerta' : 'Óptimo');
+    return `<tr><td><b>${esc(x.b.building_id)}</b></td><td>${esc(x.b.nombre)}</td><td>${esc(x.b.categoria)}</td><td>${esc(x.b.cert_leed)}</td>
+      <td>${fmt(x.kwh)}</td><td><b>${fmt(x.eui, 1)}</b></td><td>${fmt(x.dem, 1)} kW</td>
+      <td style="color:${x.fp < 0.90 ? '#fca5a5' : '#6ee7b7'}">${x.fp.toFixed(3)}</td><td>${fmt(x.pctOff, 1)}%</td>
+      <td>${fmt(x.costo, 0)} USD</td><td><span class="badge ${cls}">${st}</span></td></tr>`;
+  }).join('');
+
+  const ids = new Set(list.map(x => x.b.building_id));
+  const al = ALERTAS.filter(a => { const m = +a.fecha.slice(5, 7); return ids.has(a.building_id) && m >= f.m1 && m <= f.m2; });
+  $('alertCount').textContent = `${al.length} alertas`;
+  $('alertsBody').innerHTML = al.map(a => `<tr><td>${esc(a.fecha)}</td><td><b>${esc(a.building_id)}</b></td>
+    <td><span class="badge b-crit">+${a.desviacion_pct}%</span></td><td>${esc(a.causa_bitacora)}</td></tr>`).join('') ||
+    '<tr><td colspan="4" class="note">Sin alertas en la selección.</td></tr>';
+
+  drawTrend(ids, f);
+}
+
+function renderAI(list, f, ahorro, periodo) {
+  const d = SUMMARY.diagnostico_gerencial;
+  const offline = d.modo === 'offline';
+  $('aiTitle').textContent = '✨ Copiloto gerencial · ' + d.etiqueta;
+  const lineas = d.texto.split('\n').filter(l => l.trim()).map(l => `<div class="ai-item">${esc(l.replace(/^[-•]\s*/, ''))}</div>`).join('');
+  $('aiPipeline').innerHTML = lineas +
+    `<div class="note">${offline ? 'Texto determinista sin LLM (modo offline, plantilla).' : 'Texto generado por LLM (' + esc(d.modelo) + ') con contexto recuperado de la bitácora.'}
+     Calculado al ejecutar el pipeline sobre el campus completo; no cambia con los filtros.${d.error ? ' Fallo LLM: ' + esc(d.error) : ''}</div>`;
+  if (!list.length) { $('aiDynamic').innerHTML = '<div class="note">Sin datos para la selección.</div>'; return; }
+  const top = list[0], lowFp = list.filter(x => x.fp < 0.90).map(x => x.b.building_id).join(', ') || 'Ninguno';
+  $('aiDynamic').innerHTML = `
+    <div class="ai-item"><b>Foco (${periodo}):</b> ${esc(top.b.nombre)} lidera la selección con ${fmt(top.kwh)} kWh (EUI anualizado ${fmt(top.eui, 1)} kWh/m², ${fmt(top.costo, 0)} USD).</div>
+    <div class="ai-item"><b>Factor de potencia &lt; 0.90:</b> ${esc(lowFp)}. Se supone que bancos de capacitores eliminan ${fmt(SUP.ahorro.eliminacion_penalizacion_fp_pct.valor * 100)}% de la penalización (supuesto del equipo).</div>
+    <div class="ai-item"><b>Ahorro supuesto del período:</b> ${fmt(ahorro, 0)} USD según los porcentajes de supuestos.json.</div>`;
+}
+
+function drawTrend(ids, f) {
+  const c = $('trendCanvas'), ctx = c.getContext('2d'), W = c.width, H = c.height;
+  ctx.clearRect(0, 0, W, H);
+  const n = MESES.length;
+  const vals = [], temps = [];
+  for (let m = 1; m <= n; m++) {
+    const rs = ROWS.filter(r => ids.has(r.building_id) && r.mes === m);
+    vals.push(rs.reduce((s, r) => s + r.kwh_mes, 0) / 1000);
+    temps.push(rs.length ? rs.reduce((s, r) => s + r.temp_prom_c, 0) / rs.length : null);
+  }
+  $('trendNote').textContent = ids.size ? `${ids.size} edif. · meses fuera del rango atenuados` : '';
+  if (!ids.size) return;
+  const padL = 56, padR = 20, padT = 20, padB = 30, cw = W - padL - padR, ch = H - padT - padB;
+  const minV = Math.min(...vals) * 0.85, maxV = Math.max(...vals) * 1.08;
+  const tv = temps.filter(t => t !== null), minT = Math.min(...tv) - 0.5, maxT = Math.max(...tv) + 0.5;
+  ctx.strokeStyle = '#1e3a5f'; ctx.lineWidth = 1; ctx.font = '11px Segoe UI';
+  for (let i = 0; i <= 4; i++) {
+    const y = padT + (ch / 4) * i;
+    ctx.beginPath(); ctx.moveTo(padL, y); ctx.lineTo(W - padR, y); ctx.stroke();
+    ctx.fillStyle = '#94a3b8'; ctx.fillText(Math.round(maxV - ((maxV - minV) / 4) * i) + ' MWh', 2, y + 4);
+  }
+  const slot = cw / n, bw = slot * 0.56;
+  vals.forEach((v, i) => {
+    const inR = i + 1 >= f.m1 && i + 1 <= f.m2, x = padL + slot * i + (slot - bw) / 2;
+    const bh = ((v - minV) / (maxV - minV)) * ch;
+    ctx.globalAlpha = inR ? 1 : 0.25;
+    ctx.fillStyle = i + 1 <= 4 ? '#f59e0b' : '#0ea5e9'; ctx.fillRect(x, padT + ch - bh, bw, bh);
+    ctx.fillStyle = '#cbd5e1'; ctx.fillText(MESES[i], x + 2, H - 10);
+    ctx.globalAlpha = 1;
+  });
+  ctx.strokeStyle = '#ef4444'; ctx.lineWidth = 2.5; ctx.beginPath();
+  temps.forEach((t, i) => {
+    const x = padL + slot * i + slot / 2, y = padT + ch - ((t - minT) / (maxT - minT)) * ch;
+    i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+  });
+  ctx.stroke();
+  temps.forEach((t, i) => {
+    ctx.fillStyle = '#ef4444'; ctx.beginPath();
+    ctx.arc(padL + slot * i + slot / 2, padT + ch - ((t - minT) / (maxT - minT)) * ch, 3.8, 0, Math.PI * 2); ctx.fill();
+  });
+  ctx.fillStyle = '#fca5a5'; ctx.fillText(`Temp. ${minT.toFixed(1)}–${maxT.toFixed(1)} °C (línea roja)`, padL + 4, padT + 12);
+}
+
+$('footAviso').textContent = SUMMARY.aviso_datos;
+$('footSupuestos').innerHTML = 'Supuestos financieros (supuestos.json): ' + Object.entries(SUP.ahorro).map(([k, v]) =>
+  `${esc(k)}=${v.valor} [${esc(v.tipo_fuente)}]`).join(' · ') + ` · capex=${SUP.inversion.capex_usd.valor} USD [${esc(SUP.inversion.capex_usd.tipo_fuente)}]`;
+initControls();
+render();
+</script>
+</body>
+</html>

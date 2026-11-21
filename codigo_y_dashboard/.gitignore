@@ -1,0 +1,15 @@
+# entornos y secretos
+.env
+.venv/
+venv/
+*.pem
+credentials*
+
+# python
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# salidas regenerables y pesadas (el resto de data/ se versiona: es sintetica y reproducible)
+data/gold/mongo_fallback_*.json
+.claude/

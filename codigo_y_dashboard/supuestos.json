@@ -1,0 +1,49 @@
+{
+  "_nota": "Supuestos del modelo. Los datos de consumo son SINTETICOS (fines academicos). Solo se marca como 'literatura' lo que tiene referencia verificable; todo lo demas es 'supuesto del equipo' y debe validarse con datos reales antes de decidir.",
+  "ahorro": {
+    "bms_cargas_fantasma_pct": {
+      "valor": 0.088,
+      "unidad": "fraccion de la factura total anual",
+      "tipo_fuente": "supuesto del equipo",
+      "justificacion": "Valor elegido por el equipo para control BMS de horarios y cargas fuera de horario. No deriva de una formula de la literatura. Es de orden conservador frente a la mediana de 16 % de ahorro de energia de edificio completo reportada para retrocomisionamiento de edificios existentes (Mills, 2011), que incluye mas medidas que el control de horarios.",
+      "referencia_contexto": "Mills, E. (2011). Building commissioning: a golden opportunity for reducing energy costs and greenhouse-gas emissions in the United States. Energy Efficiency, 4(2), 145-173. https://doi.org/10.1007/s12053-011-9116-8 (mediana 16 % edificios existentes, 13 % obra nueva; payback mediano 1,1 y 4,2 anios)"
+    },
+    "peak_shaving_demanda_pct": {
+      "valor": 0.14,
+      "unidad": "fraccion del cargo por demanda anual",
+      "tipo_fuente": "supuesto del equipo",
+      "justificacion": "Reduccion supuesta del cargo por demanda maxima mediante escalonado de arranques de chillers y alertas de pico. Sin referencia verificable aplicable a Panama; sensibilizar entre 5 % y 20 % en el informe."
+    },
+    "eliminacion_penalizacion_fp_pct": {
+      "valor": 0.95,
+      "unidad": "fraccion de la penalizacion por factor de potencia",
+      "tipo_fuente": "supuesto del equipo",
+      "justificacion": "Se asume que bancos de capacitores automaticos llevan el factor de potencia sobre el umbral y eliminan casi toda la penalizacion. El umbral de 0,90 y la formula de penalizacion de los datos son sinteticos; verificar contra el pliego tarifario vigente de ASEP antes de citar como regulacion."
+    },
+    "retrofit_hvac_top3_pct": {
+      "valor": 0.11,
+      "unidad": "fraccion del cargo de energia de los 3 edificios de mayor consumo",
+      "tipo_fuente": "supuesto del equipo",
+      "justificacion": "Ahorro supuesto por variadores de frecuencia (VFD) y mantenimiento de chillers en los 3 edificios de mayor consumo. Sin fuente especifica; el rango de la literatura para VFD/HVAC es amplio y depende del caso."
+    }
+  },
+  "inversion": {
+    "capex_usd": {
+      "valor": 285000.0,
+      "unidad": "USD",
+      "tipo_fuente": "supuesto del equipo",
+      "justificacion": "Estimacion presupuestaria del equipo (sensores AMI/IoT, nube/MongoDB anio 1, bancos de capacitores, BMS y VFD de los 3 edificios top). NO proviene de cotizaciones; debe reemplazarse por cotizaciones reales."
+    }
+  },
+  "tarifas_y_emisiones": {
+    "tarifa_red_usd_kwh": {"valor": 0.178, "tipo_fuente": "supuesto del equipo", "justificacion": "Valor ilustrativo coherente con los datos sinteticos; sustituir por el pliego tarifario vigente de ASEP."},
+    "tarifa_ppa_usd_kwh": {"valor": 0.128, "tipo_fuente": "supuesto del equipo", "justificacion": "Precio ilustrativo de un PPA renovable; sustituir por el contrato real."},
+    "tarifa_demanda_usd_kw": {"valor": 14.85, "tipo_fuente": "supuesto del equipo", "justificacion": "Cargo ilustrativo por kW de demanda maxima; sustituir por pliego tarifario."},
+    "factor_emision_red_kg_kwh": {"valor": 0.165, "tipo_fuente": "supuesto del equipo", "justificacion": "Factor ilustrativo del SIN; sustituir por el factor oficial publicado por la Secretaria de Energia."},
+    "factor_emision_ppa_kg_kwh": {"valor": 0.018, "tipo_fuente": "supuesto del equipo", "justificacion": "Factor ilustrativo para energia renovable (ciclo de vida); sustituir por fuente oficial."}
+  },
+  "deteccion_anomalias": {
+    "z_score_umbral": {"valor": 2.1, "tipo_fuente": "supuesto del equipo", "justificacion": "Umbral de desviacion estandar sobre el consumo diario de cada edificio para generar una alerta."},
+    "outlier_multiplo_base": {"valor": 3.0, "tipo_fuente": "supuesto del equipo", "justificacion": "Una lectura AMI mayor a 3 veces el consumo base diario del catalogo (o menor o igual a 0) se considera error de medicion y se imputa con la mediana del edificio."}
+  }
+}
