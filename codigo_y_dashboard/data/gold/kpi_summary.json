@@ -3631,11 +3631,11 @@
     }
   ],
   "diagnostico_gerencial": {
-    "modo": "offline",
-    "etiqueta": "modo offline (plantilla)",
-    "modelo": null,
+    "modo": "gemini",
+    "etiqueta": "Google Gemini (gemini-3.5-flash-lite)",
+    "modelo": "gemini-3.5-flash-lite",
     "error": null,
     "entradas_bitacora_usadas": 7,
-    "texto": "- Edificio 208 - INDICASAT-AIP (CDS-208) es el mayor consumidor: 1788 MWh/anio, EUI 368.6 kWh/m2 (3.3x la referencia LEED Platinum del campus).\n- Los 4 edificios de mayor consumo concentran 54.5 % del consumo total.\n- Se detectaron 43 dias con anomalia de consumo (z-score) y 11,279 USD de penalizacion por factor de potencia.\n- Bitacora CDS-208 (2025-03-12): Fuga de refrigerante en Chiller #2 y falla de válvula de bypass en laboratorios de biología molecular.\n- Bitacora CDS-184 (2025-04-08): Congreso Internacional de Energía + climatización encendida 24h sin programación BMS."
+    "texto": "- El campus de 12 edificios registró en 2025 un consumo total de 9,533.9 MWh con un costo anual de 1,838,914.72 USD, un EUI promedio de 230.6 kWh/m² (superior a la referencia LEED Platinum de 112.1) y penalizaciones por factor de potencia de 11,279.31 USD.\n- Los 4 edificios de mayor consumo (CDS-208, CDS-184, CDS-227 y CDS-PLZ) concentran el 54.5 % del consumo total del campus y presentan factores de potencia promedio por debajo de 0.90 (entre 0.869 y 0.889).\n- Se acumularon 43 alertas de anomalía distribuidas en los edificios, destacando CDS-ATN con 12 días, CDS-184 con 11, CDS-208 con 9 y CDS-PLZ con 8, mientras que la bitacora de mantenimiento no detalla las causas específicas de las alertas en CDS-ATN ni el origen exacto de 3 de los 11 días anómalos del CDS-184.\n- La bitacora de mantenimiento identifica fallas operativas críticas en los edificios principales, incluyendo una fuga de refrigerante y falla de válvula en CDS-208, climatización continua 24h sin programación BMS en CDS-184, un sensor de retorno fallido en CDS-227 y un termostato dañado en CDS-PLZ.\n- El análisis técnico de mantenimiento señala la degradación del banco de capacitores en CDS-208 y recomienda la instalación de variadores de frecuencia (VFD) en el CDS-184, además de reportar la limpieza preventiva de paneles solares en los Dormitorios LEED Platinum (CDS-DRM) con una eficiencia óptima del 98%."
   }
 }

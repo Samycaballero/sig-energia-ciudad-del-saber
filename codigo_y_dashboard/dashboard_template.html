@@ -243,7 +243,7 @@ function renderAI(list, f, ahorro, periodo) {
   $('aiTitle').textContent = '✨ Copiloto gerencial · ' + d.etiqueta;
   const lineas = d.texto.split('\n').filter(l => l.trim()).map(l => `<div class="ai-item">${esc(l.replace(/^[-•]\s*/, ''))}</div>`).join('');
   $('aiPipeline').innerHTML = lineas +
-    `<div class="note">${offline ? 'Texto determinista sin LLM (modo offline, plantilla).' : 'Texto generado por LLM (' + esc(d.modelo) + ') con contexto recuperado de la bitácora.'}
+    `<div class="note">${offline ? 'Texto determinista sin LLM (modo offline, plantilla).' : 'Texto generado por LLM (' + esc(d.etiqueta) + ') con contexto recuperado de la bitácora.'}
      Calculado al ejecutar el pipeline sobre el campus completo; no cambia con los filtros.${d.error ? ' Fallo LLM: ' + esc(d.error) : ''}</div>`;
   if (!list.length) { $('aiDynamic').innerHTML = '<div class="note">Sin datos para la selección.</div>'; return; }
   const top = list[0], lowFp = list.filter(x => x.fp < 0.90).map(x => x.b.building_id).join(', ') || 'Ninguno';

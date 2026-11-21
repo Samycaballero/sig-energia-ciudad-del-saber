@@ -12,7 +12,8 @@ sys.path.insert(0, str(ROOT))
 def _sin_claves(monkeypatch):
     """Ningun test depende de claves reales ni de servicios externos."""
     for v in ("ANTHROPIC_API_KEY", "BEDROCK_MODEL_ID", "GENAI_MODE", "S3_BUCKET", "MONGO_STRICT",
-              "AWS_ACCESS_KEY_ID", "AWS_SECRET_ACCESS_KEY", "AWS_PROFILE"):
+              "GEMINI_API_KEY", "GOOGLE_API_KEY", "GEMINI_MODEL",
+              "GEMINI_BASE_URL", "OLLAMA_MODEL", "OLLAMA_HOST", "SIG_LLM", "AWS_ACCESS_KEY_ID", "AWS_SECRET_ACCESS_KEY", "AWS_PROFILE"):
         monkeypatch.delenv(v, raising=False)
 
 

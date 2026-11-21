@@ -102,7 +102,7 @@ def fig1_arquitectura(DATA):
     # Columna 4: Inteligencia Artificial y Automatización
     draw_col_header(64.5, 16.5, "04", "IA GEN. & AUTOM.", "#6D28D9")
     draw_card(64.5, 22.8, 16.5, 17.0, "IA Generativa y ML",
-              f"• Z-Score (implementado)\n  ({k['alertas_anomalias_detectadas']} anomalías detectadas)\n• LLM opcional (Anthropic/\n  Bedrock) + RAG bitácora\n• Sin clave: plantilla\n  (modo offline)", "#6D28D9", "#F5F3FF")
+              f"• Z-Score (implementado)\n  ({k['alertas_anomalias_detectadas']} anomalías detectadas)\n• LLM opcional: Gemini,\n  Ollama, Claude, Bedrock\n  + RAG bitácora\n• Sin clave: plantilla", "#6D28D9", "#F5F3FF")
     draw_card(64.5, 4.6, 16.5, 16.6, "Automatización Negocio",
               "Propuesta (no implementada):\n• Órdenes CMMS por alerta\n• Pre-alerta Peak Shaving\n• Reporte periódico\n  de indicadores", C_AMBER, "#FFFBEB", "#B45309")
 
@@ -487,7 +487,7 @@ def fig6_dashboard_mockup(DATA):
     for sp in ["bottom", "left"]: ax_m.spines[sp].set_color("#1E3A5F")
     ax_m.set_ylim(min(tots)*0.88, max(tots)*1.08)
 
-    # Row 2 Right: Panel de Copiloto IA Generativa (Bedrock) + Alertas
+    # Row 2 Right: Panel de Copiloto IA Generativa (proveedor según etiqueta) + Alertas
     ax_ai = fig.add_subplot(gs[2, 7:12])
     ax_ai.set_facecolor("#172B47")
     for sp in ax_ai.spines.values():

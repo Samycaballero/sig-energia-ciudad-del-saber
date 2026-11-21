@@ -6,7 +6,7 @@ numpy>=1.26
 pymongo>=4.6
 # --- AWS S3 (opcional en ejecucion) y Bedrock (opcional) ---
 boto3>=1.34
-# --- IA generativa (opcional en ejecucion: sin ANTHROPIC_API_KEY corre en modo offline) ---
+# --- IA generativa (opcional en ejecucion: sin proveedor corre en modo offline; Gemini/Ollama usan solo urllib, sin paquetes extra) ---
 anthropic>=0.40
 # --- tests ---
 pytest>=8.0

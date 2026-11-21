@@ -11,7 +11,8 @@ ROOT = Path(__file__).resolve().parent.parent
 
 
 def _correr(datos):
-    env = {k: v for k, v in os.environ.items() if not k.startswith(("ANTHROPIC", "AWS_", "S3_", "BEDROCK"))}
+    env = {k: v for k, v in os.environ.items() if not k.startswith(("ANTHROPIC", "AWS_", "S3_", "BEDROCK", "GEMINI", "GOOGLE_API", "OLLAMA", "GENAI_"))
+           and k != "SIG_LLM"}
     env.update(SIG_DATA_DIR=str(datos / "data"), SIG_OUT_DIR=str(datos / "out"), MONGO_URI="mongodb://127.0.0.1:1",
                MONGO_TIMEOUT_MS="300", PYTHONIOENCODING="utf-8")
     return subprocess.run([sys.executable, str(ROOT / "orquestacion_airflow_dag.py"), "--run-local"],
