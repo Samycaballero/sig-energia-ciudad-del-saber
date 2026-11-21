@@ -52,6 +52,8 @@ pip install -r requirements.txt
 ```
 Python 3.10+. Airflow no está en `requirements.txt` (opcional; ver abajo).
 
+> **Windows y rutas largas:** si el repositorio está en una carpeta con ruta larga (por ejemplo dentro de *Documentos* con nombres extensos), `pip install` puede fallar con `OSError: [Errno 2] No such file or directory` por el límite de 260 caracteres de Windows (lo provoca el paquete `anthropic`). Solución: crear el entorno en una ruta corta fuera del proyecto, por ejemplo `python -m venv C:\venv-sig` y usar `C:\venv-sig\Scripts\python.exe` en lugar de activar `.venv`.
+
 ## Variables de entorno (todas opcionales; el código no lee `.env`, expórtelas en el shell — ver `.env.example`)
 | Variable | Efecto |
 |---|---|
