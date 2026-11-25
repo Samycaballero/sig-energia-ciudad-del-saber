@@ -1,11 +1,11 @@
 {
-  "raw_ami_rows": 4422,
+  "raw_ami_rows": 4428,
   "iot_json_docs": 4380,
   "xml_facturas": 144,
   "txt_bitacora_eventos": 9,
-  "fechas_normalizadas": 109,
-  "duplicados_eliminados": 42,
-  "nulos_imputados": 55,
-  "outliers_corregidos": 45,
+  "fechas_normalizadas": 112,
+  "duplicados_eliminados": 48,
+  "nulos_imputados": 53,
+  "outliers_corregidos": 44,
   "silver_ami_rows": 4380
 }

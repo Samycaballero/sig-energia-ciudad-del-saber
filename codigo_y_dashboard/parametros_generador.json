@@ -1,0 +1,1192 @@
+{
+ "_nota": "Parametros del generador de datos sinteticos (generar_datos_fuente.py). Cada parametro tiene min, max, unidad, ancla (id de fuentes_oficiales.json o 'supuesto del equipo') y justificacion. El generador LEE este archivo y verifica que todo valor usado/generado quede dentro de [min, max]. Roles: por_edificio / por_tipo / por_mes / escalar (valores concretos dentro del rango), cota_salida (cota que se aplica a los datos generados), tarifa (valor leido de supuestos.json, que debe caer en el rango). Todo consumo, EUI, area, FP, % fuera de horario y estacionalidad es supuesto del equipo; solo tarifas, regla de FP y factor de emision tienen ancla oficial.",
+ "version": "3.0",
+ "semilla": 202511,
+ "calendario_no_laborable": {
+  "ancla": "feriados_2025_panama",
+  "fechas_ancla": {
+   "feriados_2025_panama": {
+    "periodo_del_dato": "2025",
+    "fecha_publicacion": "2025-01-31 (calendario Global Bank / Red ACH)",
+    "fecha_consulta": "2026-11-24"
+   }
+  },
+  "justificacion": "Dia no laborable (feriado o duelo): consumo tipo fin de semana (mult_finde, ocupacion y horas de fin de semana, mas % fuera de horario). 24 y 31-dic NO son feriados; 22-24-abr (duelo por el papa Francisco) fue dia ordinario.",
+  "feriados_2025": [
+   {
+    "fecha": "2025-01-01",
+    "nombre": "feriado (nombre no indicado en el brief)"
+   },
+   {
+    "fecha": "2025-01-09",
+    "nombre": "feriado (nombre no indicado en el brief)"
+   },
+   {
+    "fecha": "2025-03-03",
+    "nombre": "Carnaval"
+   },
+   {
+    "fecha": "2025-03-04",
+    "nombre": "Carnaval"
+   },
+   {
+    "fecha": "2025-03-05",
+    "nombre": "Carnaval (con reserva: EY dice que el Decreto 6 de 2025 cerro oficinas publicas el 3 y el 5)"
+   },
+   {
+    "fecha": "2025-04-17",
+    "nombre": "Jueves Santo"
+   },
+   {
+    "fecha": "2025-04-18",
+    "nombre": "Viernes Santo"
+   },
+   {
+    "fecha": "2025-05-01",
+    "nombre": "feriado (nombre no indicado en el brief)"
+   },
+   {
+    "fecha": "2025-11-03",
+    "nombre": "feriado (nombre no indicado en el brief)"
+   },
+   {
+    "fecha": "2025-11-04",
+    "nombre": "feriado (nombre no indicado en el brief)"
+   },
+   {
+    "fecha": "2025-11-05",
+    "nombre": "feriado (nombre no indicado en el brief)"
+   },
+   {
+    "fecha": "2025-11-10",
+    "nombre": "feriado (nombre no indicado en el brief)"
+   },
+   {
+    "fecha": "2025-11-28",
+    "nombre": "feriado (nombre no indicado en el brief)"
+   },
+   {
+    "fecha": "2025-12-08",
+    "nombre": "feriado (nombre no indicado en el brief)"
+   },
+   {
+    "fecha": "2025-12-20",
+    "nombre": "Duelo nacional (sabado)"
+   },
+   {
+    "fecha": "2025-12-25",
+    "nombre": "feriado (nombre no indicado en el brief)"
+   }
+  ]
+ },
+ "periodo": {
+  "inicio": "2025-01-01",
+  "dias": 365
+ },
+ "parametros": {
+  "area_m2": {
+   "rol": "por_edificio",
+   "unidad": "m2",
+   "min": 500,
+   "max": 4000,
+   "ancla": "supuesto del equipo",
+   "justificacion": "Ed. 128, 108 y 202: areas de la tesis TalTech 2018 (Plan Maestro de CdS; correspondencia numero-nombre = suposicion). Los demas: areas ilustrativas (supuesto del equipo), elegidas para que el area total del catalogo quede en 12,000-16,000 m2.",
+   "valores": {
+    "CDS-208": 1600,
+    "CDS-184": 1400,
+    "CDS-227": 1200,
+    "CDS-205": 1100,
+    "CDS-128": 3511,
+    "CDS-PLZ": 900,
+    "CDS-104": 700,
+    "CDS-234": 650,
+    "CDS-109": 550,
+    "CDS-108": 1027,
+    "CDS-DRM": 1000,
+    "CDS-202": 704
+   },
+   "ancla_por_valor": {
+    "CDS-128": "areas_cds_tesis_2018",
+    "CDS-108": "areas_cds_tesis_2018",
+    "CDS-202": "areas_cds_tesis_2018"
+   },
+   "fechas_ancla": {
+    "areas_cds_tesis_2018": {
+     "periodo_del_dato": "2018 (Plan Maestro de CdS)",
+     "fecha_publicacion": "2018",
+     "fecha_consulta": "2026-11-24"
+    }
+   }
+  },
+  "anio_rehab": {
+   "rol": "por_edificio",
+   "unidad": "anio",
+   "min": 2000,
+   "max": 2020,
+   "ancla": "supuesto del equipo",
+   "justificacion": "Anio de rehabilitacion ilustrativo, solo metadato del catalogo.",
+   "valores": {
+    "CDS-208": 2008,
+    "CDS-184": 2006,
+    "CDS-227": 2004,
+    "CDS-205": 2010,
+    "CDS-128": 2014,
+    "CDS-PLZ": 2012,
+    "CDS-104": 2011,
+    "CDS-234": 2015,
+    "CDS-109": 2016,
+    "CDS-108": 2013,
+    "CDS-DRM": 2015,
+    "CDS-202": 2012
+   }
+  },
+  "chiller_antiguedad_anios": {
+   "rol": "por_edificio",
+   "unidad": "anios",
+   "min": 3,
+   "max": 20,
+   "ancla": "supuesto del equipo",
+   "justificacion": "Antiguedad ilustrativa del chiller; reduce el COP simulado.",
+   "valores": {
+    "CDS-208": 14,
+    "CDS-184": 15,
+    "CDS-227": 16,
+    "CDS-205": 11,
+    "CDS-128": 8,
+    "CDS-PLZ": 12,
+    "CDS-104": 9,
+    "CDS-234": 7,
+    "CDS-109": 6,
+    "CDS-108": 11,
+    "CDS-DRM": 5,
+    "CDS-202": 10
+   }
+  },
+  "pct_fuera_horario_base": {
+   "rol": "por_edificio",
+   "unidad": "fraccion del consumo diario",
+   "min": 0.15,
+   "max": 0.5,
+   "ancla": "supuesto del equipo",
+   "justificacion": "Proporcion base de consumo fuera de horario laboral (cargas base/HVAC residual); sin dato oficial.",
+   "valores": {
+    "CDS-208": 0.44,
+    "CDS-184": 0.31,
+    "CDS-227": 0.34,
+    "CDS-205": 0.29,
+    "CDS-128": 0.22,
+    "CDS-PLZ": 0.38,
+    "CDS-104": 0.26,
+    "CDS-234": 0.33,
+    "CDS-109": 0.28,
+    "CDS-108": 0.35,
+    "CDS-DRM": 0.36,
+    "CDS-202": 0.3
+   }
+  },
+  "fp_base": {
+   "rol": "por_edificio",
+   "unidad": "adimensional",
+   "min": 0.85,
+   "max": 0.97,
+   "ancla": "supuesto del equipo",
+   "justificacion": "Factor de potencia medio por edificio; sin dato oficial. El umbral de recargo 0.90 si es oficial (ver factor_potencia_regla).",
+   "valores": {
+    "CDS-208": 0.87,
+    "CDS-184": 0.88,
+    "CDS-227": 0.89,
+    "CDS-205": 0.91,
+    "CDS-128": 0.94,
+    "CDS-PLZ": 0.88,
+    "CDS-104": 0.93,
+    "CDS-234": 0.92,
+    "CDS-109": 0.93,
+    "CDS-108": 0.9,
+    "CDS-DRM": 0.96,
+    "CDS-202": 0.95
+   }
+  },
+  "sensibilidad_clima": {
+   "rol": "por_edificio",
+   "unidad": "fraccion de consumo por cada escala_clima_c sobre la referencia",
+   "min": 0.08,
+   "max": 0.26,
+   "ancla": "supuesto del equipo",
+   "justificacion": "Sensibilidad del consumo a la temperatura exterior (carga HVAC); sin dato oficial.",
+   "valores": {
+    "CDS-208": 0.16,
+    "CDS-184": 0.24,
+    "CDS-227": 0.22,
+    "CDS-205": 0.19,
+    "CDS-128": 0.14,
+    "CDS-PLZ": 0.18,
+    "CDS-104": 0.15,
+    "CDS-234": 0.16,
+    "CDS-109": 0.15,
+    "CDS-108": 0.21,
+    "CDS-DRM": 0.09,
+    "CDS-202": 0.2
+   }
+  },
+  "setpoint_c": {
+   "rol": "por_edificio",
+   "unidad": "C",
+   "min": 21.0,
+   "max": 23.5,
+   "ancla": "supuesto del equipo",
+   "justificacion": "Consigna de climatizacion ilustrativa en operacion normal.",
+   "valores": {
+    "CDS-208": 21.5,
+    "CDS-184": 21.5,
+    "CDS-227": 21.5,
+    "CDS-205": 21.5,
+    "CDS-128": 23.0,
+    "CDS-PLZ": 21.5,
+    "CDS-104": 23.0,
+    "CDS-234": 23.0,
+    "CDS-109": 23.0,
+    "CDS-108": 21.5,
+    "CDS-DRM": 23.0,
+    "CDS-202": 21.5
+   }
+  },
+  "mult_anomalia": {
+   "rol": "por_edificio",
+   "unidad": "multiplicador del consumo diario",
+   "min": 1.2,
+   "max": 1.6,
+   "ancla": "supuesto del equipo",
+   "justificacion": "Sobreconsumo durante la falla operativa inyectada (un evento por edificio afectado).",
+   "valores": {
+    "CDS-208": 1.32,
+    "CDS-184": 1.48,
+    "CDS-227": 1.36,
+    "CDS-234": 1.29,
+    "CDS-109": 1.27
+   }
+  },
+  "eui_laboratorio": {
+   "rol": "por_edificio",
+   "unidad": "kWh/m2/anio",
+   "min": 300,
+   "max": 420,
+   "ancla": "supuesto del equipo",
+   "justificacion": "EUI anual objetivo por edificio del tipo 'laboratorio'; supuesto del equipo. Orientacion NO confirmada de la literatura para clima calido-humedo: 47-628 kWh/m2/anio (Energies 2021, 14(21), 7013; no verificado).",
+   "valores": {
+    "CDS-208": 350
+   }
+  },
+  "eui_eventos_convenciones": {
+   "rol": "por_edificio",
+   "unidad": "kWh/m2/anio",
+   "min": 200,
+   "max": 300,
+   "ancla": "supuesto del equipo",
+   "justificacion": "EUI anual objetivo por edificio del tipo 'eventos_convenciones'; supuesto del equipo. Orientacion NO confirmada de la literatura para clima calido-humedo: 47-628 kWh/m2/anio (Energies 2021, 14(21), 7013; no verificado).",
+   "valores": {
+    "CDS-184": 240
+   }
+  },
+  "eui_academico": {
+   "rol": "por_edificio",
+   "unidad": "kWh/m2/anio",
+   "min": 190,
+   "max": 290,
+   "ancla": "supuesto del equipo",
+   "justificacion": "EUI anual objetivo por edificio del tipo 'academico'; supuesto del equipo. Orientacion NO confirmada de la literatura para clima calido-humedo: 47-628 kWh/m2/anio (Energies 2021, 14(21), 7013; no verificado).",
+   "valores": {
+    "CDS-227": 240
+   }
+  },
+  "eui_oficinas": {
+   "rol": "por_edificio",
+   "unidad": "kWh/m2/anio",
+   "min": 150,
+   "max": 260,
+   "ancla": "supuesto del equipo",
+   "justificacion": "EUI anual objetivo por edificio del tipo 'oficinas'; supuesto del equipo. Orientacion NO confirmada de la literatura para clima calido-humedo: 47-628 kWh/m2/anio (Energies 2021, 14(21), 7013; no verificado).",
+   "valores": {
+    "CDS-205": 210,
+    "CDS-128": 155,
+    "CDS-104": 180
+   }
+  },
+  "eui_comercial": {
+   "rol": "por_edificio",
+   "unidad": "kWh/m2/anio",
+   "min": 220,
+   "max": 330,
+   "ancla": "supuesto del equipo",
+   "justificacion": "EUI anual objetivo por edificio del tipo 'comercial'; supuesto del equipo. Orientacion NO confirmada de la literatura para clima calido-humedo: 47-628 kWh/m2/anio (Energies 2021, 14(21), 7013; no verificado).",
+   "valores": {
+    "CDS-PLZ": 280
+   }
+  },
+  "eui_tecnologia": {
+   "rol": "por_edificio",
+   "unidad": "kWh/m2/anio",
+   "min": 170,
+   "max": 270,
+   "ancla": "supuesto del equipo",
+   "justificacion": "EUI anual objetivo por edificio del tipo 'tecnologia'; supuesto del equipo. Orientacion NO confirmada de la literatura para clima calido-humedo: 47-628 kWh/m2/anio (Energies 2021, 14(21), 7013; no verificado).",
+   "valores": {
+    "CDS-234": 215,
+    "CDS-109": 215
+   }
+  },
+  "eui_recreacion_eventos": {
+   "rol": "por_edificio",
+   "unidad": "kWh/m2/anio",
+   "min": 180,
+   "max": 280,
+   "ancla": "supuesto del equipo",
+   "justificacion": "EUI anual objetivo por edificio del tipo 'recreacion_eventos'; supuesto del equipo. Orientacion NO confirmada de la literatura para clima calido-humedo: 47-628 kWh/m2/anio (Energies 2021, 14(21), 7013; no verificado).",
+   "valores": {
+    "CDS-108": 215,
+    "CDS-202": 215
+   }
+  },
+  "eui_hospedaje": {
+   "rol": "por_edificio",
+   "unidad": "kWh/m2/anio",
+   "min": 90,
+   "max": 160,
+   "ancla": "supuesto del equipo",
+   "justificacion": "EUI anual objetivo por edificio del tipo 'hospedaje'; supuesto del equipo. Orientacion NO confirmada de la literatura para clima calido-humedo: 47-628 kWh/m2/anio (Energies 2021, 14(21), 7013; no verificado).",
+   "valores": {
+    "CDS-DRM": 110
+   }
+  },
+  "factor_carga": {
+   "rol": "por_tipo",
+   "unidad": "adimensional (demanda media / demanda pico)",
+   "min": 0.45,
+   "max": 0.8,
+   "ancla": "supuesto del equipo",
+   "justificacion": "Factor de carga por tipo de uso; fija la demanda pico (kW) a partir del consumo diario.",
+   "valores": {
+    "laboratorio": 0.76,
+    "eventos_convenciones": 0.52,
+    "recreacion_eventos": 0.52,
+    "comercial": 0.64,
+    "hospedaje": 0.64,
+    "academico": 0.64,
+    "oficinas": 0.64,
+    "tecnologia": 0.64
+   }
+  },
+  "mult_finde": {
+   "rol": "por_tipo",
+   "unidad": "multiplicador",
+   "min": 0.4,
+   "max": 1.2,
+   "ancla": "supuesto del equipo",
+   "justificacion": "Perfil semanal: consumo en fin de semana relativo (eventos suben, oficinas bajan).",
+   "valores": {
+    "laboratorio": 0.88,
+    "eventos_convenciones": 1.12,
+    "recreacion_eventos": 1.12,
+    "comercial": 0.88,
+    "hospedaje": 0.88,
+    "academico": 0.46,
+    "oficinas": 0.46,
+    "tecnologia": 0.46
+   }
+  },
+  "mult_semana": {
+   "rol": "por_tipo",
+   "unidad": "multiplicador",
+   "min": 0.9,
+   "max": 1.2,
+   "ancla": "supuesto del equipo",
+   "justificacion": "Perfil semanal: consumo relativo entre semana.",
+   "valores": {
+    "laboratorio": 1.03,
+    "eventos_convenciones": 0.95,
+    "recreacion_eventos": 0.95,
+    "comercial": 1.03,
+    "hospedaje": 1.03,
+    "academico": 1.15,
+    "oficinas": 1.15,
+    "tecnologia": 1.15
+   }
+  },
+  "temp_media_mensual_c": {
+   "rol": "por_mes",
+   "unidad": "C",
+   "min": 25.0,
+   "max": 29.0,
+   "ancla": "clima_albrook_etesa_eia_2023",
+   "justificacion": "Temperatura media mensual de la serie historica de 66 anios de Albrook (ETESA/IMHPA via EIA MiAmbiente 2023): climatologia, NO el clima real de 2025.",
+   "valores": {
+    "1": 26.2,
+    "2": 26.8,
+    "3": 27.5,
+    "4": 28.0,
+    "5": 27.6,
+    "6": 27.1,
+    "7": 27.0,
+    "8": 27.3,
+    "9": 26.7,
+    "10": 26.5,
+    "11": 26.5,
+    "12": 26.5
+   },
+   "fechas_ancla": {
+    "clima_albrook_etesa_eia_2023": {
+     "periodo_del_dato": "serie historica de 66 anios (climatologia)",
+     "fecha_publicacion": "2023-08-08",
+     "fecha_consulta": "2026-11-24"
+    }
+   }
+  },
+  "humedad_media_mensual_pct": {
+   "rol": "por_mes",
+   "unidad": "%",
+   "min": 85.0,
+   "max": 90.0,
+   "ancla": "clima_albrook_etesa_eia_2023",
+   "justificacion": "Humedad media de Albrook: dato real solo en ene, may, ago, sep, oct, nov y dic; feb, mar, abr, jun y jul SIN DATO -> valor 87.5 supuesto del equipo dentro de 85-90 %.",
+   "valores": {
+    "1": 86.8,
+    "2": 87.5,
+    "3": 87.5,
+    "4": 87.5,
+    "5": 87.0,
+    "6": 87.5,
+    "7": 87.5,
+    "8": 88.0,
+    "9": 87.9,
+    "10": 89.2,
+    "11": 88.7,
+    "12": 85.0
+   },
+   "ancla_por_valor": {
+    "2": "supuesto del equipo",
+    "3": "supuesto del equipo",
+    "4": "supuesto del equipo",
+    "6": "supuesto del equipo",
+    "7": "supuesto del equipo"
+   },
+   "fechas_ancla": {
+    "clima_albrook_etesa_eia_2023": {
+     "periodo_del_dato": "serie historica de 66 anios (climatologia)",
+     "fecha_publicacion": "2023-08-08",
+     "fecha_consulta": "2026-11-24"
+    }
+   }
+  },
+  "indice_mensual_edemet_2025": {
+   "rol": "por_mes",
+   "unidad": "indice (promedio 1)",
+   "min": 0.9,
+   "max": 1.1,
+   "ancla": "edemet_ventas_mensuales_2025",
+   "justificacion": "Estacionalidad real de EDEMET 2025: (ventas GWh del mes / dias del mes), normalizado a promedio 1; multiplica la carga diaria del campus. Plana (max/min de ventas EDEMET 1.11; 1.07 en el total de distribuidoras).",
+   "valores": {
+    "1": 0.9307,
+    "2": 1.0747,
+    "3": 1.0124,
+    "4": 1.0685,
+    "5": 1.0066,
+    "6": 1.0226,
+    "7": 0.9728,
+    "8": 1.0063,
+    "9": 1.0219,
+    "10": 0.9708,
+    "11": 0.9684,
+    "12": 0.9444
+   },
+   "fechas_ancla": {
+    "edemet_ventas_mensuales_2025": {
+     "periodo_del_dato": "2025 (ene-dic)",
+     "fecha_publicacion": "PDF creados entre 2025-03-10 y 2026-01-20",
+     "fecha_consulta": "2026-11-24"
+    }
+   }
+  },
+  "incremento_pct_fuera_horario_no_laborable": {
+   "rol": "escalar",
+   "unidad": "fraccion",
+   "min": 0.05,
+   "max": 0.2,
+   "ancla": "supuesto del equipo",
+   "justificacion": "Aumento del % fuera de horario en fines de semana y feriados (dia no laborable: consumo tipo fuera de horario).",
+   "valor": 0.1
+  },
+  "temp_referencia_c": {
+   "rol": "escalar",
+   "unidad": "C",
+   "min": 26.0,
+   "max": 28.0,
+   "ancla": "supuesto del equipo",
+   "justificacion": "Temperatura exterior de referencia del multiplicador climatico (cercana a la media anual de Albrook, 27.0 C).",
+   "valor": 27.0
+  },
+  "escala_clima_c": {
+   "rol": "escalar",
+   "unidad": "C",
+   "min": 2.5,
+   "max": 3.5,
+   "ancla": "supuesto del equipo",
+   "justificacion": "Grados que producen un cambio igual a la sensibilidad_clima en el consumo.",
+   "valor": 3.0
+  },
+  "ruido_consumo_sigma": {
+   "rol": "escalar",
+   "unidad": "fraccion",
+   "min": 0.02,
+   "max": 0.08,
+   "ancla": "supuesto del equipo",
+   "justificacion": "Desviacion estandar del ruido multiplicativo diario del consumo.",
+   "valor": 0.045
+  },
+  "ruido_temp_sigma_c": {
+   "rol": "escalar",
+   "unidad": "C",
+   "min": 0.5,
+   "max": 1.5,
+   "ancla": "supuesto del equipo",
+   "justificacion": "Desviacion estandar de la temperatura diaria respecto a la media mensual.",
+   "valor": 0.9
+  },
+  "ruido_humedad_sigma_pct": {
+   "rol": "escalar",
+   "unidad": "%",
+   "min": 2.0,
+   "max": 5.0,
+   "ancla": "supuesto del equipo",
+   "justificacion": "Desviacion estandar de la humedad diaria.",
+   "valor": 3.2
+  },
+  "ruido_pct_fuera_horario_sigma": {
+   "rol": "escalar",
+   "unidad": "fraccion",
+   "min": 0.01,
+   "max": 0.04,
+   "ancla": "supuesto del equipo",
+   "justificacion": "Ruido diario del porcentaje fuera de horario.",
+   "valor": 0.02
+  },
+  "ruido_fp_sigma": {
+   "rol": "escalar",
+   "unidad": "adimensional",
+   "min": 0.005,
+   "max": 0.02,
+   "ancla": "supuesto del equipo",
+   "justificacion": "Ruido diario del factor de potencia.",
+   "valor": 0.012
+  },
+  "ruido_voltaje_sigma_v": {
+   "rol": "escalar",
+   "unidad": "V",
+   "min": 1.0,
+   "max": 3.0,
+   "ancla": "supuesto del equipo",
+   "justificacion": "Ruido del voltaje promedio.",
+   "valor": 1.8
+  },
+  "voltaje_nominal_v": {
+   "rol": "escalar",
+   "unidad": "V",
+   "min": 205.0,
+   "max": 211.0,
+   "ancla": "supuesto del equipo",
+   "justificacion": "Voltaje promedio nominal simulado (baja tension).",
+   "valor": 208.0
+  },
+  "incremento_pct_fuera_horario_anomalia": {
+   "rol": "escalar",
+   "unidad": "fraccion",
+   "min": 0.05,
+   "max": 0.12,
+   "ancla": "supuesto del equipo",
+   "justificacion": "Aumento del % fuera de horario durante una falla operativa.",
+   "valor": 0.08
+  },
+  "reduccion_fp_anomalia": {
+   "rol": "escalar",
+   "unidad": "adimensional",
+   "min": 0.01,
+   "max": 0.05,
+   "ancla": "supuesto del equipo",
+   "justificacion": "Caida del factor de potencia durante una falla operativa.",
+   "valor": 0.03
+  },
+  "ocupacion_semana_media_pct": {
+   "rol": "escalar",
+   "unidad": "%",
+   "min": 60,
+   "max": 90,
+   "ancla": "supuesto del equipo",
+   "justificacion": "Ocupacion media entre semana.",
+   "valor": 78
+  },
+  "ocupacion_finde_media_pct": {
+   "rol": "escalar",
+   "unidad": "%",
+   "min": 10,
+   "max": 35,
+   "ancla": "supuesto del equipo",
+   "justificacion": "Ocupacion media en fin de semana.",
+   "valor": 22
+  },
+  "ruido_ocupacion_sigma_pct": {
+   "rol": "escalar",
+   "unidad": "%",
+   "min": 5,
+   "max": 12,
+   "ancla": "supuesto del equipo",
+   "justificacion": "Ruido de la ocupacion.",
+   "valor": 9
+  },
+  "cop_nuevo": {
+   "rol": "escalar",
+   "unidad": "adimensional",
+   "min": 4.0,
+   "max": 5.0,
+   "ancla": "supuesto del equipo",
+   "justificacion": "COP de un chiller nuevo.",
+   "valor": 4.4
+  },
+  "cop_degradacion_por_anio": {
+   "rol": "escalar",
+   "unidad": "COP/anio",
+   "min": 0.05,
+   "max": 0.15,
+   "ancla": "supuesto del equipo",
+   "justificacion": "Perdida de COP por anio de antiguedad.",
+   "valor": 0.11
+  },
+  "cop_penal_anomalia": {
+   "rol": "escalar",
+   "unidad": "COP",
+   "min": 0.3,
+   "max": 0.9,
+   "ancla": "supuesto del equipo",
+   "justificacion": "Perdida de COP durante una falla operativa.",
+   "valor": 0.6
+  },
+  "cop_minimo": {
+   "rol": "escalar",
+   "unidad": "adimensional",
+   "min": 1.8,
+   "max": 2.4,
+   "ancla": "supuesto del equipo",
+   "justificacion": "Piso del COP simulado.",
+   "valor": 2.1
+  },
+  "horas_operacion_semana": {
+   "rol": "escalar",
+   "unidad": "h/dia",
+   "min": 10,
+   "max": 16,
+   "ancla": "supuesto del equipo",
+   "justificacion": "Horas de operacion HVAC entre semana.",
+   "valor": 13
+  },
+  "horas_operacion_finde": {
+   "rol": "escalar",
+   "unidad": "h/dia",
+   "min": 6,
+   "max": 12,
+   "ancla": "supuesto del equipo",
+   "justificacion": "Horas de operacion HVAC en fin de semana.",
+   "valor": 10
+  },
+  "horas_operacion_24h": {
+   "rol": "escalar",
+   "unidad": "h/dia",
+   "min": 24,
+   "max": 24,
+   "ancla": "supuesto del equipo",
+   "justificacion": "Horas de operacion continua (laboratorios y edificios en falla).",
+   "valor": 24
+  },
+  "setpoint_anomalia_c": {
+   "rol": "escalar",
+   "unidad": "C",
+   "min": 18.0,
+   "max": 20.0,
+   "ancla": "supuesto del equipo",
+   "justificacion": "Consigna anomala (sobre-enfriamiento) durante una falla operativa.",
+   "valor": 19.0
+  },
+  "factor_pico_demanda_min": {
+   "rol": "escalar",
+   "unidad": "adimensional",
+   "min": 0.9,
+   "max": 1.0,
+   "ancla": "supuesto del equipo",
+   "justificacion": "Limite inferior del factor aleatorio de pico de demanda (ventana de 15 min).",
+   "valor": 0.95
+  },
+  "factor_pico_demanda_max": {
+   "rol": "escalar",
+   "unidad": "adimensional",
+   "min": 1.0,
+   "max": 1.15,
+   "ancla": "supuesto del equipo",
+   "justificacion": "Limite superior del factor aleatorio de pico de demanda (ventana de 15 min).",
+   "valor": 1.08
+  },
+  "prob_fecha_mixta": {
+   "rol": "escalar",
+   "unidad": "probabilidad por fila",
+   "min": 0.01,
+   "max": 0.04,
+   "ancla": "supuesto del equipo",
+   "justificacion": "Defecto inyectado: fecha dd/mm/yyyy en vez de ISO. Conteo exacto = round(p x filas).",
+   "valor": 0.025
+  },
+  "prob_nulo": {
+   "rol": "escalar",
+   "unidad": "probabilidad por fila",
+   "min": 0.005,
+   "max": 0.02,
+   "ancla": "supuesto del equipo",
+   "justificacion": "Defecto inyectado: kWh vacio (perdida de paquete AMI).",
+   "valor": 0.012
+  },
+  "prob_outlier_negativo": {
+   "rol": "escalar",
+   "unidad": "probabilidad por fila",
+   "min": 0.002,
+   "max": 0.01,
+   "ancla": "supuesto del equipo",
+   "justificacion": "Defecto inyectado: lectura negativa.",
+   "valor": 0.006
+  },
+  "prob_pico_espurio": {
+   "rol": "escalar",
+   "unidad": "probabilidad por fila",
+   "min": 0.002,
+   "max": 0.008,
+   "ancla": "supuesto del equipo",
+   "justificacion": "Defecto inyectado: pico espurio (reset de medidor).",
+   "valor": 0.004
+  },
+  "mult_pico_espurio": {
+   "rol": "escalar",
+   "unidad": "multiplicador",
+   "min": 5.0,
+   "max": 12.0,
+   "ancla": "supuesto del equipo",
+   "justificacion": "Magnitud del pico espurio (supera el umbral de outlier de 3x del pipeline).",
+   "valor": 9.5
+  },
+  "prob_duplicado": {
+   "rol": "escalar",
+   "unidad": "probabilidad por fila",
+   "min": 0.005,
+   "max": 0.02,
+   "ancla": "supuesto del equipo",
+   "justificacion": "Defecto inyectado: fila duplicada.",
+   "valor": 0.011
+  },
+  "temp_exterior_c": {
+   "rol": "cota_salida",
+   "unidad": "C",
+   "min": 22.0,
+   "max": 34.0,
+   "ancla": "supuesto del equipo",
+   "justificacion": "Cota de la temperatura diaria generada (tope superior ~34 C)."
+  },
+  "humedad_relativa_pct": {
+   "rol": "cota_salida",
+   "unidad": "%",
+   "min": 70.0,
+   "max": 97.0,
+   "ancla": "supuesto del equipo",
+   "justificacion": "Cota de la humedad diaria generada."
+  },
+  "pct_fuera_horario_diario": {
+   "rol": "cota_salida",
+   "unidad": "fraccion",
+   "min": 0.1,
+   "max": 0.65,
+   "ancla": "supuesto del equipo",
+   "justificacion": "Cota del % fuera de horario diario generado."
+  },
+  "factor_potencia_diario": {
+   "rol": "cota_salida",
+   "unidad": "adimensional",
+   "min": 0.79,
+   "max": 0.99,
+   "ancla": "supuesto del equipo",
+   "justificacion": "Cota del factor de potencia diario generado."
+  },
+  "ocupacion_pct": {
+   "rol": "cota_salida",
+   "unidad": "%",
+   "min": 5.0,
+   "max": 100.0,
+   "ancla": "supuesto del equipo",
+   "justificacion": "Cota de la ocupacion generada."
+  },
+  "voltaje_promedio_v": {
+   "rol": "cota_salida",
+   "unidad": "V",
+   "min": 200.0,
+   "max": 216.0,
+   "ancla": "supuesto del equipo",
+   "justificacion": "Cota del voltaje generado."
+  },
+  "demanda_max_kw": {
+   "rol": "cota_salida",
+   "unidad": "kW",
+   "min": 5.0,
+   "max": 1500.0,
+   "ancla": "supuesto del equipo",
+   "justificacion": "Cota de la demanda pico diaria generada."
+  },
+  "kwh_dia_edificio": {
+   "rol": "cota_salida",
+   "unidad": "kWh/dia",
+   "min": 50.0,
+   "max": 15000.0,
+   "ancla": "supuesto del equipo",
+   "justificacion": "Cota del consumo diario verdadero por edificio."
+  },
+  "cop_eficiencia": {
+   "rol": "cota_salida",
+   "unidad": "adimensional",
+   "min": 2.1,
+   "max": 4.4,
+   "ancla": "supuesto del equipo",
+   "justificacion": "Cota del COP generado (piso cop_minimo, techo cop_nuevo)."
+  },
+  "setpoint_generado_c": {
+   "rol": "cota_salida",
+   "unidad": "C",
+   "min": 18.0,
+   "max": 23.5,
+   "ancla": "supuesto del equipo",
+   "justificacion": "Cota de la consigna generada."
+  },
+  "tarifa_energia_usd_kwh": {
+   "rol": "tarifa",
+   "unidad": "USD/kWh",
+   "min": 0.15,
+   "max": 0.16,
+   "ancla": "tarifa_energia_edemet_mtd",
+   "justificacion": "Cargo por energia MTD EDEMET; rango de sensibilidad del generador.",
+   "fuente_valor": "supuestos.json::tarifas_y_emisiones::tarifa_energia_usd_kwh",
+   "fechas_ancla": {
+    "tarifa_energia_edemet_mtd": {
+     "periodo_del_dato": "2026-07 a 2030-06 (pliego vigente; los datos simulados son de 2025)",
+     "fecha_publicacion": "2026-06-18 (fecha de la Res. AN No. 21781-Elec; publicacion del archivo no confirmada)",
+     "fecha_consulta": "2026-11-24"
+    }
+   }
+  },
+  "tarifa_demanda_usd_kw_mes": {
+   "rol": "tarifa",
+   "unidad": "USD/kW-mes",
+   "min": 15.0,
+   "max": 20.5,
+   "ancla": "tarifa_demanda_edemet_mtd",
+   "justificacion": "Cargo por demanda MTD EDEMET; rango entre ENSA (15.23) y EDEMET (20.23).",
+   "fuente_valor": "supuestos.json::tarifas_y_emisiones::tarifa_demanda_usd_kw_mes",
+   "fechas_ancla": {
+    "tarifa_demanda_edemet_mtd": {
+     "periodo_del_dato": "2026-07 a 2030-06 (pliego vigente; los datos simulados son de 2025)",
+     "fecha_publicacion": "2026-06-18 (fecha de la Res. AN No. 21781-Elec; publicacion del archivo no confirmada)",
+     "fecha_consulta": "2026-11-24"
+    }
+   }
+  },
+  "cargo_fijo_usd_cliente_mes": {
+   "rol": "tarifa",
+   "unidad": "USD/cliente-mes",
+   "min": 14.32,
+   "max": 14.32,
+   "ancla": "cargo_fijo_edemet_mtd",
+   "justificacion": "Cargo fijo MTD EDEMET; sin rango alterno en la fuente.",
+   "fuente_valor": "supuestos.json::tarifas_y_emisiones::cargo_fijo_usd_cliente_mes",
+   "fechas_ancla": {
+    "cargo_fijo_edemet_mtd": {
+     "periodo_del_dato": "2026-07 a 2030-06 (pliego vigente; los datos simulados son de 2025)",
+     "fecha_publicacion": "2026-06-18 (fecha de la Res. AN No. 21781-Elec; publicacion del archivo no confirmada)",
+     "fecha_consulta": "2026-11-24"
+    }
+   }
+  },
+  "fp_umbral": {
+   "rol": "tarifa",
+   "unidad": "adimensional",
+   "min": 0.9,
+   "max": 0.9,
+   "ancla": "factor_potencia_regla",
+   "justificacion": "Umbral de recargo por factor de potencia en atraso.",
+   "fuente_valor": "supuestos.json::tarifas_y_emisiones::fp_umbral",
+   "fechas_ancla": {
+    "factor_potencia_regla": {
+     "periodo_del_dato": "2026-07 a 2030-06 (pliego vigente; los datos simulados son de 2025)",
+     "fecha_publicacion": "2026-06-18 (fecha de la Res. AN No. 21781-Elec; publicacion del archivo no confirmada)",
+     "fecha_consulta": "2026-11-24"
+    }
+   }
+  },
+  "fp_recargo_fraccion_por_0_01": {
+   "rol": "tarifa",
+   "unidad": "fraccion",
+   "min": 0.02,
+   "max": 0.02,
+   "ancla": "factor_potencia_regla",
+   "justificacion": "Recargo de 2 % por cada 0.01 bajo el umbral (aplicado al cargo por demanda: simplificacion).",
+   "fuente_valor": "supuestos.json::tarifas_y_emisiones::fp_recargo_fraccion_por_0_01",
+   "fechas_ancla": {
+    "factor_potencia_regla": {
+     "periodo_del_dato": "2026-07 a 2030-06 (pliego vigente; los datos simulados son de 2025)",
+     "fecha_publicacion": "2026-06-18 (fecha de la Res. AN No. 21781-Elec; publicacion del archivo no confirmada)",
+     "fecha_consulta": "2026-11-24"
+    }
+   }
+  },
+  "factor_emision_kg_kwh": {
+   "rol": "tarifa",
+   "unidad": "kg CO2/kWh",
+   "min": 0.1501,
+   "max": 0.1501,
+   "ancla": "factor_emision_sin_2024",
+   "justificacion": "Factor de emision del SIN 2024 (MiAmbiente); se aplica a toda la energia.",
+   "fuente_valor": "supuestos.json::tarifas_y_emisiones::factor_emision_kg_kwh",
+   "fechas_ancla": {
+    "factor_emision_sin_2024": {
+     "periodo_del_dato": "2024",
+     "fecha_publicacion": "2025-08-21 (Gaceta Oficial 30348; Res. MIPRE-2025-0030765 del 2025-08-20)",
+     "fecha_consulta": "2026-11-24"
+    }
+   }
+  }
+ },
+ "edificios": [
+  {
+   "building_id": "CDS-208",
+   "nombre": "Edificio 208 (ilustrativo)",
+   "nombre_estado": "ilustrativo",
+   "tipo": "laboratorio",
+   "categoria": "Laboratorios I+D",
+   "cert_leed": "Sin dato",
+   "certificacion_estado": "sin dato",
+   "certificacion_fuente": null,
+   "iluminacion": "Mixta fluorescente/LED",
+   "area_fuente": "supuesto del equipo (ilustrativa)",
+   "area_fecha": "supuesto",
+   "datos_ilustrativos": "area, consumo, categoria, anio de rehabilitacion y demas atributos son ilustrativos (supuesto del equipo)"
+  },
+  {
+   "building_id": "CDS-184",
+   "nombre": "Edificio 184 (ilustrativo)",
+   "nombre_estado": "ilustrativo",
+   "tipo": "eventos_convenciones",
+   "categoria": "Eventos y Convenciones",
+   "cert_leed": "Sin dato",
+   "certificacion_estado": "sin dato",
+   "certificacion_fuente": null,
+   "iluminacion": "Mixta fluorescente/LED",
+   "area_fuente": "supuesto del equipo (ilustrativa)",
+   "area_fecha": "supuesto",
+   "datos_ilustrativos": "area, consumo, categoria, anio de rehabilitacion y demas atributos son ilustrativos (supuesto del equipo)"
+  },
+  {
+   "building_id": "CDS-227",
+   "nombre": "Edificio 227 (ilustrativo)",
+   "nombre_estado": "ilustrativo",
+   "tipo": "academico",
+   "categoria": "Académico",
+   "cert_leed": "Sin dato",
+   "certificacion_estado": "sin dato",
+   "certificacion_fuente": null,
+   "iluminacion": "Mixta fluorescente/LED",
+   "area_fuente": "supuesto del equipo (ilustrativa)",
+   "area_fecha": "supuesto",
+   "datos_ilustrativos": "area, consumo, categoria, anio de rehabilitacion y demas atributos son ilustrativos (supuesto del equipo)"
+  },
+  {
+   "building_id": "CDS-205",
+   "nombre": "Ed. 205 Senacyt",
+   "nombre_estado": "nombre verificado (publico)",
+   "tipo": "oficinas",
+   "categoria": "Oficinas",
+   "cert_leed": "Sin dato",
+   "certificacion_estado": "sin dato",
+   "certificacion_fuente": null,
+   "iluminacion": "Mixta fluorescente/LED",
+   "area_fuente": "supuesto del equipo (ilustrativa)",
+   "area_fecha": "supuesto",
+   "datos_ilustrativos": "area, consumo, categoria, anio de rehabilitacion y demas atributos son ilustrativos (supuesto del equipo)"
+  },
+  {
+   "building_id": "CDS-128",
+   "nombre": "Ed. 128 Casa de las Naciones Unidas",
+   "nombre_estado": "nombre verificado (publico)",
+   "tipo": "oficinas",
+   "categoria": "Oficinas",
+   "cert_leed": "LEED (nivel sin confirmar)",
+   "certificacion_estado": "reportado por una fuente, no verificado en USGBC",
+   "certificacion_fuente": "reportado, nivel sin confirmar",
+   "iluminacion": "LED con sensores de presencia",
+   "area_fuente": "tesis TalTech 2018 (R. Osorio, 'District Cooling Potential in Panama City', Apendice 1, Plan Maestro de CdS); la correspondencia numero de edificio -> nombre es una SUPOSICION del equipo",
+   "area_fecha": "2018",
+   "datos_ilustrativos": "area, consumo, categoria, anio de rehabilitacion y demas atributos son ilustrativos (supuesto del equipo)"
+  },
+  {
+   "building_id": "CDS-PLZ",
+   "nombre": "Plaza Ciudad del Saber",
+   "nombre_estado": "nombre verificado (publico)",
+   "tipo": "comercial",
+   "categoria": "Comercial y Gastronomía",
+   "cert_leed": "LEED Gold",
+   "certificacion_estado": "reportado por una fuente, no verificado en USGBC",
+   "certificacion_fuente": "ACR 2013",
+   "iluminacion": "Mixta fluorescente/LED",
+   "area_fuente": "supuesto del equipo (ilustrativa)",
+   "area_fecha": "supuesto",
+   "datos_ilustrativos": "area, consumo, categoria, anio de rehabilitacion y demas atributos son ilustrativos (supuesto del equipo)"
+  },
+  {
+   "building_id": "CDS-104",
+   "nombre": "Edificio 104 (ilustrativo)",
+   "nombre_estado": "ilustrativo",
+   "tipo": "oficinas",
+   "categoria": "Oficinas",
+   "cert_leed": "Sin dato",
+   "certificacion_estado": "sin dato",
+   "certificacion_fuente": null,
+   "iluminacion": "LED con sensores de presencia",
+   "area_fuente": "supuesto del equipo (ilustrativa)",
+   "area_fecha": "supuesto",
+   "datos_ilustrativos": "area, consumo, categoria, anio de rehabilitacion y demas atributos son ilustrativos (supuesto del equipo)"
+  },
+  {
+   "building_id": "CDS-234",
+   "nombre": "Edificio 234 (ilustrativo)",
+   "nombre_estado": "ilustrativo",
+   "tipo": "tecnologia",
+   "categoria": "Tecnología e Innovación",
+   "cert_leed": "Sin dato",
+   "certificacion_estado": "sin dato",
+   "certificacion_fuente": null,
+   "iluminacion": "LED con sensores de presencia",
+   "area_fuente": "supuesto del equipo (ilustrativa)",
+   "area_fecha": "supuesto",
+   "datos_ilustrativos": "area, consumo, categoria, anio de rehabilitacion y demas atributos son ilustrativos (supuesto del equipo)"
+  },
+  {
+   "building_id": "CDS-109",
+   "nombre": "Edificio 109 (ilustrativo)",
+   "nombre_estado": "ilustrativo",
+   "tipo": "tecnologia",
+   "categoria": "Tecnología e Innovación",
+   "cert_leed": "Sin dato",
+   "certificacion_estado": "sin dato",
+   "certificacion_fuente": null,
+   "iluminacion": "LED con sensores de presencia",
+   "area_fuente": "supuesto del equipo (ilustrativa)",
+   "area_fecha": "supuesto",
+   "datos_ilustrativos": "area, consumo, categoria, anio de rehabilitacion y demas atributos son ilustrativos (supuesto del equipo)"
+  },
+  {
+   "building_id": "CDS-108",
+   "nombre": "Ed. 108 Casa Club",
+   "nombre_estado": "nombre verificado (publico)",
+   "tipo": "recreacion_eventos",
+   "categoria": "Recreación y Eventos",
+   "cert_leed": "Sin dato",
+   "certificacion_estado": "sin dato",
+   "certificacion_fuente": null,
+   "iluminacion": "Mixta fluorescente/LED",
+   "area_fuente": "tesis TalTech 2018 (R. Osorio, 'District Cooling Potential in Panama City', Apendice 1, Plan Maestro de CdS); la correspondencia numero de edificio -> nombre es una SUPOSICION del equipo",
+   "area_fecha": "2018",
+   "datos_ilustrativos": "area, consumo, categoria, anio de rehabilitacion y demas atributos son ilustrativos (supuesto del equipo)"
+  },
+  {
+   "building_id": "CDS-DRM",
+   "nombre": "Complejo de Hospedaje (Dormitorios)",
+   "nombre_estado": "nombre verificado (publico)",
+   "tipo": "hospedaje",
+   "categoria": "Hospedaje",
+   "cert_leed": "LEED Platinum",
+   "certificacion_estado": "reportado por una fuente, no verificado en USGBC",
+   "certificacion_fuente": "Revista Panorama 2023",
+   "iluminacion": "LED con sensores de presencia",
+   "area_fuente": "supuesto del equipo (ilustrativa)",
+   "area_fecha": "supuesto",
+   "datos_ilustrativos": "area, consumo, categoria, anio de rehabilitacion y demas atributos son ilustrativos (supuesto del equipo)"
+  },
+  {
+   "building_id": "CDS-202",
+   "nombre": "Ed. 202 Clayton Bowling",
+   "nombre_estado": "nombre verificado (publico)",
+   "tipo": "recreacion_eventos",
+   "categoria": "Recreación y Eventos",
+   "cert_leed": "Sin dato",
+   "certificacion_estado": "sin dato",
+   "certificacion_fuente": null,
+   "iluminacion": "Mixta fluorescente/LED",
+   "area_fuente": "tesis TalTech 2018 (R. Osorio, 'District Cooling Potential in Panama City', Apendice 1, Plan Maestro de CdS); la correspondencia numero de edificio -> nombre es una SUPOSICION del equipo",
+   "area_fecha": "2018",
+   "datos_ilustrativos": "area, consumo, categoria, anio de rehabilitacion y demas atributos son ilustrativos (supuesto del equipo)"
+  }
+ ],
+ "anomalias_operativas": [
+  {
+   "building_id": "CDS-208",
+   "inicio": "2025-03-12",
+   "fin": "2025-03-21",
+   "descripcion": "Fuga de refrigerante en Chiller #2 y falla de válvula de bypass en laboratorios."
+  },
+  {
+   "building_id": "CDS-184",
+   "inicio": "2025-04-08",
+   "fin": "2025-04-14",
+   "descripcion": "Evento masivo + climatización encendida 24h sin programación BMS."
+  },
+  {
+   "building_id": "CDS-227",
+   "inicio": "2025-08-18",
+   "fin": "2025-08-29",
+   "descripcion": "Falla en sensor de retorno de manejadora AHU-03; enfriamiento continuo durante fines de semana."
+  },
+  {
+   "building_id": "CDS-234",
+   "inicio": "2025-10-04",
+   "fin": "2025-10-13",
+   "descripcion": "Termostato dañado en climatización de sala de servidores: compresor en ciclo continuo."
+  },
+  {
+   "building_id": "CDS-109",
+   "inicio": "2025-06-10",
+   "fin": "2025-06-17",
+   "descripcion": "Desconfiguración del temporizador de iluminación y chillers tras mantenimiento eléctrico programado."
+  }
+ ],
+ "eventos_informativos": [
+  {
+   "fecha": "2025-05-03",
+   "building_id": "CDS-104",
+   "severidad": "BAJA",
+   "reporte": "Limpieza preventiva de filtros y serpentines de manejadoras."
+  },
+  {
+   "fecha": "2025-07-19",
+   "building_id": "CDS-234",
+   "severidad": "BAJA",
+   "reporte": "Calibración semestral del sistema BMS; consumo nocturno estable."
+  },
+  {
+   "fecha": "2025-09-11",
+   "building_id": "CDS-208",
+   "severidad": "MEDIA",
+   "reporte": "Banco de capacitores en subestación presenta degradación en 2 celdas; factor de potencia debajo de 0.90."
+  },
+  {
+   "fecha": "2025-11-05",
+   "building_id": "CDS-184",
+   "severidad": "MEDIA",
+   "reporte": "Se recomienda instalar variadores de frecuencia (VFD) en bombas secundarias para mitigar picos de demanda."
+  }
+ ]
+}

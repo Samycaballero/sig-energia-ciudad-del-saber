@@ -10,11 +10,15 @@ sys.path.insert(0, str(ROOT))
 
 @pytest.fixture(autouse=True)
 def _sin_claves(monkeypatch):
-    """Ningun test depende de claves reales ni de servicios externos."""
+    """Ningun test depende de claves reales ni de servicios externos, ni toca un MongoDB local real."""
     for v in ("ANTHROPIC_API_KEY", "BEDROCK_MODEL_ID", "GENAI_MODE", "S3_BUCKET", "MONGO_STRICT",
               "GEMINI_API_KEY", "GOOGLE_API_KEY", "GEMINI_MODEL",
-              "GEMINI_BASE_URL", "OLLAMA_MODEL", "OLLAMA_HOST", "SIG_LLM", "AWS_ACCESS_KEY_ID", "AWS_SECRET_ACCESS_KEY", "AWS_PROFILE"):
+              "GEMINI_BASE_URL", "OLLAMA_MODEL", "OLLAMA_HOST", "SIG_LLM", "AWS_ACCESS_KEY_ID", "AWS_SECRET_ACCESS_KEY", "AWS_PROFILE",
+              "SIG_FUENTE"):
         monkeypatch.delenv(v, raising=False)
+    # Mongo invalido a proposito: ningun test puede escribir en el MongoDB del usuario (solo mongomock o fallback JSON)
+    monkeypatch.setenv("MONGO_URI", "mongodb://127.0.0.1:1")
+    monkeypatch.setenv("MONGO_TIMEOUT_MS", "300")
 
 
 @pytest.fixture

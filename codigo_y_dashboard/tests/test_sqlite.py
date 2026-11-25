@@ -22,6 +22,7 @@ def test_esquema_y_vistas(db):
             "vw_bi_detalle_mensual"} <= objs
     cols = {r[1] for r in c.execute("PRAGMA table_info(fact_alertas_automatizadas)")}
     assert {"accion_recomendada", "causa_bitacora"} <= cols
+    assert "certificacion_estado" in {r[1] for r in c.execute("PRAGMA table_info(dim_edificio)")}
 
 
 def test_conteos_y_integridad(db):
@@ -55,3 +56,7 @@ def test_gold_kpis_coherentes_con_vista(datos):
     imp = s["impacto_financiero_proyectado"]
     assert imp["inversion_estimada_usd"] == s["supuestos"]["inversion"]["capex_usd"]["valor"]
     assert s["diagnostico_gerencial"]["etiqueta"] == "modo offline (plantilla)"
+    k = s["kpis_globales"]
+    assert k["costo_total_anual_usd"] == pytest.approx(k["costo_energia_anual_usd"] + k["costo_demanda_anual_usd"] + k["costo_fijo_anual_usd"]
+                                                       + k["penalizacion_fp_anual_usd"], abs=2)
+    assert k["alertas_anomalias_detectadas"] > 0 and 0 < k["concentracion_top3_pct"] < k["concentracion_top4_pct"] < 100

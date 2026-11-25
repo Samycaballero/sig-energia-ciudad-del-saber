@@ -101,7 +101,7 @@ def construir_contexto(summary, bitacora, max_n=12):
     lineas = [
         f"Periodo: {summary['periodo']}. Edificios: {k['total_edificios']}.",
         f"Consumo total: {k['consumo_total_mwh']} MWh; costo anual: {k['costo_total_anual_usd']} USD; "
-        f"EUI promedio: {k['eui_promedio_kwh_m2']} kWh/m2; EUI referencia LEED Platinum: {k['eui_benchmark_leed_platinum']}.",
+        f"EUI promedio: {k['eui_promedio_kwh_m2']} kWh/m2; EUI de referencia interna (Complejo de Hospedaje): {k['eui_referencia_hospedaje']}.",
         f"Los 4 edificios de mayor consumo concentran {k['concentracion_top4_pct']} % del consumo.",
         f"Penalizacion por factor de potencia: {k['penalizacion_fp_anual_usd']} USD; alertas de anomalia: {k['alertas_anomalias_detectadas']}.",
         "Top edificios (id, nombre, MWh, EUI, FP promedio, dias con anomalia):",
@@ -122,10 +122,10 @@ def _plantilla(summary, entradas):
     k = summary["kpis_globales"]
     rk = summary["ranking_edificios"]
     t = rk[0]
-    ratio = t["eui_kwh_m2"] / k["eui_benchmark_leed_platinum"]
+    ratio = t["eui_kwh_m2"] / k["eui_referencia_hospedaje"]
     pts = [
         f"- {t['nombre']} ({t['building_id']}) es el mayor consumidor: {t['kwh_anual']/1000:.0f} MWh/anio, "
-        f"EUI {t['eui_kwh_m2']} kWh/m2 ({ratio:.1f}x la referencia LEED Platinum del campus).",
+        f"EUI {t['eui_kwh_m2']} kWh/m2 ({ratio:.1f}x el EUI de referencia interna del Complejo de Hospedaje).",
         f"- Los 4 edificios de mayor consumo concentran {k['concentracion_top4_pct']} % del consumo total.",
         f"- Se detectaron {k['alertas_anomalias_detectadas']} dias con anomalia de consumo (z-score) y "
         f"{k['penalizacion_fp_anual_usd']:,.0f} USD de penalizacion por factor de potencia.",

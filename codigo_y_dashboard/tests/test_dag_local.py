@@ -1,4 +1,5 @@
 import importlib
+import json
 import os
 import subprocess
 import sys
@@ -10,12 +11,12 @@ import orquestacion_airflow_dag as dag
 ROOT = Path(__file__).resolve().parent.parent
 
 
-def _correr(datos):
+def _correr(datos, *args):
     env = {k: v for k, v in os.environ.items() if not k.startswith(("ANTHROPIC", "AWS_", "S3_", "BEDROCK", "GEMINI", "GOOGLE_API", "OLLAMA", "GENAI_"))
            and k != "SIG_LLM"}
     env.update(SIG_DATA_DIR=str(datos / "data"), SIG_OUT_DIR=str(datos / "out"), MONGO_URI="mongodb://127.0.0.1:1",
                MONGO_TIMEOUT_MS="300", PYTHONIOENCODING="utf-8")
-    return subprocess.run([sys.executable, str(ROOT / "orquestacion_airflow_dag.py"), "--run-local"],
+    return subprocess.run([sys.executable, str(ROOT / "orquestacion_airflow_dag.py"), "--run-local", *args],
                           capture_output=True, text=True, env=env, encoding="utf-8")
 
 
@@ -31,14 +32,42 @@ def test_run_local_punta_a_punta(datos):
     assert len(list((out / "graficos").glob("*.png"))) == 6
     html = (out / "dashboard_interactivo.html").read_text(encoding="utf-8")
     assert "modo offline (plantilla)" in html and "filterBldg" in html and "monthFrom" in html and "filterLeed" in html
-    assert "Amazon Bedrock RAG" not in html
+    assert "Amazon Bedrock RAG" not in html and "PPA" not in html and "Enel" not in html and "INDICASAT" not in html
+    # la fuente sintetica regenera data/raw con el generador y deja su metodologia
+    assert "Fuente SINTETICA" in p.stderr and (datos / "data" / "raw" / "_metodologia.json").exists()
+    s = json.loads((gold / "kpi_summary.json").read_text(encoding="utf-8"))
+    assert s["procedencia_datos"]["modo"] == "sintetico_anclado" and s["procedencia_datos"]["plausibilidad"]["dentro_de_rango"]
+    assert s["procedencia_datos"]["semilla"] == 202511
 
 
 def test_run_local_falla_con_codigo_distinto_de_cero(datos):
+    # con --fuente real no se regenera nada: si falta un archivo, la primera tarea falla con mensaje claro
+    (datos / "data" / "raw" / "_metodologia.json").unlink()
     (datos / "data" / "raw" / "facturacion_mtd_distribuidora_2025.xml").unlink()
-    p = _correr(datos)
+    p = _correr(datos, "--fuente", "real")
     assert p.returncode != 0
-    assert "TAREA FALLIDA: extract_validar_4_formatos" in p.stderr
+    assert "TAREA FALLIDA: fuente_datos" in p.stderr and "facturacion_mtd_distribuidora_2025.xml: archivo no encontrado" in p.stderr
+
+
+def test_run_local_fuente_real_valida_corre_y_no_genera(datos):
+    raw = datos / "data" / "raw"
+    (raw / "_metodologia.json").unlink()
+    antes = {f.name: f.stat().st_mtime_ns for f in raw.iterdir()}
+    p = _correr(datos, "--fuente", "real")
+    assert p.returncode == 0, p.stderr
+    assert "Fuente REAL" in p.stderr and "Fuente SINTETICA" not in p.stderr
+    assert {f.name: f.stat().st_mtime_ns for f in raw.iterdir()} == antes  # el generador no corrio
+    s = json.loads((datos / "data" / "gold" / "kpi_summary.json").read_text(encoding="utf-8"))
+    assert s["procedencia_datos"]["modo"] == "real"
+
+
+def test_run_local_fuente_real_con_esquema_invalido(datos):
+    raw = datos / "data" / "raw"
+    (raw / "_metodologia.json").unlink()
+    f = raw / "sensores_iot_hvac_clima_2025.json"
+    f.write_text(f.read_text(encoding="utf-8").replace("cop_eficiencia", "cop", 1), encoding="utf-8")
+    p = _correr(datos, "--fuente", "real")
+    assert p.returncode != 0 and "TAREA FALLIDA: fuente_datos" in p.stderr and "hvac.cop_eficiencia" in p.stderr
 
 
 def test_orden_topologico_respeta_dependencias():

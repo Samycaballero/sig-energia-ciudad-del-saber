@@ -1,1731 +1,1587 @@
 <?xml version='1.0' encoding='utf-8'?>
-<FacturacionElectricaCampus organizacion="Fundacion Ciudad del Saber" distribuidora="distribuidora (supuesto)" tarifa_regulada="MTD" contrato_renovable="proveedor de energía renovable (supuesto)" anio="2025" moneda="USD">
+<FacturacionElectricaCampus organizacion="Fundacion Ciudad del Saber" distribuidora="EDEMET (inferencia geografica; probable, no confirmada)" tarifa_regulada="MTD" pliego="ASEP 2026-2030, Anexo A Res. AN No. 21781-Elec (ver fuentes_oficiales.json)" anio="2025" moneda="USD" datos="SINTETICOS" nota_valoracion="Consumo 2025 valorado a la tarifa EDEMET MTD vigente de jul-2026 a jun-2030 (valoracion de referencia); factor de emision 2024 (el mas reciente publicado)" tarifa_energia_usd_kwh="0.1557" tarifa_demanda_usd_kw_mes="20.23" cargo_fijo_usd_cliente_mes="14.32" fp_umbral="0.9" fp_recargo_fraccion_por_0_01="0.02" factor_emision_kg_kwh="0.1501">
   <FacturaMensual id_factura="FAC-2025-01-CDS-104" building_id="CDS-104" mes="1">
-    <kwh_facturados>54961.10</kwh_facturados>
-    <kwh_ppa_renovable>41220.82</kwh_ppa_renovable>
-    <kwh_red_sin>13740.28</kwh_red_sin>
-    <demanda_maxima_kw>164.74</demanda_maxima_kw>
-    <factor_potencia_mensual>0.929</factor_potencia_mensual>
-    <cargo_energia_usd>7722.03</cargo_energia_usd>
-    <cargo_demanda_usd>2446.39</cargo_demanda_usd>
+    <kwh_facturados>9616.03</kwh_facturados>
+    <demanda_maxima_kw>30.73</demanda_maxima_kw>
+    <factor_potencia_mensual>0.928</factor_potencia_mensual>
+    <cargo_energia_usd>1497.22</cargo_energia_usd>
+    <cargo_demanda_usd>621.67</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>10168.42</total_factura_usd>
-    <emisiones_alcance2_kg_co2>3009.12</emisiones_alcance2_kg_co2>
+    <total_factura_usd>2133.21</total_factura_usd>
+    <emisiones_alcance2_kg_co2>1443.37</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-02-CDS-104" building_id="CDS-104" mes="2">
-    <kwh_facturados>49644.72</kwh_facturados>
-    <kwh_ppa_renovable>37233.54</kwh_ppa_renovable>
-    <kwh_red_sin>12411.18</kwh_red_sin>
-    <demanda_maxima_kw>163.10</demanda_maxima_kw>
-    <factor_potencia_mensual>0.931</factor_potencia_mensual>
-    <cargo_energia_usd>6975.08</cargo_energia_usd>
-    <cargo_demanda_usd>2422.03</cargo_demanda_usd>
+    <kwh_facturados>10797.96</kwh_facturados>
+    <demanda_maxima_kw>32.43</demanda_maxima_kw>
+    <factor_potencia_mensual>0.932</factor_potencia_mensual>
+    <cargo_energia_usd>1681.24</cargo_energia_usd>
+    <cargo_demanda_usd>656.06</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>9397.11</total_factura_usd>
-    <emisiones_alcance2_kg_co2>2718.05</emisiones_alcance2_kg_co2>
+    <total_factura_usd>2351.62</total_factura_usd>
+    <emisiones_alcance2_kg_co2>1620.77</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-03-CDS-104" building_id="CDS-104" mes="3">
-    <kwh_facturados>56327.58</kwh_facturados>
-    <kwh_ppa_renovable>42245.68</kwh_ppa_renovable>
-    <kwh_red_sin>14081.90</kwh_red_sin>
-    <demanda_maxima_kw>173.56</demanda_maxima_kw>
-    <factor_potencia_mensual>0.926</factor_potencia_mensual>
-    <cargo_energia_usd>7914.03</cargo_energia_usd>
-    <cargo_demanda_usd>2577.37</cargo_demanda_usd>
+    <kwh_facturados>10273.04</kwh_facturados>
+    <demanda_maxima_kw>31.16</demanda_maxima_kw>
+    <factor_potencia_mensual>0.928</factor_potencia_mensual>
+    <cargo_energia_usd>1599.51</cargo_energia_usd>
+    <cargo_demanda_usd>630.37</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>10491.40</total_factura_usd>
-    <emisiones_alcance2_kg_co2>3083.94</emisiones_alcance2_kg_co2>
+    <total_factura_usd>2244.20</total_factura_usd>
+    <emisiones_alcance2_kg_co2>1541.98</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-04-CDS-104" building_id="CDS-104" mes="4">
-    <kwh_facturados>56100.59</kwh_facturados>
-    <kwh_ppa_renovable>42075.44</kwh_ppa_renovable>
-    <kwh_red_sin>14025.15</kwh_red_sin>
-    <demanda_maxima_kw>162.11</demanda_maxima_kw>
+    <kwh_facturados>11449.45</kwh_facturados>
+    <demanda_maxima_kw>37.50</demanda_maxima_kw>
     <factor_potencia_mensual>0.929</factor_potencia_mensual>
-    <cargo_energia_usd>7882.13</cargo_energia_usd>
-    <cargo_demanda_usd>2407.33</cargo_demanda_usd>
+    <cargo_energia_usd>1782.68</cargo_energia_usd>
+    <cargo_demanda_usd>758.62</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>10289.46</total_factura_usd>
-    <emisiones_alcance2_kg_co2>3071.51</emisiones_alcance2_kg_co2>
+    <total_factura_usd>2555.62</total_factura_usd>
+    <emisiones_alcance2_kg_co2>1718.56</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-05-CDS-104" building_id="CDS-104" mes="5">
-    <kwh_facturados>52686.43</kwh_facturados>
-    <kwh_ppa_renovable>39514.82</kwh_ppa_renovable>
-    <kwh_red_sin>13171.61</kwh_red_sin>
-    <demanda_maxima_kw>152.52</demanda_maxima_kw>
-    <factor_potencia_mensual>0.928</factor_potencia_mensual>
-    <cargo_energia_usd>7402.44</cargo_energia_usd>
-    <cargo_demanda_usd>2264.92</cargo_demanda_usd>
+    <kwh_facturados>11069.76</kwh_facturados>
+    <demanda_maxima_kw>33.24</demanda_maxima_kw>
+    <factor_potencia_mensual>0.932</factor_potencia_mensual>
+    <cargo_energia_usd>1723.56</cargo_energia_usd>
+    <cargo_demanda_usd>672.45</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>9667.36</total_factura_usd>
-    <emisiones_alcance2_kg_co2>2884.58</emisiones_alcance2_kg_co2>
+    <total_factura_usd>2410.33</total_factura_usd>
+    <emisiones_alcance2_kg_co2>1661.57</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-06-CDS-104" building_id="CDS-104" mes="6">
-    <kwh_facturados>49413.50</kwh_facturados>
-    <kwh_ppa_renovable>37060.12</kwh_ppa_renovable>
-    <kwh_red_sin>12353.38</kwh_red_sin>
-    <demanda_maxima_kw>156.57</demanda_maxima_kw>
-    <factor_potencia_mensual>0.927</factor_potencia_mensual>
-    <cargo_energia_usd>6942.60</cargo_energia_usd>
-    <cargo_demanda_usd>2325.06</cargo_demanda_usd>
+    <kwh_facturados>10928.98</kwh_facturados>
+    <demanda_maxima_kw>36.35</demanda_maxima_kw>
+    <factor_potencia_mensual>0.928</factor_potencia_mensual>
+    <cargo_energia_usd>1701.64</cargo_energia_usd>
+    <cargo_demanda_usd>735.36</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>9267.66</total_factura_usd>
-    <emisiones_alcance2_kg_co2>2705.39</emisiones_alcance2_kg_co2>
+    <total_factura_usd>2451.32</total_factura_usd>
+    <emisiones_alcance2_kg_co2>1640.44</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-07-CDS-104" building_id="CDS-104" mes="7">
-    <kwh_facturados>52284.73</kwh_facturados>
-    <kwh_ppa_renovable>39213.55</kwh_ppa_renovable>
-    <kwh_red_sin>13071.18</kwh_red_sin>
-    <demanda_maxima_kw>158.23</demanda_maxima_kw>
-    <factor_potencia_mensual>0.931</factor_potencia_mensual>
-    <cargo_energia_usd>7346.00</cargo_energia_usd>
-    <cargo_demanda_usd>2349.72</cargo_demanda_usd>
+    <kwh_facturados>11100.91</kwh_facturados>
+    <demanda_maxima_kw>33.48</demanda_maxima_kw>
+    <factor_potencia_mensual>0.930</factor_potencia_mensual>
+    <cargo_energia_usd>1728.41</cargo_energia_usd>
+    <cargo_demanda_usd>677.30</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>9695.72</total_factura_usd>
-    <emisiones_alcance2_kg_co2>2862.59</emisiones_alcance2_kg_co2>
+    <total_factura_usd>2420.03</total_factura_usd>
+    <emisiones_alcance2_kg_co2>1666.25</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-08-CDS-104" building_id="CDS-104" mes="8">
-    <kwh_facturados>48443.47</kwh_facturados>
-    <kwh_ppa_renovable>36332.60</kwh_ppa_renovable>
-    <kwh_red_sin>12110.87</kwh_red_sin>
-    <demanda_maxima_kw>142.78</demanda_maxima_kw>
-    <factor_potencia_mensual>0.930</factor_potencia_mensual>
-    <cargo_energia_usd>6806.31</cargo_energia_usd>
-    <cargo_demanda_usd>2120.28</cargo_demanda_usd>
+    <kwh_facturados>10966.73</kwh_facturados>
+    <demanda_maxima_kw>32.74</demanda_maxima_kw>
+    <factor_potencia_mensual>0.934</factor_potencia_mensual>
+    <cargo_energia_usd>1707.52</cargo_energia_usd>
+    <cargo_demanda_usd>662.33</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>8926.59</total_factura_usd>
-    <emisiones_alcance2_kg_co2>2652.28</emisiones_alcance2_kg_co2>
+    <total_factura_usd>2384.17</total_factura_usd>
+    <emisiones_alcance2_kg_co2>1646.11</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-09-CDS-104" building_id="CDS-104" mes="9">
-    <kwh_facturados>48715.58</kwh_facturados>
-    <kwh_ppa_renovable>36536.68</kwh_ppa_renovable>
-    <kwh_red_sin>12178.90</kwh_red_sin>
-    <demanda_maxima_kw>146.44</demanda_maxima_kw>
-    <factor_potencia_mensual>0.934</factor_potencia_mensual>
-    <cargo_energia_usd>6844.54</cargo_energia_usd>
-    <cargo_demanda_usd>2174.63</cargo_demanda_usd>
+    <kwh_facturados>10735.92</kwh_facturados>
+    <demanda_maxima_kw>32.54</demanda_maxima_kw>
+    <factor_potencia_mensual>0.925</factor_potencia_mensual>
+    <cargo_energia_usd>1671.58</cargo_energia_usd>
+    <cargo_demanda_usd>658.28</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>9019.17</total_factura_usd>
-    <emisiones_alcance2_kg_co2>2667.18</emisiones_alcance2_kg_co2>
+    <total_factura_usd>2344.18</total_factura_usd>
+    <emisiones_alcance2_kg_co2>1611.46</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-10-CDS-104" building_id="CDS-104" mes="10">
-    <kwh_facturados>51003.88</kwh_facturados>
-    <kwh_ppa_renovable>38252.91</kwh_ppa_renovable>
-    <kwh_red_sin>12750.97</kwh_red_sin>
-    <demanda_maxima_kw>150.13</demanda_maxima_kw>
-    <factor_potencia_mensual>0.932</factor_potencia_mensual>
-    <cargo_energia_usd>7166.05</cargo_energia_usd>
-    <cargo_demanda_usd>2229.43</cargo_demanda_usd>
+    <kwh_facturados>10867.57</kwh_facturados>
+    <demanda_maxima_kw>31.01</demanda_maxima_kw>
+    <factor_potencia_mensual>0.933</factor_potencia_mensual>
+    <cargo_energia_usd>1692.08</cargo_energia_usd>
+    <cargo_demanda_usd>627.33</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>9395.48</total_factura_usd>
-    <emisiones_alcance2_kg_co2>2792.46</emisiones_alcance2_kg_co2>
+    <total_factura_usd>2333.73</total_factura_usd>
+    <emisiones_alcance2_kg_co2>1631.22</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-11-CDS-104" building_id="CDS-104" mes="11">
-    <kwh_facturados>45184.17</kwh_facturados>
-    <kwh_ppa_renovable>33888.13</kwh_ppa_renovable>
-    <kwh_red_sin>11296.04</kwh_red_sin>
-    <demanda_maxima_kw>138.82</demanda_maxima_kw>
-    <factor_potencia_mensual>0.929</factor_potencia_mensual>
-    <cargo_energia_usd>6348.38</cargo_energia_usd>
-    <cargo_demanda_usd>2061.48</cargo_demanda_usd>
+    <kwh_facturados>8501.58</kwh_facturados>
+    <demanda_maxima_kw>29.84</demanda_maxima_kw>
+    <factor_potencia_mensual>0.925</factor_potencia_mensual>
+    <cargo_energia_usd>1323.70</cargo_energia_usd>
+    <cargo_demanda_usd>603.66</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>8409.86</total_factura_usd>
-    <emisiones_alcance2_kg_co2>2473.83</emisiones_alcance2_kg_co2>
+    <total_factura_usd>1941.68</total_factura_usd>
+    <emisiones_alcance2_kg_co2>1276.09</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-12-CDS-104" building_id="CDS-104" mes="12">
-    <kwh_facturados>52165.07</kwh_facturados>
-    <kwh_ppa_renovable>39123.80</kwh_ppa_renovable>
-    <kwh_red_sin>13041.27</kwh_red_sin>
-    <demanda_maxima_kw>151.89</demanda_maxima_kw>
-    <factor_potencia_mensual>0.932</factor_potencia_mensual>
-    <cargo_energia_usd>7329.19</cargo_energia_usd>
-    <cargo_demanda_usd>2255.57</cargo_demanda_usd>
+    <kwh_facturados>9692.06</kwh_facturados>
+    <demanda_maxima_kw>32.41</demanda_maxima_kw>
+    <factor_potencia_mensual>0.929</factor_potencia_mensual>
+    <cargo_energia_usd>1509.05</cargo_energia_usd>
+    <cargo_demanda_usd>655.65</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>9584.76</total_factura_usd>
-    <emisiones_alcance2_kg_co2>2856.04</emisiones_alcance2_kg_co2>
+    <total_factura_usd>2179.02</total_factura_usd>
+    <emisiones_alcance2_kg_co2>1454.78</emisiones_alcance2_kg_co2>
+  </FacturaMensual>
+  <FacturaMensual id_factura="FAC-2025-01-CDS-108" building_id="CDS-108" mes="1">
+    <kwh_facturados>16821.01</kwh_facturados>
+    <demanda_maxima_kw>56.48</demanda_maxima_kw>
+    <factor_potencia_mensual>0.900</factor_potencia_mensual>
+    <cargo_energia_usd>2619.03</cargo_energia_usd>
+    <cargo_demanda_usd>1142.59</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
+    <total_factura_usd>3775.94</total_factura_usd>
+    <emisiones_alcance2_kg_co2>2524.83</emisiones_alcance2_kg_co2>
+  </FacturaMensual>
+  <FacturaMensual id_factura="FAC-2025-02-CDS-108" building_id="CDS-108" mes="2">
+    <kwh_facturados>17615.58</kwh_facturados>
+    <demanda_maxima_kw>70.28</demanda_maxima_kw>
+    <factor_potencia_mensual>0.898</factor_potencia_mensual>
+    <cargo_energia_usd>2742.75</cargo_energia_usd>
+    <cargo_demanda_usd>1421.76</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>5.69</penalizacion_fp_usd>
+    <total_factura_usd>4184.52</total_factura_usd>
+    <emisiones_alcance2_kg_co2>2644.10</emisiones_alcance2_kg_co2>
+  </FacturaMensual>
+  <FacturaMensual id_factura="FAC-2025-03-CDS-108" building_id="CDS-108" mes="3">
+    <kwh_facturados>19892.28</kwh_facturados>
+    <demanda_maxima_kw>73.11</demanda_maxima_kw>
+    <factor_potencia_mensual>0.898</factor_potencia_mensual>
+    <cargo_energia_usd>3097.23</cargo_energia_usd>
+    <cargo_demanda_usd>1479.02</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>5.92</penalizacion_fp_usd>
+    <total_factura_usd>4596.49</total_factura_usd>
+    <emisiones_alcance2_kg_co2>2985.83</emisiones_alcance2_kg_co2>
+  </FacturaMensual>
+  <FacturaMensual id_factura="FAC-2025-04-CDS-108" building_id="CDS-108" mes="4">
+    <kwh_facturados>20918.32</kwh_facturados>
+    <demanda_maxima_kw>76.03</demanda_maxima_kw>
+    <factor_potencia_mensual>0.902</factor_potencia_mensual>
+    <cargo_energia_usd>3256.98</cargo_energia_usd>
+    <cargo_demanda_usd>1538.09</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
+    <total_factura_usd>4809.39</total_factura_usd>
+    <emisiones_alcance2_kg_co2>3139.84</emisiones_alcance2_kg_co2>
+  </FacturaMensual>
+  <FacturaMensual id_factura="FAC-2025-05-CDS-108" building_id="CDS-108" mes="5">
+    <kwh_facturados>19660.33</kwh_facturados>
+    <demanda_maxima_kw>68.83</demanda_maxima_kw>
+    <factor_potencia_mensual>0.900</factor_potencia_mensual>
+    <cargo_energia_usd>3061.11</cargo_energia_usd>
+    <cargo_demanda_usd>1392.43</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
+    <total_factura_usd>4467.86</total_factura_usd>
+    <emisiones_alcance2_kg_co2>2951.02</emisiones_alcance2_kg_co2>
+  </FacturaMensual>
+  <FacturaMensual id_factura="FAC-2025-06-CDS-108" building_id="CDS-108" mes="6">
+    <kwh_facturados>18532.82</kwh_facturados>
+    <demanda_maxima_kw>62.64</demanda_maxima_kw>
+    <factor_potencia_mensual>0.902</factor_potencia_mensual>
+    <cargo_energia_usd>2885.56</cargo_energia_usd>
+    <cargo_demanda_usd>1267.21</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
+    <total_factura_usd>4167.09</total_factura_usd>
+    <emisiones_alcance2_kg_co2>2781.78</emisiones_alcance2_kg_co2>
+  </FacturaMensual>
+  <FacturaMensual id_factura="FAC-2025-07-CDS-108" building_id="CDS-108" mes="7">
+    <kwh_facturados>18142.55</kwh_facturados>
+    <demanda_maxima_kw>61.25</demanda_maxima_kw>
+    <factor_potencia_mensual>0.901</factor_potencia_mensual>
+    <cargo_energia_usd>2824.80</cargo_energia_usd>
+    <cargo_demanda_usd>1239.09</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
+    <total_factura_usd>4078.21</total_factura_usd>
+    <emisiones_alcance2_kg_co2>2723.20</emisiones_alcance2_kg_co2>
+  </FacturaMensual>
+  <FacturaMensual id_factura="FAC-2025-08-CDS-108" building_id="CDS-108" mes="8">
+    <kwh_facturados>19357.29</kwh_facturados>
+    <demanda_maxima_kw>65.64</demanda_maxima_kw>
+    <factor_potencia_mensual>0.903</factor_potencia_mensual>
+    <cargo_energia_usd>3013.93</cargo_energia_usd>
+    <cargo_demanda_usd>1327.90</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
+    <total_factura_usd>4356.15</total_factura_usd>
+    <emisiones_alcance2_kg_co2>2905.53</emisiones_alcance2_kg_co2>
+  </FacturaMensual>
+  <FacturaMensual id_factura="FAC-2025-09-CDS-108" building_id="CDS-108" mes="9">
+    <kwh_facturados>17716.51</kwh_facturados>
+    <demanda_maxima_kw>64.48</demanda_maxima_kw>
+    <factor_potencia_mensual>0.900</factor_potencia_mensual>
+    <cargo_energia_usd>2758.46</cargo_energia_usd>
+    <cargo_demanda_usd>1304.43</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
+    <total_factura_usd>4077.21</total_factura_usd>
+    <emisiones_alcance2_kg_co2>2659.25</emisiones_alcance2_kg_co2>
+  </FacturaMensual>
+  <FacturaMensual id_factura="FAC-2025-10-CDS-108" building_id="CDS-108" mes="10">
+    <kwh_facturados>17180.49</kwh_facturados>
+    <demanda_maxima_kw>56.12</demanda_maxima_kw>
+    <factor_potencia_mensual>0.897</factor_potencia_mensual>
+    <cargo_energia_usd>2675.00</cargo_energia_usd>
+    <cargo_demanda_usd>1135.31</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>6.81</penalizacion_fp_usd>
+    <total_factura_usd>3831.44</total_factura_usd>
+    <emisiones_alcance2_kg_co2>2578.79</emisiones_alcance2_kg_co2>
+  </FacturaMensual>
+  <FacturaMensual id_factura="FAC-2025-11-CDS-108" building_id="CDS-108" mes="11">
+    <kwh_facturados>17684.17</kwh_facturados>
+    <demanda_maxima_kw>60.44</demanda_maxima_kw>
+    <factor_potencia_mensual>0.899</factor_potencia_mensual>
+    <cargo_energia_usd>2753.43</cargo_energia_usd>
+    <cargo_demanda_usd>1222.70</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>2.45</penalizacion_fp_usd>
+    <total_factura_usd>3992.90</total_factura_usd>
+    <emisiones_alcance2_kg_co2>2654.39</emisiones_alcance2_kg_co2>
+  </FacturaMensual>
+  <FacturaMensual id_factura="FAC-2025-12-CDS-108" building_id="CDS-108" mes="12">
+    <kwh_facturados>17283.64</kwh_facturados>
+    <demanda_maxima_kw>58.89</demanda_maxima_kw>
+    <factor_potencia_mensual>0.897</factor_potencia_mensual>
+    <cargo_energia_usd>2691.06</cargo_energia_usd>
+    <cargo_demanda_usd>1191.34</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>7.15</penalizacion_fp_usd>
+    <total_factura_usd>3903.87</total_factura_usd>
+    <emisiones_alcance2_kg_co2>2594.27</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-01-CDS-109" building_id="CDS-109" mes="1">
-    <kwh_facturados>42154.14</kwh_facturados>
-    <kwh_ppa_renovable>29507.90</kwh_ppa_renovable>
-    <kwh_red_sin>12646.24</kwh_red_sin>
-    <demanda_maxima_kw>121.97</demanda_maxima_kw>
-    <factor_potencia_mensual>0.925</factor_potencia_mensual>
-    <cargo_energia_usd>6028.04</cargo_energia_usd>
-    <cargo_demanda_usd>1811.25</cargo_demanda_usd>
+    <kwh_facturados>9022.40</kwh_facturados>
+    <demanda_maxima_kw>27.49</demanda_maxima_kw>
+    <factor_potencia_mensual>0.931</factor_potencia_mensual>
+    <cargo_energia_usd>1404.79</cargo_energia_usd>
+    <cargo_demanda_usd>556.12</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>7839.29</total_factura_usd>
-    <emisiones_alcance2_kg_co2>2617.77</emisiones_alcance2_kg_co2>
+    <total_factura_usd>1975.23</total_factura_usd>
+    <emisiones_alcance2_kg_co2>1354.26</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-02-CDS-109" building_id="CDS-109" mes="2">
-    <kwh_facturados>38906.52</kwh_facturados>
-    <kwh_ppa_renovable>27234.56</kwh_ppa_renovable>
-    <kwh_red_sin>11671.96</kwh_red_sin>
-    <demanda_maxima_kw>125.66</demanda_maxima_kw>
-    <factor_potencia_mensual>0.930</factor_potencia_mensual>
-    <cargo_energia_usd>5563.63</cargo_energia_usd>
-    <cargo_demanda_usd>1866.05</cargo_demanda_usd>
+    <kwh_facturados>9746.88</kwh_facturados>
+    <demanda_maxima_kw>30.98</demanda_maxima_kw>
+    <factor_potencia_mensual>0.934</factor_potencia_mensual>
+    <cargo_energia_usd>1517.59</cargo_energia_usd>
+    <cargo_demanda_usd>626.73</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>7429.68</total_factura_usd>
-    <emisiones_alcance2_kg_co2>2416.10</emisiones_alcance2_kg_co2>
+    <total_factura_usd>2158.64</total_factura_usd>
+    <emisiones_alcance2_kg_co2>1463.01</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-03-CDS-109" building_id="CDS-109" mes="3">
-    <kwh_facturados>43404.31</kwh_facturados>
-    <kwh_ppa_renovable>30383.02</kwh_ppa_renovable>
-    <kwh_red_sin>13021.29</kwh_red_sin>
-    <demanda_maxima_kw>138.27</demanda_maxima_kw>
-    <factor_potencia_mensual>0.930</factor_potencia_mensual>
-    <cargo_energia_usd>6206.82</cargo_energia_usd>
-    <cargo_demanda_usd>2053.31</cargo_demanda_usd>
+    <kwh_facturados>9657.07</kwh_facturados>
+    <demanda_maxima_kw>28.97</demanda_maxima_kw>
+    <factor_potencia_mensual>0.928</factor_potencia_mensual>
+    <cargo_energia_usd>1503.61</cargo_energia_usd>
+    <cargo_demanda_usd>586.06</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>8260.13</total_factura_usd>
-    <emisiones_alcance2_kg_co2>2695.41</emisiones_alcance2_kg_co2>
+    <total_factura_usd>2103.99</total_factura_usd>
+    <emisiones_alcance2_kg_co2>1449.53</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-04-CDS-109" building_id="CDS-109" mes="4">
-    <kwh_facturados>42253.10</kwh_facturados>
-    <kwh_ppa_renovable>29577.17</kwh_ppa_renovable>
-    <kwh_red_sin>12675.93</kwh_red_sin>
-    <demanda_maxima_kw>125.65</demanda_maxima_kw>
-    <factor_potencia_mensual>0.929</factor_potencia_mensual>
-    <cargo_energia_usd>6042.19</cargo_energia_usd>
-    <cargo_demanda_usd>1865.90</cargo_demanda_usd>
+    <kwh_facturados>10959.33</kwh_facturados>
+    <demanda_maxima_kw>35.51</demanda_maxima_kw>
+    <factor_potencia_mensual>0.930</factor_potencia_mensual>
+    <cargo_energia_usd>1706.37</cargo_energia_usd>
+    <cargo_demanda_usd>718.37</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>7908.09</total_factura_usd>
-    <emisiones_alcance2_kg_co2>2623.92</emisiones_alcance2_kg_co2>
+    <total_factura_usd>2439.06</total_factura_usd>
+    <emisiones_alcance2_kg_co2>1645.00</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-05-CDS-109" building_id="CDS-109" mes="5">
-    <kwh_facturados>40149.59</kwh_facturados>
-    <kwh_ppa_renovable>28104.71</kwh_ppa_renovable>
-    <kwh_red_sin>12044.88</kwh_red_sin>
-    <demanda_maxima_kw>119.06</demanda_maxima_kw>
-    <factor_potencia_mensual>0.925</factor_potencia_mensual>
-    <cargo_energia_usd>5741.39</cargo_energia_usd>
-    <cargo_demanda_usd>1768.04</cargo_demanda_usd>
+    <kwh_facturados>10408.15</kwh_facturados>
+    <demanda_maxima_kw>31.13</demanda_maxima_kw>
+    <factor_potencia_mensual>0.928</factor_potencia_mensual>
+    <cargo_energia_usd>1620.55</cargo_energia_usd>
+    <cargo_demanda_usd>629.76</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>7509.43</total_factura_usd>
-    <emisiones_alcance2_kg_co2>2493.29</emisiones_alcance2_kg_co2>
+    <total_factura_usd>2264.63</total_factura_usd>
+    <emisiones_alcance2_kg_co2>1562.26</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-06-CDS-109" building_id="CDS-109" mes="6">
-    <kwh_facturados>36803.37</kwh_facturados>
-    <kwh_ppa_renovable>25762.36</kwh_ppa_renovable>
-    <kwh_red_sin>11041.01</kwh_red_sin>
-    <demanda_maxima_kw>113.61</demanda_maxima_kw>
-    <factor_potencia_mensual>0.932</factor_potencia_mensual>
-    <cargo_energia_usd>5262.88</cargo_energia_usd>
-    <cargo_demanda_usd>1687.11</cargo_demanda_usd>
+    <kwh_facturados>10947.35</kwh_facturados>
+    <demanda_maxima_kw>38.54</demanda_maxima_kw>
+    <factor_potencia_mensual>0.920</factor_potencia_mensual>
+    <cargo_energia_usd>1704.50</cargo_energia_usd>
+    <cargo_demanda_usd>779.66</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>6949.99</total_factura_usd>
-    <emisiones_alcance2_kg_co2>2285.49</emisiones_alcance2_kg_co2>
+    <total_factura_usd>2498.48</total_factura_usd>
+    <emisiones_alcance2_kg_co2>1643.20</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-07-CDS-109" building_id="CDS-109" mes="7">
-    <kwh_facturados>39516.35</kwh_facturados>
-    <kwh_ppa_renovable>27661.44</kwh_ppa_renovable>
-    <kwh_red_sin>11854.91</kwh_red_sin>
-    <demanda_maxima_kw>110.47</demanda_maxima_kw>
+    <kwh_facturados>10156.03</kwh_facturados>
+    <demanda_maxima_kw>29.00</demanda_maxima_kw>
     <factor_potencia_mensual>0.929</factor_potencia_mensual>
-    <cargo_energia_usd>5650.84</cargo_energia_usd>
-    <cargo_demanda_usd>1640.48</cargo_demanda_usd>
+    <cargo_energia_usd>1581.29</cargo_energia_usd>
+    <cargo_demanda_usd>586.67</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>7291.32</total_factura_usd>
-    <emisiones_alcance2_kg_co2>2453.97</emisiones_alcance2_kg_co2>
+    <total_factura_usd>2182.28</total_factura_usd>
+    <emisiones_alcance2_kg_co2>1524.42</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-08-CDS-109" building_id="CDS-109" mes="8">
-    <kwh_facturados>38029.39</kwh_facturados>
-    <kwh_ppa_renovable>26620.57</kwh_ppa_renovable>
-    <kwh_red_sin>11408.82</kwh_red_sin>
-    <demanda_maxima_kw>116.65</demanda_maxima_kw>
-    <factor_potencia_mensual>0.932</factor_potencia_mensual>
-    <cargo_energia_usd>5438.20</cargo_energia_usd>
-    <cargo_demanda_usd>1732.25</cargo_demanda_usd>
+    <kwh_facturados>10187.28</kwh_facturados>
+    <demanda_maxima_kw>32.11</demanda_maxima_kw>
+    <factor_potencia_mensual>0.929</factor_potencia_mensual>
+    <cargo_energia_usd>1586.16</cargo_energia_usd>
+    <cargo_demanda_usd>649.59</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>7170.45</total_factura_usd>
-    <emisiones_alcance2_kg_co2>2361.63</emisiones_alcance2_kg_co2>
+    <total_factura_usd>2250.07</total_factura_usd>
+    <emisiones_alcance2_kg_co2>1529.11</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-09-CDS-109" building_id="CDS-109" mes="9">
-    <kwh_facturados>37011.84</kwh_facturados>
-    <kwh_ppa_renovable>25908.29</kwh_ppa_renovable>
-    <kwh_red_sin>11103.55</kwh_red_sin>
-    <demanda_maxima_kw>106.65</demanda_maxima_kw>
-    <factor_potencia_mensual>0.929</factor_potencia_mensual>
-    <cargo_energia_usd>5292.69</cargo_energia_usd>
-    <cargo_demanda_usd>1583.75</cargo_demanda_usd>
+    <kwh_facturados>10029.38</kwh_facturados>
+    <demanda_maxima_kw>29.71</demanda_maxima_kw>
+    <factor_potencia_mensual>0.932</factor_potencia_mensual>
+    <cargo_energia_usd>1561.57</cargo_energia_usd>
+    <cargo_demanda_usd>601.03</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>6876.44</total_factura_usd>
-    <emisiones_alcance2_kg_co2>2298.43</emisiones_alcance2_kg_co2>
+    <total_factura_usd>2176.92</total_factura_usd>
+    <emisiones_alcance2_kg_co2>1505.41</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-10-CDS-109" building_id="CDS-109" mes="10">
-    <kwh_facturados>38190.95</kwh_facturados>
-    <kwh_ppa_renovable>26733.66</kwh_ppa_renovable>
-    <kwh_red_sin>11457.29</kwh_red_sin>
-    <demanda_maxima_kw>111.01</demanda_maxima_kw>
-    <factor_potencia_mensual>0.930</factor_potencia_mensual>
-    <cargo_energia_usd>5461.31</cargo_energia_usd>
-    <cargo_demanda_usd>1648.50</cargo_demanda_usd>
+    <kwh_facturados>9973.98</kwh_facturados>
+    <demanda_maxima_kw>29.15</demanda_maxima_kw>
+    <factor_potencia_mensual>0.929</factor_potencia_mensual>
+    <cargo_energia_usd>1552.95</cargo_energia_usd>
+    <cargo_demanda_usd>589.70</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>7109.81</total_factura_usd>
-    <emisiones_alcance2_kg_co2>2371.66</emisiones_alcance2_kg_co2>
+    <total_factura_usd>2156.97</total_factura_usd>
+    <emisiones_alcance2_kg_co2>1497.09</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-11-CDS-109" building_id="CDS-109" mes="11">
-    <kwh_facturados>35319.82</kwh_facturados>
-    <kwh_ppa_renovable>24723.87</kwh_ppa_renovable>
-    <kwh_red_sin>10595.95</kwh_red_sin>
-    <demanda_maxima_kw>111.91</demanda_maxima_kw>
-    <factor_potencia_mensual>0.927</factor_potencia_mensual>
-    <cargo_energia_usd>5050.73</cargo_energia_usd>
-    <cargo_demanda_usd>1661.86</cargo_demanda_usd>
+    <kwh_facturados>8044.35</kwh_facturados>
+    <demanda_maxima_kw>28.20</demanda_maxima_kw>
+    <factor_potencia_mensual>0.932</factor_potencia_mensual>
+    <cargo_energia_usd>1252.51</cargo_energia_usd>
+    <cargo_demanda_usd>570.49</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>6712.59</total_factura_usd>
-    <emisiones_alcance2_kg_co2>2193.36</emisiones_alcance2_kg_co2>
+    <total_factura_usd>1837.32</total_factura_usd>
+    <emisiones_alcance2_kg_co2>1207.46</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-12-CDS-109" building_id="CDS-109" mes="12">
-    <kwh_facturados>40326.82</kwh_facturados>
-    <kwh_ppa_renovable>28228.77</kwh_ppa_renovable>
-    <kwh_red_sin>12098.05</kwh_red_sin>
-    <demanda_maxima_kw>119.19</demanda_maxima_kw>
-    <factor_potencia_mensual>0.928</factor_potencia_mensual>
-    <cargo_energia_usd>5766.74</cargo_energia_usd>
-    <cargo_demanda_usd>1769.97</cargo_demanda_usd>
+    <kwh_facturados>9117.77</kwh_facturados>
+    <demanda_maxima_kw>27.46</demanda_maxima_kw>
+    <factor_potencia_mensual>0.931</factor_potencia_mensual>
+    <cargo_energia_usd>1419.64</cargo_energia_usd>
+    <cargo_demanda_usd>555.52</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>7536.71</total_factura_usd>
-    <emisiones_alcance2_kg_co2>2504.30</emisiones_alcance2_kg_co2>
+    <total_factura_usd>1989.48</total_factura_usd>
+    <emisiones_alcance2_kg_co2>1368.58</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-01-CDS-128" building_id="CDS-128" mes="1">
-    <kwh_facturados>67108.67</kwh_facturados>
-    <kwh_ppa_renovable>50331.50</kwh_ppa_renovable>
-    <kwh_red_sin>16777.17</kwh_red_sin>
-    <demanda_maxima_kw>184.04</demanda_maxima_kw>
-    <factor_potencia_mensual>0.940</factor_potencia_mensual>
-    <cargo_energia_usd>9428.77</cargo_energia_usd>
-    <cargo_demanda_usd>2732.99</cargo_demanda_usd>
+    <kwh_facturados>40563.98</kwh_facturados>
+    <demanda_maxima_kw>123.75</demanda_maxima_kw>
+    <factor_potencia_mensual>0.938</factor_potencia_mensual>
+    <cargo_energia_usd>6315.81</cargo_energia_usd>
+    <cargo_demanda_usd>2503.46</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>12161.76</total_factura_usd>
-    <emisiones_alcance2_kg_co2>3674.20</emisiones_alcance2_kg_co2>
+    <total_factura_usd>8833.59</total_factura_usd>
+    <emisiones_alcance2_kg_co2>6088.65</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-02-CDS-128" building_id="CDS-128" mes="2">
-    <kwh_facturados>60155.13</kwh_facturados>
-    <kwh_ppa_renovable>45116.35</kwh_ppa_renovable>
-    <kwh_red_sin>15038.78</kwh_red_sin>
-    <demanda_maxima_kw>187.34</demanda_maxima_kw>
-    <factor_potencia_mensual>0.933</factor_potencia_mensual>
-    <cargo_energia_usd>8451.80</cargo_energia_usd>
-    <cargo_demanda_usd>2782.00</cargo_demanda_usd>
+    <kwh_facturados>45574.94</kwh_facturados>
+    <demanda_maxima_kw>153.34</demanda_maxima_kw>
+    <factor_potencia_mensual>0.938</factor_potencia_mensual>
+    <cargo_energia_usd>7096.02</cargo_energia_usd>
+    <cargo_demanda_usd>3102.07</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>11233.80</total_factura_usd>
-    <emisiones_alcance2_kg_co2>3293.49</emisiones_alcance2_kg_co2>
+    <total_factura_usd>10212.41</total_factura_usd>
+    <emisiones_alcance2_kg_co2>6840.80</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-03-CDS-128" building_id="CDS-128" mes="3">
-    <kwh_facturados>68686.79</kwh_facturados>
-    <kwh_ppa_renovable>51515.09</kwh_ppa_renovable>
-    <kwh_red_sin>17171.70</kwh_red_sin>
-    <demanda_maxima_kw>201.24</demanda_maxima_kw>
-    <factor_potencia_mensual>0.941</factor_potencia_mensual>
-    <cargo_energia_usd>9650.49</cargo_energia_usd>
-    <cargo_demanda_usd>2988.41</cargo_demanda_usd>
+    <kwh_facturados>45336.39</kwh_facturados>
+    <demanda_maxima_kw>152.83</demanda_maxima_kw>
+    <factor_potencia_mensual>0.939</factor_potencia_mensual>
+    <cargo_energia_usd>7058.88</cargo_energia_usd>
+    <cargo_demanda_usd>3091.75</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>12638.90</total_factura_usd>
-    <emisiones_alcance2_kg_co2>3760.60</emisiones_alcance2_kg_co2>
+    <total_factura_usd>10164.95</total_factura_usd>
+    <emisiones_alcance2_kg_co2>6804.99</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-04-CDS-128" building_id="CDS-128" mes="4">
-    <kwh_facturados>67399.11</kwh_facturados>
-    <kwh_ppa_renovable>50549.33</kwh_ppa_renovable>
-    <kwh_red_sin>16849.78</kwh_red_sin>
-    <demanda_maxima_kw>199.06</demanda_maxima_kw>
-    <factor_potencia_mensual>0.941</factor_potencia_mensual>
-    <cargo_energia_usd>9469.58</cargo_energia_usd>
-    <cargo_demanda_usd>2956.04</cargo_demanda_usd>
+    <kwh_facturados>49289.73</kwh_facturados>
+    <demanda_maxima_kw>150.15</demanda_maxima_kw>
+    <factor_potencia_mensual>0.939</factor_potencia_mensual>
+    <cargo_energia_usd>7674.41</cargo_energia_usd>
+    <cargo_demanda_usd>3037.53</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>12425.62</total_factura_usd>
-    <emisiones_alcance2_kg_co2>3690.10</emisiones_alcance2_kg_co2>
+    <total_factura_usd>10726.26</total_factura_usd>
+    <emisiones_alcance2_kg_co2>7398.39</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-05-CDS-128" building_id="CDS-128" mes="5">
-    <kwh_facturados>63226.82</kwh_facturados>
-    <kwh_ppa_renovable>47420.11</kwh_ppa_renovable>
-    <kwh_red_sin>15806.71</kwh_red_sin>
-    <demanda_maxima_kw>179.77</demanda_maxima_kw>
+    <kwh_facturados>48050.20</kwh_facturados>
+    <demanda_maxima_kw>146.12</demanda_maxima_kw>
     <factor_potencia_mensual>0.939</factor_potencia_mensual>
-    <cargo_energia_usd>8883.37</cargo_energia_usd>
-    <cargo_demanda_usd>2669.58</cargo_demanda_usd>
+    <cargo_energia_usd>7481.42</cargo_energia_usd>
+    <cargo_demanda_usd>2956.01</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>11552.95</total_factura_usd>
-    <emisiones_alcance2_kg_co2>3461.67</emisiones_alcance2_kg_co2>
+    <total_factura_usd>10451.75</total_factura_usd>
+    <emisiones_alcance2_kg_co2>7212.34</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-06-CDS-128" building_id="CDS-128" mes="6">
-    <kwh_facturados>60031.57</kwh_facturados>
-    <kwh_ppa_renovable>45023.68</kwh_ppa_renovable>
-    <kwh_red_sin>15007.89</kwh_red_sin>
-    <demanda_maxima_kw>178.18</demanda_maxima_kw>
-    <factor_potencia_mensual>0.941</factor_potencia_mensual>
-    <cargo_energia_usd>8434.44</cargo_energia_usd>
-    <cargo_demanda_usd>2645.97</cargo_demanda_usd>
+    <kwh_facturados>47785.23</kwh_facturados>
+    <demanda_maxima_kw>142.95</demanda_maxima_kw>
+    <factor_potencia_mensual>0.938</factor_potencia_mensual>
+    <cargo_energia_usd>7440.16</cargo_energia_usd>
+    <cargo_demanda_usd>2891.88</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>11080.41</total_factura_usd>
-    <emisiones_alcance2_kg_co2>3286.73</emisiones_alcance2_kg_co2>
+    <total_factura_usd>10346.36</total_factura_usd>
+    <emisiones_alcance2_kg_co2>7172.56</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-07-CDS-128" building_id="CDS-128" mes="7">
-    <kwh_facturados>62199.67</kwh_facturados>
-    <kwh_ppa_renovable>46649.75</kwh_ppa_renovable>
-    <kwh_red_sin>15549.92</kwh_red_sin>
-    <demanda_maxima_kw>172.26</demanda_maxima_kw>
-    <factor_potencia_mensual>0.938</factor_potencia_mensual>
-    <cargo_energia_usd>8739.05</cargo_energia_usd>
-    <cargo_demanda_usd>2558.06</cargo_demanda_usd>
+    <kwh_facturados>46854.06</kwh_facturados>
+    <demanda_maxima_kw>131.25</demanda_maxima_kw>
+    <factor_potencia_mensual>0.940</factor_potencia_mensual>
+    <cargo_energia_usd>7295.18</cargo_energia_usd>
+    <cargo_demanda_usd>2655.19</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>11297.11</total_factura_usd>
-    <emisiones_alcance2_kg_co2>3405.43</emisiones_alcance2_kg_co2>
+    <total_factura_usd>9964.69</total_factura_usd>
+    <emisiones_alcance2_kg_co2>7032.79</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-08-CDS-128" building_id="CDS-128" mes="8">
-    <kwh_facturados>59563.02</kwh_facturados>
-    <kwh_ppa_renovable>44672.26</kwh_ppa_renovable>
-    <kwh_red_sin>14890.76</kwh_red_sin>
-    <demanda_maxima_kw>181.03</demanda_maxima_kw>
-    <factor_potencia_mensual>0.945</factor_potencia_mensual>
-    <cargo_energia_usd>8368.60</cargo_energia_usd>
-    <cargo_demanda_usd>2688.30</cargo_demanda_usd>
+    <kwh_facturados>48208.61</kwh_facturados>
+    <demanda_maxima_kw>148.90</demanda_maxima_kw>
+    <factor_potencia_mensual>0.938</factor_potencia_mensual>
+    <cargo_energia_usd>7506.08</cargo_energia_usd>
+    <cargo_demanda_usd>3012.25</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>11056.90</total_factura_usd>
-    <emisiones_alcance2_kg_co2>3261.08</emisiones_alcance2_kg_co2>
+    <total_factura_usd>10532.65</total_factura_usd>
+    <emisiones_alcance2_kg_co2>7236.11</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-09-CDS-128" building_id="CDS-128" mes="9">
-    <kwh_facturados>58886.35</kwh_facturados>
-    <kwh_ppa_renovable>44164.76</kwh_ppa_renovable>
-    <kwh_red_sin>14721.59</kwh_red_sin>
-    <demanda_maxima_kw>176.03</demanda_maxima_kw>
-    <factor_potencia_mensual>0.942</factor_potencia_mensual>
-    <cargo_energia_usd>8273.53</cargo_energia_usd>
-    <cargo_demanda_usd>2614.05</cargo_demanda_usd>
+    <kwh_facturados>46558.21</kwh_facturados>
+    <demanda_maxima_kw>133.78</demanda_maxima_kw>
+    <factor_potencia_mensual>0.941</factor_potencia_mensual>
+    <cargo_energia_usd>7249.11</cargo_energia_usd>
+    <cargo_demanda_usd>2706.37</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>10887.58</total_factura_usd>
-    <emisiones_alcance2_kg_co2>3224.03</emisiones_alcance2_kg_co2>
+    <total_factura_usd>9969.80</total_factura_usd>
+    <emisiones_alcance2_kg_co2>6988.39</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-10-CDS-128" building_id="CDS-128" mes="10">
-    <kwh_facturados>60525.56</kwh_facturados>
-    <kwh_ppa_renovable>45394.17</kwh_ppa_renovable>
-    <kwh_red_sin>15131.39</kwh_red_sin>
-    <demanda_maxima_kw>172.93</demanda_maxima_kw>
-    <factor_potencia_mensual>0.937</factor_potencia_mensual>
-    <cargo_energia_usd>8503.84</cargo_energia_usd>
-    <cargo_demanda_usd>2568.01</cargo_demanda_usd>
+    <kwh_facturados>46068.36</kwh_facturados>
+    <demanda_maxima_kw>148.22</demanda_maxima_kw>
+    <factor_potencia_mensual>0.936</factor_potencia_mensual>
+    <cargo_energia_usd>7172.84</cargo_energia_usd>
+    <cargo_demanda_usd>2998.49</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>11071.85</total_factura_usd>
-    <emisiones_alcance2_kg_co2>3313.77</emisiones_alcance2_kg_co2>
+    <total_factura_usd>10185.65</total_factura_usd>
+    <emisiones_alcance2_kg_co2>6914.86</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-11-CDS-128" building_id="CDS-128" mes="11">
-    <kwh_facturados>56060.44</kwh_facturados>
-    <kwh_ppa_renovable>42045.33</kwh_ppa_renovable>
-    <kwh_red_sin>14015.11</kwh_red_sin>
-    <demanda_maxima_kw>174.68</demanda_maxima_kw>
-    <factor_potencia_mensual>0.943</factor_potencia_mensual>
-    <cargo_energia_usd>7876.49</cargo_energia_usd>
-    <cargo_demanda_usd>2594.00</cargo_demanda_usd>
+    <kwh_facturados>37438.02</kwh_facturados>
+    <demanda_maxima_kw>125.77</demanda_maxima_kw>
+    <factor_potencia_mensual>0.937</factor_potencia_mensual>
+    <cargo_energia_usd>5829.10</cargo_energia_usd>
+    <cargo_demanda_usd>2544.33</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>10470.49</total_factura_usd>
-    <emisiones_alcance2_kg_co2>3069.31</emisiones_alcance2_kg_co2>
+    <total_factura_usd>8387.75</total_factura_usd>
+    <emisiones_alcance2_kg_co2>5619.45</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-12-CDS-128" building_id="CDS-128" mes="12">
-    <kwh_facturados>64192.92</kwh_facturados>
-    <kwh_ppa_renovable>48144.69</kwh_ppa_renovable>
-    <kwh_red_sin>16048.23</kwh_red_sin>
-    <demanda_maxima_kw>185.16</demanda_maxima_kw>
-    <factor_potencia_mensual>0.940</factor_potencia_mensual>
-    <cargo_energia_usd>9019.11</cargo_energia_usd>
-    <cargo_demanda_usd>2749.63</cargo_demanda_usd>
+    <kwh_facturados>42477.31</kwh_facturados>
+    <demanda_maxima_kw>126.98</demanda_maxima_kw>
+    <factor_potencia_mensual>0.941</factor_potencia_mensual>
+    <cargo_energia_usd>6613.72</cargo_energia_usd>
+    <cargo_demanda_usd>2568.81</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>11768.74</total_factura_usd>
-    <emisiones_alcance2_kg_co2>3514.56</emisiones_alcance2_kg_co2>
-  </FacturaMensual>
-  <FacturaMensual id_factura="FAC-2025-01-CDS-173" building_id="CDS-173" mes="1">
-    <kwh_facturados>15017.52</kwh_facturados>
-    <kwh_ppa_renovable>12014.02</kwh_ppa_renovable>
-    <kwh_red_sin>3003.50</kwh_red_sin>
-    <demanda_maxima_kw>43.14</demanda_maxima_kw>
-    <factor_potencia_mensual>0.949</factor_potencia_mensual>
-    <cargo_energia_usd>2072.42</cargo_energia_usd>
-    <cargo_demanda_usd>640.63</cargo_demanda_usd>
-    <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>2713.05</total_factura_usd>
-    <emisiones_alcance2_kg_co2>711.83</emisiones_alcance2_kg_co2>
-  </FacturaMensual>
-  <FacturaMensual id_factura="FAC-2025-02-CDS-173" building_id="CDS-173" mes="2">
-    <kwh_facturados>13671.94</kwh_facturados>
-    <kwh_ppa_renovable>10937.55</kwh_ppa_renovable>
-    <kwh_red_sin>2734.39</kwh_red_sin>
-    <demanda_maxima_kw>43.94</demanda_maxima_kw>
-    <factor_potencia_mensual>0.952</factor_potencia_mensual>
-    <cargo_energia_usd>1886.73</cargo_energia_usd>
-    <cargo_demanda_usd>652.51</cargo_demanda_usd>
-    <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>2539.24</total_factura_usd>
-    <emisiones_alcance2_kg_co2>648.05</emisiones_alcance2_kg_co2>
-  </FacturaMensual>
-  <FacturaMensual id_factura="FAC-2025-03-CDS-173" building_id="CDS-173" mes="3">
-    <kwh_facturados>14821.74</kwh_facturados>
-    <kwh_ppa_renovable>11857.39</kwh_ppa_renovable>
-    <kwh_red_sin>2964.35</kwh_red_sin>
-    <demanda_maxima_kw>43.75</demanda_maxima_kw>
-    <factor_potencia_mensual>0.955</factor_potencia_mensual>
-    <cargo_energia_usd>2045.40</cargo_energia_usd>
-    <cargo_demanda_usd>649.69</cargo_demanda_usd>
-    <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>2695.09</total_factura_usd>
-    <emisiones_alcance2_kg_co2>702.55</emisiones_alcance2_kg_co2>
-  </FacturaMensual>
-  <FacturaMensual id_factura="FAC-2025-04-CDS-173" building_id="CDS-173" mes="4">
-    <kwh_facturados>15211.74</kwh_facturados>
-    <kwh_ppa_renovable>12169.39</kwh_ppa_renovable>
-    <kwh_red_sin>3042.35</kwh_red_sin>
-    <demanda_maxima_kw>44.61</demanda_maxima_kw>
-    <factor_potencia_mensual>0.952</factor_potencia_mensual>
-    <cargo_energia_usd>2099.22</cargo_energia_usd>
-    <cargo_demanda_usd>662.46</cargo_demanda_usd>
-    <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>2761.68</total_factura_usd>
-    <emisiones_alcance2_kg_co2>721.04</emisiones_alcance2_kg_co2>
-  </FacturaMensual>
-  <FacturaMensual id_factura="FAC-2025-05-CDS-173" building_id="CDS-173" mes="5">
-    <kwh_facturados>14361.72</kwh_facturados>
-    <kwh_ppa_renovable>11489.38</kwh_ppa_renovable>
-    <kwh_red_sin>2872.34</kwh_red_sin>
-    <demanda_maxima_kw>43.62</demanda_maxima_kw>
-    <factor_potencia_mensual>0.953</factor_potencia_mensual>
-    <cargo_energia_usd>1981.92</cargo_energia_usd>
-    <cargo_demanda_usd>647.76</cargo_demanda_usd>
-    <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>2629.68</total_factura_usd>
-    <emisiones_alcance2_kg_co2>680.74</emisiones_alcance2_kg_co2>
-  </FacturaMensual>
-  <FacturaMensual id_factura="FAC-2025-06-CDS-173" building_id="CDS-173" mes="6">
-    <kwh_facturados>13163.20</kwh_facturados>
-    <kwh_ppa_renovable>10530.56</kwh_ppa_renovable>
-    <kwh_red_sin>2632.64</kwh_red_sin>
-    <demanda_maxima_kw>39.05</demanda_maxima_kw>
-    <factor_potencia_mensual>0.952</factor_potencia_mensual>
-    <cargo_energia_usd>1816.52</cargo_energia_usd>
-    <cargo_demanda_usd>579.89</cargo_demanda_usd>
-    <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>2396.41</total_factura_usd>
-    <emisiones_alcance2_kg_co2>623.94</emisiones_alcance2_kg_co2>
-  </FacturaMensual>
-  <FacturaMensual id_factura="FAC-2025-07-CDS-173" building_id="CDS-173" mes="7">
-    <kwh_facturados>14226.59</kwh_facturados>
-    <kwh_ppa_renovable>11381.27</kwh_ppa_renovable>
-    <kwh_red_sin>2845.32</kwh_red_sin>
-    <demanda_maxima_kw>41.13</demanda_maxima_kw>
-    <factor_potencia_mensual>0.950</factor_potencia_mensual>
-    <cargo_energia_usd>1963.27</cargo_energia_usd>
-    <cargo_demanda_usd>610.78</cargo_demanda_usd>
-    <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>2574.05</total_factura_usd>
-    <emisiones_alcance2_kg_co2>674.34</emisiones_alcance2_kg_co2>
-  </FacturaMensual>
-  <FacturaMensual id_factura="FAC-2025-08-CDS-173" building_id="CDS-173" mes="8">
-    <kwh_facturados>13467.71</kwh_facturados>
-    <kwh_ppa_renovable>10774.17</kwh_ppa_renovable>
-    <kwh_red_sin>2693.54</kwh_red_sin>
-    <demanda_maxima_kw>41.83</demanda_maxima_kw>
-    <factor_potencia_mensual>0.952</factor_potencia_mensual>
-    <cargo_energia_usd>1858.54</cargo_energia_usd>
-    <cargo_demanda_usd>621.18</cargo_demanda_usd>
-    <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>2479.72</total_factura_usd>
-    <emisiones_alcance2_kg_co2>638.37</emisiones_alcance2_kg_co2>
-  </FacturaMensual>
-  <FacturaMensual id_factura="FAC-2025-09-CDS-173" building_id="CDS-173" mes="9">
-    <kwh_facturados>13561.75</kwh_facturados>
-    <kwh_ppa_renovable>10849.40</kwh_ppa_renovable>
-    <kwh_red_sin>2712.35</kwh_red_sin>
-    <demanda_maxima_kw>40.04</demanda_maxima_kw>
-    <factor_potencia_mensual>0.949</factor_potencia_mensual>
-    <cargo_energia_usd>1871.52</cargo_energia_usd>
-    <cargo_demanda_usd>594.59</cargo_demanda_usd>
-    <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>2466.11</total_factura_usd>
-    <emisiones_alcance2_kg_co2>642.83</emisiones_alcance2_kg_co2>
-  </FacturaMensual>
-  <FacturaMensual id_factura="FAC-2025-10-CDS-173" building_id="CDS-173" mes="10">
-    <kwh_facturados>13784.83</kwh_facturados>
-    <kwh_ppa_renovable>11027.86</kwh_ppa_renovable>
-    <kwh_red_sin>2756.97</kwh_red_sin>
-    <demanda_maxima_kw>38.77</demanda_maxima_kw>
-    <factor_potencia_mensual>0.952</factor_potencia_mensual>
-    <cargo_energia_usd>1902.31</cargo_energia_usd>
-    <cargo_demanda_usd>575.73</cargo_demanda_usd>
-    <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>2478.04</total_factura_usd>
-    <emisiones_alcance2_kg_co2>653.40</emisiones_alcance2_kg_co2>
-  </FacturaMensual>
-  <FacturaMensual id_factura="FAC-2025-11-CDS-173" building_id="CDS-173" mes="11">
-    <kwh_facturados>12700.37</kwh_facturados>
-    <kwh_ppa_renovable>10160.30</kwh_ppa_renovable>
-    <kwh_red_sin>2540.07</kwh_red_sin>
-    <demanda_maxima_kw>40.13</demanda_maxima_kw>
-    <factor_potencia_mensual>0.948</factor_potencia_mensual>
-    <cargo_energia_usd>1752.65</cargo_energia_usd>
-    <cargo_demanda_usd>595.93</cargo_demanda_usd>
-    <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>2348.58</total_factura_usd>
-    <emisiones_alcance2_kg_co2>602.00</emisiones_alcance2_kg_co2>
-  </FacturaMensual>
-  <FacturaMensual id_factura="FAC-2025-12-CDS-173" building_id="CDS-173" mes="12">
-    <kwh_facturados>14348.35</kwh_facturados>
-    <kwh_ppa_renovable>11478.68</kwh_ppa_renovable>
-    <kwh_red_sin>2869.67</kwh_red_sin>
-    <demanda_maxima_kw>40.55</demanda_maxima_kw>
-    <factor_potencia_mensual>0.951</factor_potencia_mensual>
-    <cargo_energia_usd>1980.07</cargo_energia_usd>
-    <cargo_demanda_usd>602.17</cargo_demanda_usd>
-    <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>2582.24</total_factura_usd>
-    <emisiones_alcance2_kg_co2>680.11</emisiones_alcance2_kg_co2>
+    <total_factura_usd>9196.85</total_factura_usd>
+    <emisiones_alcance2_kg_co2>6375.84</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-01-CDS-184" building_id="CDS-184" mes="1">
-    <kwh_facturados>120372.63</kwh_facturados>
-    <kwh_ppa_renovable>66204.95</kwh_ppa_renovable>
-    <kwh_red_sin>54167.68</kwh_red_sin>
-    <demanda_maxima_kw>384.40</demanda_maxima_kw>
-    <factor_potencia_mensual>0.880</factor_potencia_mensual>
-    <cargo_energia_usd>18116.08</cargo_energia_usd>
-    <cargo_demanda_usd>5708.34</cargo_demanda_usd>
-    <penalizacion_fp_usd>238.24</penalizacion_fp_usd>
-    <total_factura_usd>24062.66</total_factura_usd>
-    <emisiones_alcance2_kg_co2>10129.36</emisiones_alcance2_kg_co2>
+    <kwh_facturados>24533.86</kwh_facturados>
+    <demanda_maxima_kw>93.76</demanda_maxima_kw>
+    <factor_potencia_mensual>0.879</factor_potencia_mensual>
+    <cargo_energia_usd>3819.92</cargo_energia_usd>
+    <cargo_demanda_usd>1896.76</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>79.66</penalizacion_fp_usd>
+    <total_factura_usd>5810.66</total_factura_usd>
+    <emisiones_alcance2_kg_co2>3682.53</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-02-CDS-184" building_id="CDS-184" mes="2">
-    <kwh_facturados>116824.31</kwh_facturados>
-    <kwh_ppa_renovable>64253.37</kwh_ppa_renovable>
-    <kwh_red_sin>52570.94</kwh_red_sin>
-    <demanda_maxima_kw>425.96</demanda_maxima_kw>
-    <factor_potencia_mensual>0.881</factor_potencia_mensual>
-    <cargo_energia_usd>17582.06</cargo_energia_usd>
-    <cargo_demanda_usd>6325.51</cargo_demanda_usd>
-    <penalizacion_fp_usd>227.12</penalizacion_fp_usd>
-    <total_factura_usd>24134.69</total_factura_usd>
-    <emisiones_alcance2_kg_co2>9830.77</emisiones_alcance2_kg_co2>
+    <kwh_facturados>27171.01</kwh_facturados>
+    <demanda_maxima_kw>100.53</demanda_maxima_kw>
+    <factor_potencia_mensual>0.878</factor_potencia_mensual>
+    <cargo_energia_usd>4230.53</cargo_energia_usd>
+    <cargo_demanda_usd>2033.72</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>89.48</penalizacion_fp_usd>
+    <total_factura_usd>6368.05</total_factura_usd>
+    <emisiones_alcance2_kg_co2>4078.37</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-03-CDS-184" building_id="CDS-184" mes="3">
-    <kwh_facturados>134757.29</kwh_facturados>
-    <kwh_ppa_renovable>74116.51</kwh_ppa_renovable>
-    <kwh_red_sin>60640.78</kwh_red_sin>
-    <demanda_maxima_kw>450.71</demanda_maxima_kw>
+    <kwh_facturados>29787.80</kwh_facturados>
+    <demanda_maxima_kw>97.83</demanda_maxima_kw>
     <factor_potencia_mensual>0.881</factor_potencia_mensual>
-    <cargo_energia_usd>20280.97</cargo_energia_usd>
-    <cargo_demanda_usd>6693.04</cargo_demanda_usd>
-    <penalizacion_fp_usd>256.25</penalizacion_fp_usd>
-    <total_factura_usd>27230.26</total_factura_usd>
-    <emisiones_alcance2_kg_co2>11339.83</emisiones_alcance2_kg_co2>
+    <cargo_energia_usd>4637.96</cargo_energia_usd>
+    <cargo_demanda_usd>1979.10</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>75.21</penalizacion_fp_usd>
+    <total_factura_usd>6706.59</total_factura_usd>
+    <emisiones_alcance2_kg_co2>4471.15</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-04-CDS-184" building_id="CDS-184" mes="4">
-    <kwh_facturados>144278.47</kwh_facturados>
-    <kwh_ppa_renovable>79353.16</kwh_ppa_renovable>
-    <kwh_red_sin>64925.31</kwh_red_sin>
-    <demanda_maxima_kw>635.42</demanda_maxima_kw>
-    <factor_potencia_mensual>0.874</factor_potencia_mensual>
-    <cargo_energia_usd>21713.91</cargo_energia_usd>
-    <cargo_demanda_usd>9435.99</cargo_demanda_usd>
-    <penalizacion_fp_usd>404.95</penalizacion_fp_usd>
-    <total_factura_usd>31554.85</total_factura_usd>
-    <emisiones_alcance2_kg_co2>12141.03</emisiones_alcance2_kg_co2>
+    <kwh_facturados>35163.65</kwh_facturados>
+    <demanda_maxima_kw>154.88</demanda_maxima_kw>
+    <factor_potencia_mensual>0.871</factor_potencia_mensual>
+    <cargo_energia_usd>5474.98</cargo_energia_usd>
+    <cargo_demanda_usd>3133.22</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>181.73</penalizacion_fp_usd>
+    <total_factura_usd>8804.25</total_factura_usd>
+    <emisiones_alcance2_kg_co2>5278.06</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-05-CDS-184" building_id="CDS-184" mes="5">
-    <kwh_facturados>117432.41</kwh_facturados>
-    <kwh_ppa_renovable>64587.83</kwh_ppa_renovable>
-    <kwh_red_sin>52844.58</kwh_red_sin>
-    <demanda_maxima_kw>373.11</demanda_maxima_kw>
-    <factor_potencia_mensual>0.879</factor_potencia_mensual>
-    <cargo_energia_usd>17673.58</cargo_energia_usd>
-    <cargo_demanda_usd>5540.68</cargo_demanda_usd>
-    <penalizacion_fp_usd>243.75</penalizacion_fp_usd>
-    <total_factura_usd>23458.01</total_factura_usd>
-    <emisiones_alcance2_kg_co2>9881.94</emisiones_alcance2_kg_co2>
+    <kwh_facturados>29790.30</kwh_facturados>
+    <demanda_maxima_kw>103.55</demanda_maxima_kw>
+    <factor_potencia_mensual>0.883</factor_potencia_mensual>
+    <cargo_energia_usd>4638.35</cargo_energia_usd>
+    <cargo_demanda_usd>2094.82</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>71.22</penalizacion_fp_usd>
+    <total_factura_usd>6818.71</total_factura_usd>
+    <emisiones_alcance2_kg_co2>4471.52</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-06-CDS-184" building_id="CDS-184" mes="6">
-    <kwh_facturados>105991.54</kwh_facturados>
-    <kwh_ppa_renovable>58295.35</kwh_ppa_renovable>
-    <kwh_red_sin>47696.19</kwh_red_sin>
-    <demanda_maxima_kw>404.20</demanda_maxima_kw>
-    <factor_potencia_mensual>0.882</factor_potencia_mensual>
-    <cargo_energia_usd>15951.73</cargo_energia_usd>
-    <cargo_demanda_usd>6002.37</cargo_demanda_usd>
-    <penalizacion_fp_usd>197.59</penalizacion_fp_usd>
-    <total_factura_usd>22151.69</total_factura_usd>
-    <emisiones_alcance2_kg_co2>8919.19</emisiones_alcance2_kg_co2>
+    <kwh_facturados>28052.94</kwh_facturados>
+    <demanda_maxima_kw>96.21</demanda_maxima_kw>
+    <factor_potencia_mensual>0.880</factor_potencia_mensual>
+    <cargo_energia_usd>4367.84</cargo_energia_usd>
+    <cargo_demanda_usd>1946.33</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>77.85</penalizacion_fp_usd>
+    <total_factura_usd>6406.34</total_factura_usd>
+    <emisiones_alcance2_kg_co2>4210.75</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-07-CDS-184" building_id="CDS-184" mes="7">
-    <kwh_facturados>111768.05</kwh_facturados>
-    <kwh_ppa_renovable>61472.43</kwh_ppa_renovable>
-    <kwh_red_sin>50295.62</kwh_red_sin>
-    <demanda_maxima_kw>385.55</demanda_maxima_kw>
-    <factor_potencia_mensual>0.880</factor_potencia_mensual>
-    <cargo_energia_usd>16821.09</cargo_energia_usd>
-    <cargo_demanda_usd>5725.42</cargo_demanda_usd>
-    <penalizacion_fp_usd>225.47</penalizacion_fp_usd>
-    <total_factura_usd>22771.98</total_factura_usd>
-    <emisiones_alcance2_kg_co2>9405.28</emisiones_alcance2_kg_co2>
+    <kwh_facturados>26895.97</kwh_facturados>
+    <demanda_maxima_kw>85.16</demanda_maxima_kw>
+    <factor_potencia_mensual>0.881</factor_potencia_mensual>
+    <cargo_energia_usd>4187.70</cargo_energia_usd>
+    <cargo_demanda_usd>1722.79</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>65.47</penalizacion_fp_usd>
+    <total_factura_usd>5990.28</total_factura_usd>
+    <emisiones_alcance2_kg_co2>4037.09</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-08-CDS-184" building_id="CDS-184" mes="8">
-    <kwh_facturados>110580.32</kwh_facturados>
-    <kwh_ppa_renovable>60819.18</kwh_ppa_renovable>
-    <kwh_red_sin>49761.14</kwh_red_sin>
-    <demanda_maxima_kw>353.92</demanda_maxima_kw>
+    <kwh_facturados>30151.81</kwh_facturados>
+    <demanda_maxima_kw>100.98</demanda_maxima_kw>
     <factor_potencia_mensual>0.880</factor_potencia_mensual>
-    <cargo_energia_usd>16642.34</cargo_energia_usd>
-    <cargo_demanda_usd>5255.71</cargo_demanda_usd>
-    <penalizacion_fp_usd>218.98</penalizacion_fp_usd>
-    <total_factura_usd>22117.03</total_factura_usd>
-    <emisiones_alcance2_kg_co2>9305.33</emisiones_alcance2_kg_co2>
+    <cargo_energia_usd>4694.64</cargo_energia_usd>
+    <cargo_demanda_usd>2042.83</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>81.71</penalizacion_fp_usd>
+    <total_factura_usd>6833.50</total_factura_usd>
+    <emisiones_alcance2_kg_co2>4525.79</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-09-CDS-184" building_id="CDS-184" mes="9">
-    <kwh_facturados>102111.30</kwh_facturados>
-    <kwh_ppa_renovable>56161.22</kwh_ppa_renovable>
-    <kwh_red_sin>45950.08</kwh_red_sin>
-    <demanda_maxima_kw>353.07</demanda_maxima_kw>
+    <kwh_facturados>26545.61</kwh_facturados>
+    <demanda_maxima_kw>91.79</demanda_maxima_kw>
     <factor_potencia_mensual>0.881</factor_potencia_mensual>
-    <cargo_energia_usd>15367.75</cargo_energia_usd>
-    <cargo_demanda_usd>5243.09</cargo_demanda_usd>
-    <penalizacion_fp_usd>195.80</penalizacion_fp_usd>
-    <total_factura_usd>20806.64</total_factura_usd>
-    <emisiones_alcance2_kg_co2>8592.67</emisiones_alcance2_kg_co2>
+    <cargo_energia_usd>4133.15</cargo_energia_usd>
+    <cargo_demanda_usd>1856.91</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>70.56</penalizacion_fp_usd>
+    <total_factura_usd>6074.94</total_factura_usd>
+    <emisiones_alcance2_kg_co2>3984.50</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-10-CDS-184" building_id="CDS-184" mes="10">
-    <kwh_facturados>101618.14</kwh_facturados>
-    <kwh_ppa_renovable>55889.98</kwh_ppa_renovable>
-    <kwh_red_sin>45728.16</kwh_red_sin>
-    <demanda_maxima_kw>354.71</demanda_maxima_kw>
-    <factor_potencia_mensual>0.881</factor_potencia_mensual>
-    <cargo_energia_usd>15293.53</cargo_energia_usd>
-    <cargo_demanda_usd>5267.44</cargo_demanda_usd>
-    <penalizacion_fp_usd>195.33</penalizacion_fp_usd>
-    <total_factura_usd>20756.30</total_factura_usd>
-    <emisiones_alcance2_kg_co2>8551.17</emisiones_alcance2_kg_co2>
+    <kwh_facturados>25938.80</kwh_facturados>
+    <demanda_maxima_kw>88.10</demanda_maxima_kw>
+    <factor_potencia_mensual>0.879</factor_potencia_mensual>
+    <cargo_energia_usd>4038.67</cargo_energia_usd>
+    <cargo_demanda_usd>1782.26</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>74.85</penalizacion_fp_usd>
+    <total_factura_usd>5910.10</total_factura_usd>
+    <emisiones_alcance2_kg_co2>3893.41</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-11-CDS-184" building_id="CDS-184" mes="11">
-    <kwh_facturados>106546.60</kwh_facturados>
-    <kwh_ppa_renovable>58600.63</kwh_ppa_renovable>
-    <kwh_red_sin>47945.97</kwh_red_sin>
-    <demanda_maxima_kw>358.54</demanda_maxima_kw>
-    <factor_potencia_mensual>0.881</factor_potencia_mensual>
-    <cargo_energia_usd>16035.26</cargo_energia_usd>
-    <cargo_demanda_usd>5324.32</cargo_demanda_usd>
-    <penalizacion_fp_usd>202.92</penalizacion_fp_usd>
-    <total_factura_usd>21562.50</total_factura_usd>
-    <emisiones_alcance2_kg_co2>8965.90</emisiones_alcance2_kg_co2>
+    <kwh_facturados>27101.88</kwh_facturados>
+    <demanda_maxima_kw>91.08</demanda_maxima_kw>
+    <factor_potencia_mensual>0.882</factor_potencia_mensual>
+    <cargo_energia_usd>4219.76</cargo_energia_usd>
+    <cargo_demanda_usd>1842.55</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>66.33</penalizacion_fp_usd>
+    <total_factura_usd>6142.96</total_factura_usd>
+    <emisiones_alcance2_kg_co2>4067.99</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-12-CDS-184" building_id="CDS-184" mes="12">
-    <kwh_facturados>113229.19</kwh_facturados>
-    <kwh_ppa_renovable>62276.05</kwh_ppa_renovable>
-    <kwh_red_sin>50953.14</kwh_red_sin>
-    <demanda_maxima_kw>374.27</demanda_maxima_kw>
-    <factor_potencia_mensual>0.879</factor_potencia_mensual>
-    <cargo_energia_usd>17040.99</cargo_energia_usd>
-    <cargo_demanda_usd>5557.91</cargo_demanda_usd>
-    <penalizacion_fp_usd>237.29</penalizacion_fp_usd>
-    <total_factura_usd>22836.19</total_factura_usd>
-    <emisiones_alcance2_kg_co2>9528.24</emisiones_alcance2_kg_co2>
+    <kwh_facturados>24866.33</kwh_facturados>
+    <demanda_maxima_kw>81.09</demanda_maxima_kw>
+    <factor_potencia_mensual>0.881</factor_potencia_mensual>
+    <cargo_energia_usd>3871.69</cargo_energia_usd>
+    <cargo_demanda_usd>1640.45</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>62.34</penalizacion_fp_usd>
+    <total_factura_usd>5588.80</total_factura_usd>
+    <emisiones_alcance2_kg_co2>3732.44</emisiones_alcance2_kg_co2>
+  </FacturaMensual>
+  <FacturaMensual id_factura="FAC-2025-01-CDS-202" building_id="CDS-202" mes="1">
+    <kwh_facturados>11389.77</kwh_facturados>
+    <demanda_maxima_kw>38.35</demanda_maxima_kw>
+    <factor_potencia_mensual>0.951</factor_potencia_mensual>
+    <cargo_energia_usd>1773.39</cargo_energia_usd>
+    <cargo_demanda_usd>775.82</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
+    <total_factura_usd>2563.53</total_factura_usd>
+    <emisiones_alcance2_kg_co2>1709.60</emisiones_alcance2_kg_co2>
+  </FacturaMensual>
+  <FacturaMensual id_factura="FAC-2025-02-CDS-202" building_id="CDS-202" mes="2">
+    <kwh_facturados>12375.10</kwh_facturados>
+    <demanda_maxima_kw>44.92</demanda_maxima_kw>
+    <factor_potencia_mensual>0.951</factor_potencia_mensual>
+    <cargo_energia_usd>1926.80</cargo_energia_usd>
+    <cargo_demanda_usd>908.73</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
+    <total_factura_usd>2849.85</total_factura_usd>
+    <emisiones_alcance2_kg_co2>1857.50</emisiones_alcance2_kg_co2>
+  </FacturaMensual>
+  <FacturaMensual id_factura="FAC-2025-03-CDS-202" building_id="CDS-202" mes="3">
+    <kwh_facturados>13692.74</kwh_facturados>
+    <demanda_maxima_kw>47.21</demanda_maxima_kw>
+    <factor_potencia_mensual>0.950</factor_potencia_mensual>
+    <cargo_energia_usd>2131.96</cargo_energia_usd>
+    <cargo_demanda_usd>955.06</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
+    <total_factura_usd>3101.34</total_factura_usd>
+    <emisiones_alcance2_kg_co2>2055.28</emisiones_alcance2_kg_co2>
+  </FacturaMensual>
+  <FacturaMensual id_factura="FAC-2025-04-CDS-202" building_id="CDS-202" mes="4">
+    <kwh_facturados>14164.02</kwh_facturados>
+    <demanda_maxima_kw>51.01</demanda_maxima_kw>
+    <factor_potencia_mensual>0.943</factor_potencia_mensual>
+    <cargo_energia_usd>2205.34</cargo_energia_usd>
+    <cargo_demanda_usd>1031.93</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
+    <total_factura_usd>3251.59</total_factura_usd>
+    <emisiones_alcance2_kg_co2>2126.02</emisiones_alcance2_kg_co2>
+  </FacturaMensual>
+  <FacturaMensual id_factura="FAC-2025-05-CDS-202" building_id="CDS-202" mes="5">
+    <kwh_facturados>13367.63</kwh_facturados>
+    <demanda_maxima_kw>43.81</demanda_maxima_kw>
+    <factor_potencia_mensual>0.948</factor_potencia_mensual>
+    <cargo_energia_usd>2081.34</cargo_energia_usd>
+    <cargo_demanda_usd>886.28</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
+    <total_factura_usd>2981.94</total_factura_usd>
+    <emisiones_alcance2_kg_co2>2006.48</emisiones_alcance2_kg_co2>
+  </FacturaMensual>
+  <FacturaMensual id_factura="FAC-2025-06-CDS-202" building_id="CDS-202" mes="6">
+    <kwh_facturados>12708.95</kwh_facturados>
+    <demanda_maxima_kw>43.90</demanda_maxima_kw>
+    <factor_potencia_mensual>0.946</factor_potencia_mensual>
+    <cargo_energia_usd>1978.78</cargo_energia_usd>
+    <cargo_demanda_usd>888.10</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
+    <total_factura_usd>2881.20</total_factura_usd>
+    <emisiones_alcance2_kg_co2>1907.61</emisiones_alcance2_kg_co2>
+  </FacturaMensual>
+  <FacturaMensual id_factura="FAC-2025-07-CDS-202" building_id="CDS-202" mes="7">
+    <kwh_facturados>12518.43</kwh_facturados>
+    <demanda_maxima_kw>42.46</demanda_maxima_kw>
+    <factor_potencia_mensual>0.952</factor_potencia_mensual>
+    <cargo_energia_usd>1949.12</cargo_energia_usd>
+    <cargo_demanda_usd>858.97</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
+    <total_factura_usd>2822.41</total_factura_usd>
+    <emisiones_alcance2_kg_co2>1879.02</emisiones_alcance2_kg_co2>
+  </FacturaMensual>
+  <FacturaMensual id_factura="FAC-2025-08-CDS-202" building_id="CDS-202" mes="8">
+    <kwh_facturados>13062.68</kwh_facturados>
+    <demanda_maxima_kw>40.92</demanda_maxima_kw>
+    <factor_potencia_mensual>0.950</factor_potencia_mensual>
+    <cargo_energia_usd>2033.86</cargo_energia_usd>
+    <cargo_demanda_usd>827.81</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
+    <total_factura_usd>2875.99</total_factura_usd>
+    <emisiones_alcance2_kg_co2>1960.71</emisiones_alcance2_kg_co2>
+  </FacturaMensual>
+  <FacturaMensual id_factura="FAC-2025-09-CDS-202" building_id="CDS-202" mes="9">
+    <kwh_facturados>12377.12</kwh_facturados>
+    <demanda_maxima_kw>43.53</demanda_maxima_kw>
+    <factor_potencia_mensual>0.946</factor_potencia_mensual>
+    <cargo_energia_usd>1927.12</cargo_energia_usd>
+    <cargo_demanda_usd>880.61</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
+    <total_factura_usd>2822.05</total_factura_usd>
+    <emisiones_alcance2_kg_co2>1857.81</emisiones_alcance2_kg_co2>
+  </FacturaMensual>
+  <FacturaMensual id_factura="FAC-2025-10-CDS-202" building_id="CDS-202" mes="10">
+    <kwh_facturados>12007.61</kwh_facturados>
+    <demanda_maxima_kw>38.89</demanda_maxima_kw>
+    <factor_potencia_mensual>0.951</factor_potencia_mensual>
+    <cargo_energia_usd>1869.58</cargo_energia_usd>
+    <cargo_demanda_usd>786.74</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
+    <total_factura_usd>2670.64</total_factura_usd>
+    <emisiones_alcance2_kg_co2>1802.34</emisiones_alcance2_kg_co2>
+  </FacturaMensual>
+  <FacturaMensual id_factura="FAC-2025-11-CDS-202" building_id="CDS-202" mes="11">
+    <kwh_facturados>12054.58</kwh_facturados>
+    <demanda_maxima_kw>42.47</demanda_maxima_kw>
+    <factor_potencia_mensual>0.949</factor_potencia_mensual>
+    <cargo_energia_usd>1876.90</cargo_energia_usd>
+    <cargo_demanda_usd>859.17</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
+    <total_factura_usd>2750.39</total_factura_usd>
+    <emisiones_alcance2_kg_co2>1809.39</emisiones_alcance2_kg_co2>
+  </FacturaMensual>
+  <FacturaMensual id_factura="FAC-2025-12-CDS-202" building_id="CDS-202" mes="12">
+    <kwh_facturados>11641.39</kwh_facturados>
+    <demanda_maxima_kw>40.73</demanda_maxima_kw>
+    <factor_potencia_mensual>0.953</factor_potencia_mensual>
+    <cargo_energia_usd>1812.56</cargo_energia_usd>
+    <cargo_demanda_usd>823.97</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
+    <total_factura_usd>2650.85</total_factura_usd>
+    <emisiones_alcance2_kg_co2>1747.37</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-01-CDS-205" building_id="CDS-205" mes="1">
-    <kwh_facturados>75831.28</kwh_facturados>
-    <kwh_ppa_renovable>45498.77</kwh_ppa_renovable>
-    <kwh_red_sin>30332.51</kwh_red_sin>
-    <demanda_maxima_kw>231.82</demanda_maxima_kw>
-    <factor_potencia_mensual>0.910</factor_potencia_mensual>
-    <cargo_energia_usd>11223.03</cargo_energia_usd>
-    <cargo_demanda_usd>3442.53</cargo_demanda_usd>
+    <kwh_facturados>17447.34</kwh_facturados>
+    <demanda_maxima_kw>53.02</demanda_maxima_kw>
+    <factor_potencia_mensual>0.913</factor_potencia_mensual>
+    <cargo_energia_usd>2716.55</cargo_energia_usd>
+    <cargo_demanda_usd>1072.59</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>14665.56</total_factura_usd>
-    <emisiones_alcance2_kg_co2>5823.84</emisiones_alcance2_kg_co2>
+    <total_factura_usd>3803.46</total_factura_usd>
+    <emisiones_alcance2_kg_co2>2618.85</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-02-CDS-205" building_id="CDS-205" mes="2">
-    <kwh_facturados>71544.38</kwh_facturados>
-    <kwh_ppa_renovable>42926.63</kwh_ppa_renovable>
-    <kwh_red_sin>28617.75</kwh_red_sin>
-    <demanda_maxima_kw>232.06</demanda_maxima_kw>
-    <factor_potencia_mensual>0.910</factor_potencia_mensual>
-    <cargo_energia_usd>10588.57</cargo_energia_usd>
-    <cargo_demanda_usd>3446.09</cargo_demanda_usd>
+    <kwh_facturados>19275.03</kwh_facturados>
+    <demanda_maxima_kw>68.24</demanda_maxima_kw>
+    <factor_potencia_mensual>0.908</factor_potencia_mensual>
+    <cargo_energia_usd>3001.12</cargo_energia_usd>
+    <cargo_demanda_usd>1380.50</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>14034.66</total_factura_usd>
-    <emisiones_alcance2_kg_co2>5494.61</emisiones_alcance2_kg_co2>
+    <total_factura_usd>4395.94</total_factura_usd>
+    <emisiones_alcance2_kg_co2>2893.18</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-03-CDS-205" building_id="CDS-205" mes="3">
-    <kwh_facturados>78696.17</kwh_facturados>
-    <kwh_ppa_renovable>47217.70</kwh_ppa_renovable>
-    <kwh_red_sin>31478.47</kwh_red_sin>
-    <demanda_maxima_kw>230.47</demanda_maxima_kw>
-    <factor_potencia_mensual>0.910</factor_potencia_mensual>
-    <cargo_energia_usd>11647.03</cargo_energia_usd>
-    <cargo_demanda_usd>3422.48</cargo_demanda_usd>
+    <kwh_facturados>19204.05</kwh_facturados>
+    <demanda_maxima_kw>62.39</demanda_maxima_kw>
+    <factor_potencia_mensual>0.909</factor_potencia_mensual>
+    <cargo_energia_usd>2990.07</cargo_energia_usd>
+    <cargo_demanda_usd>1262.15</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>15069.51</total_factura_usd>
-    <emisiones_alcance2_kg_co2>6043.87</emisiones_alcance2_kg_co2>
+    <total_factura_usd>4266.54</total_factura_usd>
+    <emisiones_alcance2_kg_co2>2882.53</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-04-CDS-205" building_id="CDS-205" mes="4">
-    <kwh_facturados>79157.11</kwh_facturados>
-    <kwh_ppa_renovable>47494.27</kwh_ppa_renovable>
-    <kwh_red_sin>31662.84</kwh_red_sin>
-    <demanda_maxima_kw>237.26</demanda_maxima_kw>
-    <factor_potencia_mensual>0.911</factor_potencia_mensual>
-    <cargo_energia_usd>11715.25</cargo_energia_usd>
-    <cargo_demanda_usd>3523.31</cargo_demanda_usd>
+    <kwh_facturados>22054.70</kwh_facturados>
+    <demanda_maxima_kw>69.24</demanda_maxima_kw>
+    <factor_potencia_mensual>0.912</factor_potencia_mensual>
+    <cargo_energia_usd>3433.92</cargo_energia_usd>
+    <cargo_demanda_usd>1400.73</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>15238.56</total_factura_usd>
-    <emisiones_alcance2_kg_co2>6079.27</emisiones_alcance2_kg_co2>
+    <total_factura_usd>4848.97</total_factura_usd>
+    <emisiones_alcance2_kg_co2>3310.41</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-05-CDS-205" building_id="CDS-205" mes="5">
-    <kwh_facturados>73174.56</kwh_facturados>
-    <kwh_ppa_renovable>43904.74</kwh_ppa_renovable>
-    <kwh_red_sin>29269.82</kwh_red_sin>
-    <demanda_maxima_kw>221.98</demanda_maxima_kw>
+    <kwh_facturados>20621.04</kwh_facturados>
+    <demanda_maxima_kw>68.40</demanda_maxima_kw>
     <factor_potencia_mensual>0.913</factor_potencia_mensual>
-    <cargo_energia_usd>10829.83</cargo_energia_usd>
-    <cargo_demanda_usd>3296.40</cargo_demanda_usd>
+    <cargo_energia_usd>3210.70</cargo_energia_usd>
+    <cargo_demanda_usd>1383.73</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>14126.23</total_factura_usd>
-    <emisiones_alcance2_kg_co2>5619.81</emisiones_alcance2_kg_co2>
+    <total_factura_usd>4608.75</total_factura_usd>
+    <emisiones_alcance2_kg_co2>3095.22</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-06-CDS-205" building_id="CDS-205" mes="6">
-    <kwh_facturados>70113.54</kwh_facturados>
-    <kwh_ppa_renovable>42068.12</kwh_ppa_renovable>
-    <kwh_red_sin>28045.42</kwh_red_sin>
-    <demanda_maxima_kw>231.82</demanda_maxima_kw>
-    <factor_potencia_mensual>0.902</factor_potencia_mensual>
-    <cargo_energia_usd>10376.80</cargo_energia_usd>
-    <cargo_demanda_usd>3442.53</cargo_demanda_usd>
+    <kwh_facturados>19757.18</kwh_facturados>
+    <demanda_maxima_kw>63.22</demanda_maxima_kw>
+    <factor_potencia_mensual>0.911</factor_potencia_mensual>
+    <cargo_energia_usd>3076.19</cargo_energia_usd>
+    <cargo_demanda_usd>1278.94</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>13819.33</total_factura_usd>
-    <emisiones_alcance2_kg_co2>5384.72</emisiones_alcance2_kg_co2>
+    <total_factura_usd>4369.45</total_factura_usd>
+    <emisiones_alcance2_kg_co2>2965.55</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-07-CDS-205" building_id="CDS-205" mes="7">
-    <kwh_facturados>71598.49</kwh_facturados>
-    <kwh_ppa_renovable>42959.09</kwh_ppa_renovable>
-    <kwh_red_sin>28639.40</kwh_red_sin>
-    <demanda_maxima_kw>228.64</demanda_maxima_kw>
-    <factor_potencia_mensual>0.911</factor_potencia_mensual>
-    <cargo_energia_usd>10596.58</cargo_energia_usd>
-    <cargo_demanda_usd>3395.30</cargo_demanda_usd>
+    <kwh_facturados>19754.77</kwh_facturados>
+    <demanda_maxima_kw>59.60</demanda_maxima_kw>
+    <factor_potencia_mensual>0.909</factor_potencia_mensual>
+    <cargo_energia_usd>3075.82</cargo_energia_usd>
+    <cargo_demanda_usd>1205.71</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>13991.88</total_factura_usd>
-    <emisiones_alcance2_kg_co2>5498.76</emisiones_alcance2_kg_co2>
+    <total_factura_usd>4295.85</total_factura_usd>
+    <emisiones_alcance2_kg_co2>2965.19</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-08-CDS-205" building_id="CDS-205" mes="8">
-    <kwh_facturados>66047.41</kwh_facturados>
-    <kwh_ppa_renovable>39628.45</kwh_ppa_renovable>
-    <kwh_red_sin>26418.96</kwh_red_sin>
-    <demanda_maxima_kw>198.05</demanda_maxima_kw>
-    <factor_potencia_mensual>0.910</factor_potencia_mensual>
-    <cargo_energia_usd>9775.02</cargo_energia_usd>
-    <cargo_demanda_usd>2941.04</cargo_demanda_usd>
+    <kwh_facturados>20440.08</kwh_facturados>
+    <demanda_maxima_kw>60.05</demanda_maxima_kw>
+    <factor_potencia_mensual>0.912</factor_potencia_mensual>
+    <cargo_energia_usd>3182.52</cargo_energia_usd>
+    <cargo_demanda_usd>1214.81</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>12716.06</total_factura_usd>
-    <emisiones_alcance2_kg_co2>5072.44</emisiones_alcance2_kg_co2>
+    <total_factura_usd>4411.65</total_factura_usd>
+    <emisiones_alcance2_kg_co2>3068.06</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-09-CDS-205" building_id="CDS-205" mes="9">
-    <kwh_facturados>64889.83</kwh_facturados>
-    <kwh_ppa_renovable>38933.90</kwh_ppa_renovable>
-    <kwh_red_sin>25955.93</kwh_red_sin>
-    <demanda_maxima_kw>199.15</demanda_maxima_kw>
-    <factor_potencia_mensual>0.910</factor_potencia_mensual>
-    <cargo_energia_usd>9603.69</cargo_energia_usd>
-    <cargo_demanda_usd>2957.38</cargo_demanda_usd>
+    <kwh_facturados>19655.67</kwh_facturados>
+    <demanda_maxima_kw>62.22</demanda_maxima_kw>
+    <factor_potencia_mensual>0.911</factor_potencia_mensual>
+    <cargo_energia_usd>3060.39</cargo_energia_usd>
+    <cargo_demanda_usd>1258.71</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>12561.07</total_factura_usd>
-    <emisiones_alcance2_kg_co2>4983.54</emisiones_alcance2_kg_co2>
+    <total_factura_usd>4333.42</total_factura_usd>
+    <emisiones_alcance2_kg_co2>2950.32</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-10-CDS-205" building_id="CDS-205" mes="10">
-    <kwh_facturados>64661.33</kwh_facturados>
-    <kwh_ppa_renovable>38796.80</kwh_ppa_renovable>
-    <kwh_red_sin>25864.53</kwh_red_sin>
-    <demanda_maxima_kw>201.33</demanda_maxima_kw>
+    <kwh_facturados>19309.34</kwh_facturados>
+    <demanda_maxima_kw>56.56</demanda_maxima_kw>
     <factor_potencia_mensual>0.911</factor_potencia_mensual>
-    <cargo_energia_usd>9569.88</cargo_energia_usd>
-    <cargo_demanda_usd>2989.75</cargo_demanda_usd>
+    <cargo_energia_usd>3006.46</cargo_energia_usd>
+    <cargo_demanda_usd>1144.21</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>12559.63</total_factura_usd>
-    <emisiones_alcance2_kg_co2>4965.99</emisiones_alcance2_kg_co2>
+    <total_factura_usd>4164.99</total_factura_usd>
+    <emisiones_alcance2_kg_co2>2898.33</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-11-CDS-205" building_id="CDS-205" mes="11">
-    <kwh_facturados>62395.34</kwh_facturados>
-    <kwh_ppa_renovable>37437.20</kwh_ppa_renovable>
-    <kwh_red_sin>24958.14</kwh_red_sin>
-    <demanda_maxima_kw>204.61</demanda_maxima_kw>
-    <factor_potencia_mensual>0.911</factor_potencia_mensual>
-    <cargo_energia_usd>9234.51</cargo_energia_usd>
-    <cargo_demanda_usd>3038.46</cargo_demanda_usd>
+    <kwh_facturados>15677.60</kwh_facturados>
+    <demanda_maxima_kw>54.51</demanda_maxima_kw>
+    <factor_potencia_mensual>0.910</factor_potencia_mensual>
+    <cargo_energia_usd>2441.00</cargo_energia_usd>
+    <cargo_demanda_usd>1102.74</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>12272.97</total_factura_usd>
-    <emisiones_alcance2_kg_co2>4791.96</emisiones_alcance2_kg_co2>
+    <total_factura_usd>3558.06</total_factura_usd>
+    <emisiones_alcance2_kg_co2>2353.21</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-12-CDS-205" building_id="CDS-205" mes="12">
-    <kwh_facturados>71060.44</kwh_facturados>
-    <kwh_ppa_renovable>42636.26</kwh_ppa_renovable>
-    <kwh_red_sin>28424.18</kwh_red_sin>
-    <demanda_maxima_kw>212.02</demanda_maxima_kw>
-    <factor_potencia_mensual>0.910</factor_potencia_mensual>
-    <cargo_energia_usd>10516.95</cargo_energia_usd>
-    <cargo_demanda_usd>3148.50</cargo_demanda_usd>
+    <kwh_facturados>17803.24</kwh_facturados>
+    <demanda_maxima_kw>55.65</demanda_maxima_kw>
+    <factor_potencia_mensual>0.908</factor_potencia_mensual>
+    <cargo_energia_usd>2771.96</cargo_energia_usd>
+    <cargo_demanda_usd>1125.80</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>13665.45</total_factura_usd>
-    <emisiones_alcance2_kg_co2>5457.44</emisiones_alcance2_kg_co2>
+    <total_factura_usd>3912.08</total_factura_usd>
+    <emisiones_alcance2_kg_co2>2672.27</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-01-CDS-208" building_id="CDS-208" mes="1">
-    <kwh_facturados>156967.11</kwh_facturados>
-    <kwh_ppa_renovable>70635.20</kwh_ppa_renovable>
-    <kwh_red_sin>86331.91</kwh_red_sin>
-    <demanda_maxima_kw>339.50</demanda_maxima_kw>
-    <factor_potencia_mensual>0.872</factor_potencia_mensual>
-    <cargo_energia_usd>24408.39</cargo_energia_usd>
-    <cargo_demanda_usd>5041.57</cargo_demanda_usd>
-    <penalizacion_fp_usd>412.30</penalizacion_fp_usd>
-    <total_factura_usd>29862.26</total_factura_usd>
-    <emisiones_alcance2_kg_co2>15516.20</emisiones_alcance2_kg_co2>
+    <kwh_facturados>41669.91</kwh_facturados>
+    <demanda_maxima_kw>95.14</demanda_maxima_kw>
+    <factor_potencia_mensual>0.869</factor_potencia_mensual>
+    <cargo_energia_usd>6488.00</cargo_energia_usd>
+    <cargo_demanda_usd>1924.68</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>119.33</penalizacion_fp_usd>
+    <total_factura_usd>8546.33</total_factura_usd>
+    <emisiones_alcance2_kg_co2>6254.65</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-02-CDS-208" building_id="CDS-208" mes="2">
-    <kwh_facturados>143830.11</kwh_facturados>
-    <kwh_ppa_renovable>64723.55</kwh_ppa_renovable>
-    <kwh_red_sin>79106.56</kwh_red_sin>
-    <demanda_maxima_kw>355.67</demanda_maxima_kw>
-    <factor_potencia_mensual>0.867</factor_potencia_mensual>
-    <cargo_energia_usd>22365.58</cargo_energia_usd>
-    <cargo_demanda_usd>5281.70</cargo_demanda_usd>
-    <penalizacion_fp_usd>456.18</penalizacion_fp_usd>
-    <total_factura_usd>28103.46</total_factura_usd>
-    <emisiones_alcance2_kg_co2>14217.61</emisiones_alcance2_kg_co2>
+    <kwh_facturados>45426.00</kwh_facturados>
+    <demanda_maxima_kw>103.89</demanda_maxima_kw>
+    <factor_potencia_mensual>0.866</factor_potencia_mensual>
+    <cargo_energia_usd>7072.83</cargo_energia_usd>
+    <cargo_demanda_usd>2101.69</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>142.91</penalizacion_fp_usd>
+    <total_factura_usd>9331.75</total_factura_usd>
+    <emisiones_alcance2_kg_co2>6818.44</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-03-CDS-208" building_id="CDS-208" mes="3">
-    <kwh_facturados>181065.13</kwh_facturados>
-    <kwh_ppa_renovable>81479.31</kwh_ppa_renovable>
-    <kwh_red_sin>99585.82</kwh_red_sin>
-    <demanda_maxima_kw>454.09</demanda_maxima_kw>
-    <factor_potencia_mensual>0.856</factor_potencia_mensual>
-    <cargo_energia_usd>28155.63</cargo_energia_usd>
-    <cargo_demanda_usd>6743.24</cargo_demanda_usd>
-    <penalizacion_fp_usd>767.78</penalizacion_fp_usd>
-    <total_factura_usd>35666.65</total_factura_usd>
-    <emisiones_alcance2_kg_co2>17898.29</emisiones_alcance2_kg_co2>
+    <kwh_facturados>52452.09</kwh_facturados>
+    <demanda_maxima_kw>134.49</demanda_maxima_kw>
+    <factor_potencia_mensual>0.858</factor_potencia_mensual>
+    <cargo_energia_usd>8166.79</cargo_energia_usd>
+    <cargo_demanda_usd>2720.73</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>228.54</penalizacion_fp_usd>
+    <total_factura_usd>11130.38</total_factura_usd>
+    <emisiones_alcance2_kg_co2>7873.06</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-04-CDS-208" building_id="CDS-208" mes="4">
-    <kwh_facturados>161219.56</kwh_facturados>
-    <kwh_ppa_renovable>72548.80</kwh_ppa_renovable>
-    <kwh_red_sin>88670.76</kwh_red_sin>
-    <demanda_maxima_kw>337.82</demanda_maxima_kw>
-    <factor_potencia_mensual>0.872</factor_potencia_mensual>
-    <cargo_energia_usd>25069.64</cargo_energia_usd>
-    <cargo_demanda_usd>5016.63</cargo_demanda_usd>
-    <penalizacion_fp_usd>421.21</penalizacion_fp_usd>
-    <total_factura_usd>30507.48</total_factura_usd>
-    <emisiones_alcance2_kg_co2>15936.55</emisiones_alcance2_kg_co2>
+    <kwh_facturados>50963.04</kwh_facturados>
+    <demanda_maxima_kw>111.39</demanda_maxima_kw>
+    <factor_potencia_mensual>0.876</factor_potencia_mensual>
+    <cargo_energia_usd>7934.95</cargo_energia_usd>
+    <cargo_demanda_usd>2253.42</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>108.16</penalizacion_fp_usd>
+    <total_factura_usd>10310.85</total_factura_usd>
+    <emisiones_alcance2_kg_co2>7649.55</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-05-CDS-208" building_id="CDS-208" mes="5">
-    <kwh_facturados>151670.13</kwh_facturados>
-    <kwh_ppa_renovable>68251.56</kwh_ppa_renovable>
-    <kwh_red_sin>83418.57</kwh_red_sin>
-    <demanda_maxima_kw>332.34</demanda_maxima_kw>
-    <factor_potencia_mensual>0.872</factor_potencia_mensual>
-    <cargo_energia_usd>23584.71</cargo_energia_usd>
-    <cargo_demanda_usd>4935.25</cargo_demanda_usd>
-    <penalizacion_fp_usd>399.28</penalizacion_fp_usd>
-    <total_factura_usd>28919.24</total_factura_usd>
-    <emisiones_alcance2_kg_co2>14992.59</emisiones_alcance2_kg_co2>
+    <kwh_facturados>48942.81</kwh_facturados>
+    <demanda_maxima_kw>107.93</demanda_maxima_kw>
+    <factor_potencia_mensual>0.870</factor_potencia_mensual>
+    <cargo_energia_usd>7620.40</cargo_energia_usd>
+    <cargo_demanda_usd>2183.42</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>131.01</penalizacion_fp_usd>
+    <total_factura_usd>9949.15</total_factura_usd>
+    <emisiones_alcance2_kg_co2>7346.32</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-06-CDS-208" building_id="CDS-208" mes="6">
-    <kwh_facturados>142102.07</kwh_facturados>
-    <kwh_ppa_renovable>63945.93</kwh_ppa_renovable>
-    <kwh_red_sin>78156.14</kwh_red_sin>
-    <demanda_maxima_kw>308.23</demanda_maxima_kw>
-    <factor_potencia_mensual>0.869</factor_potencia_mensual>
-    <cargo_energia_usd>22096.87</cargo_energia_usd>
-    <cargo_demanda_usd>4577.22</cargo_demanda_usd>
-    <penalizacion_fp_usd>413.45</penalizacion_fp_usd>
-    <total_factura_usd>27087.54</total_factura_usd>
-    <emisiones_alcance2_kg_co2>14046.79</emisiones_alcance2_kg_co2>
+    <kwh_facturados>47756.15</kwh_facturados>
+    <demanda_maxima_kw>103.43</demanda_maxima_kw>
+    <factor_potencia_mensual>0.870</factor_potencia_mensual>
+    <cargo_energia_usd>7435.63</cargo_energia_usd>
+    <cargo_demanda_usd>2092.39</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>125.54</penalizacion_fp_usd>
+    <total_factura_usd>9667.88</total_factura_usd>
+    <emisiones_alcance2_kg_co2>7168.20</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-07-CDS-208" building_id="CDS-208" mes="7">
-    <kwh_facturados>144806.71</kwh_facturados>
-    <kwh_ppa_renovable>65163.02</kwh_ppa_renovable>
-    <kwh_red_sin>79643.69</kwh_red_sin>
-    <demanda_maxima_kw>308.34</demanda_maxima_kw>
-    <factor_potencia_mensual>0.865</factor_potencia_mensual>
-    <cargo_energia_usd>22517.44</cargo_energia_usd>
-    <cargo_demanda_usd>4578.85</cargo_demanda_usd>
-    <penalizacion_fp_usd>474.19</penalizacion_fp_usd>
-    <total_factura_usd>27570.48</total_factura_usd>
-    <emisiones_alcance2_kg_co2>14314.14</emisiones_alcance2_kg_co2>
+    <kwh_facturados>46115.55</kwh_facturados>
+    <demanda_maxima_kw>99.91</demanda_maxima_kw>
+    <factor_potencia_mensual>0.871</factor_potencia_mensual>
+    <cargo_energia_usd>7180.19</cargo_energia_usd>
+    <cargo_demanda_usd>2021.18</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>117.23</penalizacion_fp_usd>
+    <total_factura_usd>9332.92</total_factura_usd>
+    <emisiones_alcance2_kg_co2>6921.94</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-08-CDS-208" building_id="CDS-208" mes="8">
-    <kwh_facturados>144193.63</kwh_facturados>
-    <kwh_ppa_renovable>64887.13</kwh_ppa_renovable>
-    <kwh_red_sin>79306.50</kwh_red_sin>
-    <demanda_maxima_kw>307.25</demanda_maxima_kw>
-    <factor_potencia_mensual>0.870</factor_potencia_mensual>
-    <cargo_energia_usd>22422.11</cargo_energia_usd>
-    <cargo_demanda_usd>4562.66</cargo_demanda_usd>
-    <penalizacion_fp_usd>404.77</penalizacion_fp_usd>
-    <total_factura_usd>27389.54</total_factura_usd>
-    <emisiones_alcance2_kg_co2>14253.54</emisiones_alcance2_kg_co2>
+    <kwh_facturados>48665.27</kwh_facturados>
+    <demanda_maxima_kw>102.32</demanda_maxima_kw>
+    <factor_potencia_mensual>0.872</factor_potencia_mensual>
+    <cargo_energia_usd>7577.18</cargo_energia_usd>
+    <cargo_demanda_usd>2069.93</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>115.92</penalizacion_fp_usd>
+    <total_factura_usd>9777.35</total_factura_usd>
+    <emisiones_alcance2_kg_co2>7304.66</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-09-CDS-208" building_id="CDS-208" mes="9">
-    <kwh_facturados>137451.45</kwh_facturados>
-    <kwh_ppa_renovable>61853.15</kwh_ppa_renovable>
-    <kwh_red_sin>75598.30</kwh_red_sin>
-    <demanda_maxima_kw>306.30</demanda_maxima_kw>
+    <kwh_facturados>45767.89</kwh_facturados>
+    <demanda_maxima_kw>99.94</demanda_maxima_kw>
     <factor_potencia_mensual>0.869</factor_potencia_mensual>
-    <cargo_energia_usd>21373.70</cargo_energia_usd>
-    <cargo_demanda_usd>4548.56</cargo_demanda_usd>
-    <penalizacion_fp_usd>401.80</penalizacion_fp_usd>
-    <total_factura_usd>26324.06</total_factura_usd>
-    <emisiones_alcance2_kg_co2>13587.08</emisiones_alcance2_kg_co2>
+    <cargo_energia_usd>7126.06</cargo_energia_usd>
+    <cargo_demanda_usd>2021.79</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>125.35</penalizacion_fp_usd>
+    <total_factura_usd>9287.52</total_factura_usd>
+    <emisiones_alcance2_kg_co2>6869.76</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-10-CDS-208" building_id="CDS-208" mes="10">
-    <kwh_facturados>138512.00</kwh_facturados>
-    <kwh_ppa_renovable>62330.40</kwh_ppa_renovable>
-    <kwh_red_sin>76181.60</kwh_red_sin>
-    <demanda_maxima_kw>295.19</demanda_maxima_kw>
-    <factor_potencia_mensual>0.873</factor_potencia_mensual>
-    <cargo_energia_usd>21538.62</cargo_energia_usd>
-    <cargo_demanda_usd>4383.57</cargo_demanda_usd>
-    <penalizacion_fp_usd>349.95</penalizacion_fp_usd>
-    <total_factura_usd>26272.14</total_factura_usd>
-    <emisiones_alcance2_kg_co2>13691.91</emisiones_alcance2_kg_co2>
+    <kwh_facturados>45949.62</kwh_facturados>
+    <demanda_maxima_kw>102.29</demanda_maxima_kw>
+    <factor_potencia_mensual>0.869</factor_potencia_mensual>
+    <cargo_energia_usd>7154.36</cargo_energia_usd>
+    <cargo_demanda_usd>2069.33</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>128.30</penalizacion_fp_usd>
+    <total_factura_usd>9366.31</total_factura_usd>
+    <emisiones_alcance2_kg_co2>6897.04</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-11-CDS-208" building_id="CDS-208" mes="11">
-    <kwh_facturados>135908.38</kwh_facturados>
-    <kwh_ppa_renovable>61158.77</kwh_ppa_renovable>
-    <kwh_red_sin>74749.61</kwh_red_sin>
-    <demanda_maxima_kw>307.88</demanda_maxima_kw>
-    <factor_potencia_mensual>0.871</factor_potencia_mensual>
-    <cargo_energia_usd>21133.75</cargo_energia_usd>
-    <cargo_demanda_usd>4572.02</cargo_demanda_usd>
-    <penalizacion_fp_usd>372.73</penalizacion_fp_usd>
-    <total_factura_usd>26078.50</total_factura_usd>
-    <emisiones_alcance2_kg_co2>13434.54</emisiones_alcance2_kg_co2>
+    <kwh_facturados>42477.19</kwh_facturados>
+    <demanda_maxima_kw>89.59</demanda_maxima_kw>
+    <factor_potencia_mensual>0.870</factor_potencia_mensual>
+    <cargo_energia_usd>6613.70</cargo_energia_usd>
+    <cargo_demanda_usd>1812.41</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>108.74</penalizacion_fp_usd>
+    <total_factura_usd>8549.17</total_factura_usd>
+    <emisiones_alcance2_kg_co2>6375.83</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-12-CDS-208" building_id="CDS-208" mes="12">
-    <kwh_facturados>149800.79</kwh_facturados>
-    <kwh_ppa_renovable>67410.36</kwh_ppa_renovable>
-    <kwh_red_sin>82390.43</kwh_red_sin>
-    <demanda_maxima_kw>319.54</demanda_maxima_kw>
-    <factor_potencia_mensual>0.868</factor_potencia_mensual>
-    <cargo_energia_usd>23294.02</cargo_energia_usd>
-    <cargo_demanda_usd>4745.17</cargo_demanda_usd>
-    <penalizacion_fp_usd>448.63</penalizacion_fp_usd>
-    <total_factura_usd>28487.82</total_factura_usd>
-    <emisiones_alcance2_kg_co2>14807.81</emisiones_alcance2_kg_co2>
+    <kwh_facturados>43814.46</kwh_facturados>
+    <demanda_maxima_kw>90.92</demanda_maxima_kw>
+    <factor_potencia_mensual>0.871</factor_potencia_mensual>
+    <cargo_energia_usd>6821.91</cargo_energia_usd>
+    <cargo_demanda_usd>1839.31</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>106.68</penalizacion_fp_usd>
+    <total_factura_usd>8782.22</total_factura_usd>
+    <emisiones_alcance2_kg_co2>6576.55</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-01-CDS-227" building_id="CDS-227" mes="1">
-    <kwh_facturados>99515.71</kwh_facturados>
-    <kwh_ppa_renovable>49757.86</kwh_ppa_renovable>
-    <kwh_red_sin>49757.85</kwh_red_sin>
-    <demanda_maxima_kw>284.11</demanda_maxima_kw>
-    <factor_potencia_mensual>0.890</factor_potencia_mensual>
-    <cargo_energia_usd>15225.90</cargo_energia_usd>
-    <cargo_demanda_usd>4219.03</cargo_demanda_usd>
-    <penalizacion_fp_usd>97.22</penalizacion_fp_usd>
-    <total_factura_usd>19542.15</total_factura_usd>
-    <emisiones_alcance2_kg_co2>9105.69</emisiones_alcance2_kg_co2>
+    <kwh_facturados>21323.62</kwh_facturados>
+    <demanda_maxima_kw>62.70</demanda_maxima_kw>
+    <factor_potencia_mensual>0.891</factor_potencia_mensual>
+    <cargo_energia_usd>3320.09</cargo_energia_usd>
+    <cargo_demanda_usd>1268.42</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>22.83</penalizacion_fp_usd>
+    <total_factura_usd>4625.66</total_factura_usd>
+    <emisiones_alcance2_kg_co2>3200.68</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-02-CDS-227" building_id="CDS-227" mes="2">
-    <kwh_facturados>92582.84</kwh_facturados>
-    <kwh_ppa_renovable>46291.42</kwh_ppa_renovable>
-    <kwh_red_sin>46291.42</kwh_red_sin>
-    <demanda_maxima_kw>302.02</demanda_maxima_kw>
-    <factor_potencia_mensual>0.890</factor_potencia_mensual>
-    <cargo_energia_usd>14165.17</cargo_energia_usd>
-    <cargo_demanda_usd>4485.00</cargo_demanda_usd>
-    <penalizacion_fp_usd>93.25</penalizacion_fp_usd>
-    <total_factura_usd>18743.42</total_factura_usd>
-    <emisiones_alcance2_kg_co2>8471.33</emisiones_alcance2_kg_co2>
+    <kwh_facturados>24075.24</kwh_facturados>
+    <demanda_maxima_kw>78.15</demanda_maxima_kw>
+    <factor_potencia_mensual>0.888</factor_potencia_mensual>
+    <cargo_energia_usd>3748.51</cargo_energia_usd>
+    <cargo_demanda_usd>1580.97</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>37.94</penalizacion_fp_usd>
+    <total_factura_usd>5381.74</total_factura_usd>
+    <emisiones_alcance2_kg_co2>3613.69</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-03-CDS-227" building_id="CDS-227" mes="3">
-    <kwh_facturados>104021.62</kwh_facturados>
-    <kwh_ppa_renovable>52010.81</kwh_ppa_renovable>
-    <kwh_red_sin>52010.81</kwh_red_sin>
-    <demanda_maxima_kw>328.66</demanda_maxima_kw>
-    <factor_potencia_mensual>0.892</factor_potencia_mensual>
-    <cargo_energia_usd>15915.31</cargo_energia_usd>
-    <cargo_demanda_usd>4880.60</cargo_demanda_usd>
-    <penalizacion_fp_usd>83.18</penalizacion_fp_usd>
-    <total_factura_usd>20879.09</total_factura_usd>
-    <emisiones_alcance2_kg_co2>9517.98</emisiones_alcance2_kg_co2>
+    <kwh_facturados>23781.25</kwh_facturados>
+    <demanda_maxima_kw>88.55</demanda_maxima_kw>
+    <factor_potencia_mensual>0.885</factor_potencia_mensual>
+    <cargo_energia_usd>3702.74</cargo_energia_usd>
+    <cargo_demanda_usd>1791.37</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>53.74</penalizacion_fp_usd>
+    <total_factura_usd>5562.17</total_factura_usd>
+    <emisiones_alcance2_kg_co2>3569.57</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-04-CDS-227" building_id="CDS-227" mes="4">
-    <kwh_facturados>102145.07</kwh_facturados>
-    <kwh_ppa_renovable>51072.54</kwh_ppa_renovable>
-    <kwh_red_sin>51072.53</kwh_red_sin>
-    <demanda_maxima_kw>320.14</demanda_maxima_kw>
-    <factor_potencia_mensual>0.886</factor_potencia_mensual>
-    <cargo_energia_usd>15628.20</cargo_energia_usd>
-    <cargo_demanda_usd>4754.08</cargo_demanda_usd>
-    <penalizacion_fp_usd>142.68</penalizacion_fp_usd>
-    <total_factura_usd>20524.96</total_factura_usd>
-    <emisiones_alcance2_kg_co2>9346.27</emisiones_alcance2_kg_co2>
+    <kwh_facturados>26243.54</kwh_facturados>
+    <demanda_maxima_kw>88.73</demanda_maxima_kw>
+    <factor_potencia_mensual>0.887</factor_potencia_mensual>
+    <cargo_energia_usd>4086.12</cargo_energia_usd>
+    <cargo_demanda_usd>1795.01</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>46.67</penalizacion_fp_usd>
+    <total_factura_usd>5942.12</total_factura_usd>
+    <emisiones_alcance2_kg_co2>3939.16</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-05-CDS-227" building_id="CDS-227" mes="5">
-    <kwh_facturados>94028.90</kwh_facturados>
-    <kwh_ppa_renovable>47014.45</kwh_ppa_renovable>
-    <kwh_red_sin>47014.45</kwh_red_sin>
-    <demanda_maxima_kw>281.22</demanda_maxima_kw>
-    <factor_potencia_mensual>0.888</factor_potencia_mensual>
-    <cargo_energia_usd>14386.42</cargo_energia_usd>
-    <cargo_demanda_usd>4176.12</cargo_demanda_usd>
-    <penalizacion_fp_usd>111.38</penalizacion_fp_usd>
-    <total_factura_usd>18673.92</total_factura_usd>
-    <emisiones_alcance2_kg_co2>8603.64</emisiones_alcance2_kg_co2>
+    <kwh_facturados>25366.39</kwh_facturados>
+    <demanda_maxima_kw>76.58</demanda_maxima_kw>
+    <factor_potencia_mensual>0.890</factor_potencia_mensual>
+    <cargo_energia_usd>3949.55</cargo_energia_usd>
+    <cargo_demanda_usd>1549.21</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>30.98</penalizacion_fp_usd>
+    <total_factura_usd>5544.06</total_factura_usd>
+    <emisiones_alcance2_kg_co2>3807.50</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-06-CDS-227" building_id="CDS-227" mes="6">
-    <kwh_facturados>86942.37</kwh_facturados>
-    <kwh_ppa_renovable>43471.18</kwh_ppa_renovable>
-    <kwh_red_sin>43471.19</kwh_red_sin>
-    <demanda_maxima_kw>272.33</demanda_maxima_kw>
-    <factor_potencia_mensual>0.890</factor_potencia_mensual>
-    <cargo_energia_usd>13302.18</cargo_energia_usd>
-    <cargo_demanda_usd>4044.10</cargo_demanda_usd>
-    <penalizacion_fp_usd>86.73</penalizacion_fp_usd>
-    <total_factura_usd>17433.01</total_factura_usd>
-    <emisiones_alcance2_kg_co2>7955.23</emisiones_alcance2_kg_co2>
+    <kwh_facturados>24597.24</kwh_facturados>
+    <demanda_maxima_kw>78.89</demanda_maxima_kw>
+    <factor_potencia_mensual>0.887</factor_potencia_mensual>
+    <cargo_energia_usd>3829.79</cargo_energia_usd>
+    <cargo_demanda_usd>1595.94</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>41.49</penalizacion_fp_usd>
+    <total_factura_usd>5481.54</total_factura_usd>
+    <emisiones_alcance2_kg_co2>3692.05</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-07-CDS-227" building_id="CDS-227" mes="7">
-    <kwh_facturados>89789.23</kwh_facturados>
-    <kwh_ppa_renovable>44894.61</kwh_ppa_renovable>
-    <kwh_red_sin>44894.62</kwh_red_sin>
-    <demanda_maxima_kw>277.15</demanda_maxima_kw>
-    <factor_potencia_mensual>0.892</factor_potencia_mensual>
-    <cargo_energia_usd>13737.75</cargo_energia_usd>
-    <cargo_demanda_usd>4115.68</cargo_demanda_usd>
-    <penalizacion_fp_usd>71.41</penalizacion_fp_usd>
-    <total_factura_usd>17924.84</total_factura_usd>
-    <emisiones_alcance2_kg_co2>8215.72</emisiones_alcance2_kg_co2>
+    <kwh_facturados>24338.50</kwh_facturados>
+    <demanda_maxima_kw>71.18</demanda_maxima_kw>
+    <factor_potencia_mensual>0.896</factor_potencia_mensual>
+    <cargo_energia_usd>3789.50</cargo_energia_usd>
+    <cargo_demanda_usd>1439.97</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>11.52</penalizacion_fp_usd>
+    <total_factura_usd>5255.31</total_factura_usd>
+    <emisiones_alcance2_kg_co2>3653.21</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-08-CDS-227" building_id="CDS-227" mes="8">
-    <kwh_facturados>96070.98</kwh_facturados>
-    <kwh_ppa_renovable>48035.49</kwh_ppa_renovable>
-    <kwh_red_sin>48035.49</kwh_red_sin>
-    <demanda_maxima_kw>343.11</demanda_maxima_kw>
-    <factor_potencia_mensual>0.880</factor_potencia_mensual>
-    <cargo_energia_usd>14698.86</cargo_energia_usd>
-    <cargo_demanda_usd>5095.18</cargo_demanda_usd>
-    <penalizacion_fp_usd>197.94</penalizacion_fp_usd>
-    <total_factura_usd>19991.98</total_factura_usd>
-    <emisiones_alcance2_kg_co2>8790.49</emisiones_alcance2_kg_co2>
+    <kwh_facturados>29156.65</kwh_facturados>
+    <demanda_maxima_kw>108.40</demanda_maxima_kw>
+    <factor_potencia_mensual>0.881</factor_potencia_mensual>
+    <cargo_energia_usd>4539.69</cargo_energia_usd>
+    <cargo_demanda_usd>2192.93</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>83.33</penalizacion_fp_usd>
+    <total_factura_usd>6830.27</total_factura_usd>
+    <emisiones_alcance2_kg_co2>4376.41</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-09-CDS-227" building_id="CDS-227" mes="9">
-    <kwh_facturados>84714.14</kwh_facturados>
-    <kwh_ppa_renovable>42357.07</kwh_ppa_renovable>
-    <kwh_red_sin>42357.07</kwh_red_sin>
-    <demanda_maxima_kw>257.94</demanda_maxima_kw>
-    <factor_potencia_mensual>0.887</factor_potencia_mensual>
-    <cargo_energia_usd>12961.26</cargo_energia_usd>
-    <cargo_demanda_usd>3830.41</cargo_demanda_usd>
-    <penalizacion_fp_usd>109.15</penalizacion_fp_usd>
-    <total_factura_usd>16900.82</total_factura_usd>
-    <emisiones_alcance2_kg_co2>7751.34</emisiones_alcance2_kg_co2>
+    <kwh_facturados>24132.45</kwh_facturados>
+    <demanda_maxima_kw>73.99</demanda_maxima_kw>
+    <factor_potencia_mensual>0.891</factor_potencia_mensual>
+    <cargo_energia_usd>3757.42</cargo_energia_usd>
+    <cargo_demanda_usd>1496.82</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>26.94</penalizacion_fp_usd>
+    <total_factura_usd>5295.50</total_factura_usd>
+    <emisiones_alcance2_kg_co2>3622.28</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-10-CDS-227" building_id="CDS-227" mes="10">
-    <kwh_facturados>83011.90</kwh_facturados>
-    <kwh_ppa_renovable>41505.95</kwh_ppa_renovable>
-    <kwh_red_sin>41505.95</kwh_red_sin>
-    <demanda_maxima_kw>237.47</demanda_maxima_kw>
-    <factor_potencia_mensual>0.888</factor_potencia_mensual>
-    <cargo_energia_usd>12700.82</cargo_energia_usd>
-    <cargo_demanda_usd>3526.43</cargo_demanda_usd>
-    <penalizacion_fp_usd>97.36</penalizacion_fp_usd>
-    <total_factura_usd>16324.61</total_factura_usd>
-    <emisiones_alcance2_kg_co2>7595.59</emisiones_alcance2_kg_co2>
+    <kwh_facturados>24478.22</kwh_facturados>
+    <demanda_maxima_kw>76.85</demanda_maxima_kw>
+    <factor_potencia_mensual>0.892</factor_potencia_mensual>
+    <cargo_energia_usd>3811.26</cargo_energia_usd>
+    <cargo_demanda_usd>1554.68</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>24.87</penalizacion_fp_usd>
+    <total_factura_usd>5405.13</total_factura_usd>
+    <emisiones_alcance2_kg_co2>3674.18</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-11-CDS-227" building_id="CDS-227" mes="11">
-    <kwh_facturados>78408.72</kwh_facturados>
-    <kwh_ppa_renovable>39204.36</kwh_ppa_renovable>
-    <kwh_red_sin>39204.36</kwh_red_sin>
-    <demanda_maxima_kw>246.52</demanda_maxima_kw>
+    <kwh_facturados>18929.52</kwh_facturados>
+    <demanda_maxima_kw>65.84</demanda_maxima_kw>
     <factor_potencia_mensual>0.891</factor_potencia_mensual>
-    <cargo_energia_usd>11996.53</cargo_energia_usd>
-    <cargo_demanda_usd>3660.82</cargo_demanda_usd>
-    <penalizacion_fp_usd>70.46</penalizacion_fp_usd>
-    <total_factura_usd>15727.81</total_factura_usd>
-    <emisiones_alcance2_kg_co2>7174.40</emisiones_alcance2_kg_co2>
+    <cargo_energia_usd>2947.33</cargo_energia_usd>
+    <cargo_demanda_usd>1331.94</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>23.97</penalizacion_fp_usd>
+    <total_factura_usd>4317.56</total_factura_usd>
+    <emisiones_alcance2_kg_co2>2841.32</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-12-CDS-227" building_id="CDS-227" mes="12">
-    <kwh_facturados>92038.31</kwh_facturados>
-    <kwh_ppa_renovable>46019.15</kwh_ppa_renovable>
-    <kwh_red_sin>46019.16</kwh_red_sin>
-    <demanda_maxima_kw>283.46</demanda_maxima_kw>
-    <factor_potencia_mensual>0.891</factor_potencia_mensual>
-    <cargo_energia_usd>14081.86</cargo_energia_usd>
-    <cargo_demanda_usd>4209.38</cargo_demanda_usd>
-    <penalizacion_fp_usd>82.31</penalizacion_fp_usd>
-    <total_factura_usd>18373.55</total_factura_usd>
-    <emisiones_alcance2_kg_co2>8421.51</emisiones_alcance2_kg_co2>
+    <kwh_facturados>21577.32</kwh_facturados>
+    <demanda_maxima_kw>63.97</demanda_maxima_kw>
+    <factor_potencia_mensual>0.892</factor_potencia_mensual>
+    <cargo_energia_usd>3359.59</cargo_energia_usd>
+    <cargo_demanda_usd>1294.11</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>20.71</penalizacion_fp_usd>
+    <total_factura_usd>4688.73</total_factura_usd>
+    <emisiones_alcance2_kg_co2>3238.76</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-01-CDS-234" building_id="CDS-234" mes="1">
-    <kwh_facturados>55887.39</kwh_facturados>
-    <kwh_ppa_renovable>39121.17</kwh_ppa_renovable>
-    <kwh_red_sin>16766.22</kwh_red_sin>
-    <demanda_maxima_kw>161.01</demanda_maxima_kw>
-    <factor_potencia_mensual>0.918</factor_potencia_mensual>
-    <cargo_energia_usd>7991.90</cargo_energia_usd>
-    <cargo_demanda_usd>2391.00</cargo_demanda_usd>
+    <kwh_facturados>10622.51</kwh_facturados>
+    <demanda_maxima_kw>30.22</demanda_maxima_kw>
+    <factor_potencia_mensual>0.922</factor_potencia_mensual>
+    <cargo_energia_usd>1653.92</cargo_energia_usd>
+    <cargo_demanda_usd>611.35</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>10382.90</total_factura_usd>
-    <emisiones_alcance2_kg_co2>3470.61</emisiones_alcance2_kg_co2>
+    <total_factura_usd>2279.59</total_factura_usd>
+    <emisiones_alcance2_kg_co2>1594.44</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-02-CDS-234" building_id="CDS-234" mes="2">
-    <kwh_facturados>52046.85</kwh_facturados>
-    <kwh_ppa_renovable>36432.79</kwh_ppa_renovable>
-    <kwh_red_sin>15614.06</kwh_red_sin>
-    <demanda_maxima_kw>169.91</demanda_maxima_kw>
-    <factor_potencia_mensual>0.921</factor_potencia_mensual>
-    <cargo_energia_usd>7442.70</cargo_energia_usd>
-    <cargo_demanda_usd>2523.16</cargo_demanda_usd>
+    <kwh_facturados>12007.56</kwh_facturados>
+    <demanda_maxima_kw>39.61</demanda_maxima_kw>
+    <factor_potencia_mensual>0.916</factor_potencia_mensual>
+    <cargo_energia_usd>1869.58</cargo_energia_usd>
+    <cargo_demanda_usd>801.31</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>9965.86</total_factura_usd>
-    <emisiones_alcance2_kg_co2>3232.11</emisiones_alcance2_kg_co2>
+    <total_factura_usd>2685.21</total_factura_usd>
+    <emisiones_alcance2_kg_co2>1802.33</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-03-CDS-234" building_id="CDS-234" mes="3">
-    <kwh_facturados>58262.67</kwh_facturados>
-    <kwh_ppa_renovable>40783.87</kwh_ppa_renovable>
-    <kwh_red_sin>17478.80</kwh_red_sin>
-    <demanda_maxima_kw>183.83</demanda_maxima_kw>
-    <factor_potencia_mensual>0.917</factor_potencia_mensual>
-    <cargo_energia_usd>8331.56</cargo_energia_usd>
-    <cargo_demanda_usd>2729.88</cargo_demanda_usd>
+    <kwh_facturados>11401.53</kwh_facturados>
+    <demanda_maxima_kw>36.67</demanda_maxima_kw>
+    <factor_potencia_mensual>0.919</factor_potencia_mensual>
+    <cargo_energia_usd>1775.22</cargo_energia_usd>
+    <cargo_demanda_usd>741.83</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>11061.44</total_factura_usd>
-    <emisiones_alcance2_kg_co2>3618.11</emisiones_alcance2_kg_co2>
+    <total_factura_usd>2531.37</total_factura_usd>
+    <emisiones_alcance2_kg_co2>1711.37</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-04-CDS-234" building_id="CDS-234" mes="4">
-    <kwh_facturados>57891.99</kwh_facturados>
-    <kwh_ppa_renovable>40524.39</kwh_ppa_renovable>
-    <kwh_red_sin>17367.60</kwh_red_sin>
-    <demanda_maxima_kw>168.66</demanda_maxima_kw>
-    <factor_potencia_mensual>0.920</factor_potencia_mensual>
-    <cargo_energia_usd>8278.55</cargo_energia_usd>
-    <cargo_demanda_usd>2504.60</cargo_demanda_usd>
+    <kwh_facturados>12748.58</kwh_facturados>
+    <demanda_maxima_kw>40.13</demanda_maxima_kw>
+    <factor_potencia_mensual>0.919</factor_potencia_mensual>
+    <cargo_energia_usd>1984.95</cargo_energia_usd>
+    <cargo_demanda_usd>811.83</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>10783.15</total_factura_usd>
-    <emisiones_alcance2_kg_co2>3595.09</emisiones_alcance2_kg_co2>
+    <total_factura_usd>2811.10</total_factura_usd>
+    <emisiones_alcance2_kg_co2>1913.56</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-05-CDS-234" building_id="CDS-234" mes="5">
-    <kwh_facturados>53417.02</kwh_facturados>
-    <kwh_ppa_renovable>37391.91</kwh_ppa_renovable>
-    <kwh_red_sin>16025.11</kwh_red_sin>
-    <demanda_maxima_kw>165.26</demanda_maxima_kw>
-    <factor_potencia_mensual>0.918</factor_potencia_mensual>
-    <cargo_energia_usd>7638.63</cargo_energia_usd>
-    <cargo_demanda_usd>2454.11</cargo_demanda_usd>
+    <kwh_facturados>12209.19</kwh_facturados>
+    <demanda_maxima_kw>38.19</demanda_maxima_kw>
+    <factor_potencia_mensual>0.922</factor_potencia_mensual>
+    <cargo_energia_usd>1900.97</cargo_energia_usd>
+    <cargo_demanda_usd>772.58</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>10092.74</total_factura_usd>
-    <emisiones_alcance2_kg_co2>3317.20</emisiones_alcance2_kg_co2>
+    <total_factura_usd>2687.87</total_factura_usd>
+    <emisiones_alcance2_kg_co2>1832.60</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-06-CDS-234" building_id="CDS-234" mes="6">
-    <kwh_facturados>50624.64</kwh_facturados>
-    <kwh_ppa_renovable>35437.25</kwh_ppa_renovable>
-    <kwh_red_sin>15187.39</kwh_red_sin>
-    <demanda_maxima_kw>162.35</demanda_maxima_kw>
+    <kwh_facturados>12058.31</kwh_facturados>
+    <demanda_maxima_kw>37.10</demanda_maxima_kw>
     <factor_potencia_mensual>0.919</factor_potencia_mensual>
-    <cargo_energia_usd>7239.32</cargo_energia_usd>
-    <cargo_demanda_usd>2410.90</cargo_demanda_usd>
+    <cargo_energia_usd>1877.48</cargo_energia_usd>
+    <cargo_demanda_usd>750.53</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>9650.22</total_factura_usd>
-    <emisiones_alcance2_kg_co2>3143.79</emisiones_alcance2_kg_co2>
+    <total_factura_usd>2642.33</total_factura_usd>
+    <emisiones_alcance2_kg_co2>1809.95</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-07-CDS-234" building_id="CDS-234" mes="7">
-    <kwh_facturados>53197.10</kwh_facturados>
-    <kwh_ppa_renovable>37237.97</kwh_ppa_renovable>
-    <kwh_red_sin>15959.13</kwh_red_sin>
-    <demanda_maxima_kw>151.86</demanda_maxima_kw>
-    <factor_potencia_mensual>0.922</factor_potencia_mensual>
-    <cargo_energia_usd>7607.19</cargo_energia_usd>
-    <cargo_demanda_usd>2255.12</cargo_demanda_usd>
+    <kwh_facturados>11989.33</kwh_facturados>
+    <demanda_maxima_kw>35.31</demanda_maxima_kw>
+    <factor_potencia_mensual>0.924</factor_potencia_mensual>
+    <cargo_energia_usd>1866.74</cargo_energia_usd>
+    <cargo_demanda_usd>714.32</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>9862.31</total_factura_usd>
-    <emisiones_alcance2_kg_co2>3303.54</emisiones_alcance2_kg_co2>
+    <total_factura_usd>2595.38</total_factura_usd>
+    <emisiones_alcance2_kg_co2>1799.60</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-08-CDS-234" building_id="CDS-234" mes="8">
-    <kwh_facturados>50868.43</kwh_facturados>
-    <kwh_ppa_renovable>35607.90</kwh_ppa_renovable>
-    <kwh_red_sin>15260.53</kwh_red_sin>
-    <demanda_maxima_kw>157.02</demanda_maxima_kw>
-    <factor_potencia_mensual>0.922</factor_potencia_mensual>
-    <cargo_energia_usd>7274.19</cargo_energia_usd>
-    <cargo_demanda_usd>2331.75</cargo_demanda_usd>
+    <kwh_facturados>11887.35</kwh_facturados>
+    <demanda_maxima_kw>38.42</demanda_maxima_kw>
+    <factor_potencia_mensual>0.918</factor_potencia_mensual>
+    <cargo_energia_usd>1850.86</cargo_energia_usd>
+    <cargo_demanda_usd>777.24</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>9605.94</total_factura_usd>
-    <emisiones_alcance2_kg_co2>3158.93</emisiones_alcance2_kg_co2>
+    <total_factura_usd>2642.42</total_factura_usd>
+    <emisiones_alcance2_kg_co2>1784.29</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-09-CDS-234" building_id="CDS-234" mes="9">
-    <kwh_facturados>49397.46</kwh_facturados>
-    <kwh_ppa_renovable>34578.22</kwh_ppa_renovable>
-    <kwh_red_sin>14819.24</kwh_red_sin>
-    <demanda_maxima_kw>159.02</demanda_maxima_kw>
-    <factor_potencia_mensual>0.922</factor_potencia_mensual>
-    <cargo_energia_usd>7063.84</cargo_energia_usd>
-    <cargo_demanda_usd>2361.45</cargo_demanda_usd>
+    <kwh_facturados>12187.93</kwh_facturados>
+    <demanda_maxima_kw>36.55</demanda_maxima_kw>
+    <factor_potencia_mensual>0.917</factor_potencia_mensual>
+    <cargo_energia_usd>1897.66</cargo_energia_usd>
+    <cargo_demanda_usd>739.41</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>9425.29</total_factura_usd>
-    <emisiones_alcance2_kg_co2>3067.58</emisiones_alcance2_kg_co2>
+    <total_factura_usd>2651.39</total_factura_usd>
+    <emisiones_alcance2_kg_co2>1829.41</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-10-CDS-234" building_id="CDS-234" mes="10">
-    <kwh_facturados>51221.94</kwh_facturados>
-    <kwh_ppa_renovable>35855.36</kwh_ppa_renovable>
-    <kwh_red_sin>15366.58</kwh_red_sin>
-    <demanda_maxima_kw>146.00</demanda_maxima_kw>
-    <factor_potencia_mensual>0.922</factor_potencia_mensual>
-    <cargo_energia_usd>7324.74</cargo_energia_usd>
-    <cargo_demanda_usd>2168.10</cargo_demanda_usd>
+    <kwh_facturados>12550.88</kwh_facturados>
+    <demanda_maxima_kw>41.24</demanda_maxima_kw>
+    <factor_potencia_mensual>0.909</factor_potencia_mensual>
+    <cargo_energia_usd>1954.17</cargo_energia_usd>
+    <cargo_demanda_usd>834.29</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>9492.84</total_factura_usd>
-    <emisiones_alcance2_kg_co2>3180.88</emisiones_alcance2_kg_co2>
+    <total_factura_usd>2802.78</total_factura_usd>
+    <emisiones_alcance2_kg_co2>1883.89</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-11-CDS-234" building_id="CDS-234" mes="11">
-    <kwh_facturados>46754.41</kwh_facturados>
-    <kwh_ppa_renovable>32728.09</kwh_ppa_renovable>
-    <kwh_red_sin>14026.32</kwh_red_sin>
-    <demanda_maxima_kw>142.43</demanda_maxima_kw>
-    <factor_potencia_mensual>0.921</factor_potencia_mensual>
-    <cargo_energia_usd>6685.88</cargo_energia_usd>
-    <cargo_demanda_usd>2115.09</cargo_demanda_usd>
+    <kwh_facturados>9383.94</kwh_facturados>
+    <demanda_maxima_kw>33.88</demanda_maxima_kw>
+    <factor_potencia_mensual>0.923</factor_potencia_mensual>
+    <cargo_energia_usd>1461.08</cargo_energia_usd>
+    <cargo_demanda_usd>685.39</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>8800.97</total_factura_usd>
-    <emisiones_alcance2_kg_co2>2903.45</emisiones_alcance2_kg_co2>
+    <total_factura_usd>2160.79</total_factura_usd>
+    <emisiones_alcance2_kg_co2>1408.53</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-12-CDS-234" building_id="CDS-234" mes="12">
-    <kwh_facturados>54735.33</kwh_facturados>
-    <kwh_ppa_renovable>38314.73</kwh_ppa_renovable>
-    <kwh_red_sin>16420.60</kwh_red_sin>
-    <demanda_maxima_kw>166.08</demanda_maxima_kw>
-    <factor_potencia_mensual>0.919</factor_potencia_mensual>
-    <cargo_energia_usd>7827.15</cargo_energia_usd>
-    <cargo_demanda_usd>2466.29</cargo_demanda_usd>
+    <kwh_facturados>10702.93</kwh_facturados>
+    <demanda_maxima_kw>32.31</demanda_maxima_kw>
+    <factor_potencia_mensual>0.921</factor_potencia_mensual>
+    <cargo_energia_usd>1666.45</cargo_energia_usd>
+    <cargo_demanda_usd>653.63</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>10293.44</total_factura_usd>
-    <emisiones_alcance2_kg_co2>3399.06</emisiones_alcance2_kg_co2>
-  </FacturaMensual>
-  <FacturaMensual id_factura="FAC-2025-01-CDS-ATN" building_id="CDS-ATN" mes="1">
-    <kwh_facturados>39615.82</kwh_facturados>
-    <kwh_ppa_renovable>23769.49</kwh_ppa_renovable>
-    <kwh_red_sin>15846.33</kwh_red_sin>
-    <demanda_maxima_kw>131.95</demanda_maxima_kw>
-    <factor_potencia_mensual>0.898</factor_potencia_mensual>
-    <cargo_energia_usd>5863.14</cargo_energia_usd>
-    <cargo_demanda_usd>1959.46</cargo_demanda_usd>
-    <penalizacion_fp_usd>7.82</penalizacion_fp_usd>
-    <total_factura_usd>7830.42</total_factura_usd>
-    <emisiones_alcance2_kg_co2>3042.50</emisiones_alcance2_kg_co2>
-  </FacturaMensual>
-  <FacturaMensual id_factura="FAC-2025-02-CDS-ATN" building_id="CDS-ATN" mes="2">
-    <kwh_facturados>37104.12</kwh_facturados>
-    <kwh_ppa_renovable>22262.47</kwh_ppa_renovable>
-    <kwh_red_sin>14841.65</kwh_red_sin>
-    <demanda_maxima_kw>124.38</demanda_maxima_kw>
-    <factor_potencia_mensual>0.901</factor_potencia_mensual>
-    <cargo_energia_usd>5491.41</cargo_energia_usd>
-    <cargo_demanda_usd>1847.04</cargo_demanda_usd>
-    <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>7338.45</total_factura_usd>
-    <emisiones_alcance2_kg_co2>2849.60</emisiones_alcance2_kg_co2>
-  </FacturaMensual>
-  <FacturaMensual id_factura="FAC-2025-03-CDS-ATN" building_id="CDS-ATN" mes="3">
-    <kwh_facturados>43215.27</kwh_facturados>
-    <kwh_ppa_renovable>25929.16</kwh_ppa_renovable>
-    <kwh_red_sin>17286.11</kwh_red_sin>
-    <demanda_maxima_kw>146.03</demanda_maxima_kw>
-    <factor_potencia_mensual>0.903</factor_potencia_mensual>
-    <cargo_energia_usd>6395.86</cargo_energia_usd>
-    <cargo_demanda_usd>2168.55</cargo_demanda_usd>
-    <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>8564.41</total_factura_usd>
-    <emisiones_alcance2_kg_co2>3318.93</emisiones_alcance2_kg_co2>
-  </FacturaMensual>
-  <FacturaMensual id_factura="FAC-2025-04-CDS-ATN" building_id="CDS-ATN" mes="4">
-    <kwh_facturados>40708.03</kwh_facturados>
-    <kwh_ppa_renovable>24424.82</kwh_ppa_renovable>
-    <kwh_red_sin>16283.21</kwh_red_sin>
-    <demanda_maxima_kw>133.72</demanda_maxima_kw>
-    <factor_potencia_mensual>0.901</factor_potencia_mensual>
-    <cargo_energia_usd>6024.79</cargo_energia_usd>
-    <cargo_demanda_usd>1985.74</cargo_demanda_usd>
-    <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>8010.53</total_factura_usd>
-    <emisiones_alcance2_kg_co2>3126.38</emisiones_alcance2_kg_co2>
-  </FacturaMensual>
-  <FacturaMensual id_factura="FAC-2025-05-CDS-ATN" building_id="CDS-ATN" mes="5">
-    <kwh_facturados>38244.95</kwh_facturados>
-    <kwh_ppa_renovable>22946.97</kwh_ppa_renovable>
-    <kwh_red_sin>15297.98</kwh_red_sin>
-    <demanda_maxima_kw>120.11</demanda_maxima_kw>
-    <factor_potencia_mensual>0.899</factor_potencia_mensual>
-    <cargo_energia_usd>5660.25</cargo_energia_usd>
-    <cargo_demanda_usd>1783.63</cargo_demanda_usd>
-    <penalizacion_fp_usd>3.72</penalizacion_fp_usd>
-    <total_factura_usd>7447.60</total_factura_usd>
-    <emisiones_alcance2_kg_co2>2937.21</emisiones_alcance2_kg_co2>
-  </FacturaMensual>
-  <FacturaMensual id_factura="FAC-2025-06-CDS-ATN" building_id="CDS-ATN" mes="6">
-    <kwh_facturados>34552.81</kwh_facturados>
-    <kwh_ppa_renovable>20731.69</kwh_ppa_renovable>
-    <kwh_red_sin>13821.12</kwh_red_sin>
-    <demanda_maxima_kw>122.74</demanda_maxima_kw>
-    <factor_potencia_mensual>0.897</factor_potencia_mensual>
-    <cargo_energia_usd>5113.82</cargo_energia_usd>
-    <cargo_demanda_usd>1822.69</cargo_demanda_usd>
-    <penalizacion_fp_usd>10.40</penalizacion_fp_usd>
-    <total_factura_usd>6946.91</total_factura_usd>
-    <emisiones_alcance2_kg_co2>2653.66</emisiones_alcance2_kg_co2>
-  </FacturaMensual>
-  <FacturaMensual id_factura="FAC-2025-07-CDS-ATN" building_id="CDS-ATN" mes="7">
-    <kwh_facturados>36043.83</kwh_facturados>
-    <kwh_ppa_renovable>21626.30</kwh_ppa_renovable>
-    <kwh_red_sin>14417.53</kwh_red_sin>
-    <demanda_maxima_kw>117.65</demanda_maxima_kw>
-    <factor_potencia_mensual>0.904</factor_potencia_mensual>
-    <cargo_energia_usd>5334.49</cargo_energia_usd>
-    <cargo_demanda_usd>1747.10</cargo_demanda_usd>
-    <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>7081.59</total_factura_usd>
-    <emisiones_alcance2_kg_co2>2768.17</emisiones_alcance2_kg_co2>
-  </FacturaMensual>
-  <FacturaMensual id_factura="FAC-2025-08-CDS-ATN" building_id="CDS-ATN" mes="8">
-    <kwh_facturados>36234.66</kwh_facturados>
-    <kwh_ppa_renovable>21740.80</kwh_ppa_renovable>
-    <kwh_red_sin>14493.86</kwh_red_sin>
-    <demanda_maxima_kw>119.50</demanda_maxima_kw>
-    <factor_potencia_mensual>0.898</factor_potencia_mensual>
-    <cargo_energia_usd>5362.73</cargo_energia_usd>
-    <cargo_demanda_usd>1774.58</cargo_demanda_usd>
-    <penalizacion_fp_usd>7.14</penalizacion_fp_usd>
-    <total_factura_usd>7144.45</total_factura_usd>
-    <emisiones_alcance2_kg_co2>2782.82</emisiones_alcance2_kg_co2>
-  </FacturaMensual>
-  <FacturaMensual id_factura="FAC-2025-09-CDS-ATN" building_id="CDS-ATN" mes="9">
-    <kwh_facturados>34021.99</kwh_facturados>
-    <kwh_ppa_renovable>20413.19</kwh_ppa_renovable>
-    <kwh_red_sin>13608.80</kwh_red_sin>
-    <demanda_maxima_kw>121.93</demanda_maxima_kw>
-    <factor_potencia_mensual>0.903</factor_potencia_mensual>
-    <cargo_energia_usd>5035.25</cargo_energia_usd>
-    <cargo_demanda_usd>1810.66</cargo_demanda_usd>
-    <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>6845.91</total_factura_usd>
-    <emisiones_alcance2_kg_co2>2612.89</emisiones_alcance2_kg_co2>
-  </FacturaMensual>
-  <FacturaMensual id_factura="FAC-2025-10-CDS-ATN" building_id="CDS-ATN" mes="10">
-    <kwh_facturados>33788.07</kwh_facturados>
-    <kwh_ppa_renovable>20272.84</kwh_ppa_renovable>
-    <kwh_red_sin>13515.23</kwh_red_sin>
-    <demanda_maxima_kw>113.59</demanda_maxima_kw>
-    <factor_potencia_mensual>0.901</factor_potencia_mensual>
-    <cargo_energia_usd>5000.63</cargo_energia_usd>
-    <cargo_demanda_usd>1686.81</cargo_demanda_usd>
-    <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>6687.44</total_factura_usd>
-    <emisiones_alcance2_kg_co2>2594.92</emisiones_alcance2_kg_co2>
-  </FacturaMensual>
-  <FacturaMensual id_factura="FAC-2025-11-CDS-ATN" building_id="CDS-ATN" mes="11">
-    <kwh_facturados>34287.38</kwh_facturados>
-    <kwh_ppa_renovable>20572.43</kwh_ppa_renovable>
-    <kwh_red_sin>13714.95</kwh_red_sin>
-    <demanda_maxima_kw>123.12</demanda_maxima_kw>
-    <factor_potencia_mensual>0.903</factor_potencia_mensual>
-    <cargo_energia_usd>5074.53</cargo_energia_usd>
-    <cargo_demanda_usd>1828.33</cargo_demanda_usd>
-    <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>6902.86</total_factura_usd>
-    <emisiones_alcance2_kg_co2>2633.27</emisiones_alcance2_kg_co2>
-  </FacturaMensual>
-  <FacturaMensual id_factura="FAC-2025-12-CDS-ATN" building_id="CDS-ATN" mes="12">
-    <kwh_facturados>37168.02</kwh_facturados>
-    <kwh_ppa_renovable>22300.81</kwh_ppa_renovable>
-    <kwh_red_sin>14867.21</kwh_red_sin>
-    <demanda_maxima_kw>135.73</demanda_maxima_kw>
-    <factor_potencia_mensual>0.898</factor_potencia_mensual>
-    <cargo_energia_usd>5500.87</cargo_energia_usd>
-    <cargo_demanda_usd>2015.59</cargo_demanda_usd>
-    <penalizacion_fp_usd>7.52</penalizacion_fp_usd>
-    <total_factura_usd>7523.98</total_factura_usd>
-    <emisiones_alcance2_kg_co2>2854.50</emisiones_alcance2_kg_co2>
+    <total_factura_usd>2334.40</total_factura_usd>
+    <emisiones_alcance2_kg_co2>1606.51</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-01-CDS-DRM" building_id="CDS-DRM" mes="1">
-    <kwh_facturados>35200.90</kwh_facturados>
-    <kwh_ppa_renovable>29920.76</kwh_ppa_renovable>
-    <kwh_red_sin>5280.14</kwh_red_sin>
-    <demanda_maxima_kw>91.43</demanda_maxima_kw>
-    <factor_potencia_mensual>0.959</factor_potencia_mensual>
-    <cargo_energia_usd>4769.72</cargo_energia_usd>
-    <cargo_demanda_usd>1357.74</cargo_demanda_usd>
+    <kwh_facturados>8485.89</kwh_facturados>
+    <demanda_maxima_kw>20.74</demanda_maxima_kw>
+    <factor_potencia_mensual>0.962</factor_potencia_mensual>
+    <cargo_energia_usd>1321.25</cargo_energia_usd>
+    <cargo_demanda_usd>419.57</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>6127.46</total_factura_usd>
-    <emisiones_alcance2_kg_co2>1409.80</emisiones_alcance2_kg_co2>
+    <total_factura_usd>1755.14</total_factura_usd>
+    <emisiones_alcance2_kg_co2>1273.73</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-02-CDS-DRM" building_id="CDS-DRM" mes="2">
-    <kwh_facturados>32099.89</kwh_facturados>
-    <kwh_ppa_renovable>27284.91</kwh_ppa_renovable>
-    <kwh_red_sin>4814.98</kwh_red_sin>
-    <demanda_maxima_kw>90.53</demanda_maxima_kw>
-    <factor_potencia_mensual>0.962</factor_potencia_mensual>
-    <cargo_energia_usd>4349.53</cargo_energia_usd>
-    <cargo_demanda_usd>1344.37</cargo_demanda_usd>
+    <kwh_facturados>9264.59</kwh_facturados>
+    <demanda_maxima_kw>24.85</demanda_maxima_kw>
+    <factor_potencia_mensual>0.960</factor_potencia_mensual>
+    <cargo_energia_usd>1442.50</cargo_energia_usd>
+    <cargo_demanda_usd>502.72</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>5693.90</total_factura_usd>
-    <emisiones_alcance2_kg_co2>1285.60</emisiones_alcance2_kg_co2>
+    <total_factura_usd>1959.54</total_factura_usd>
+    <emisiones_alcance2_kg_co2>1390.61</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-03-CDS-DRM" building_id="CDS-DRM" mes="3">
-    <kwh_facturados>36290.28</kwh_facturados>
-    <kwh_ppa_renovable>30846.74</kwh_ppa_renovable>
-    <kwh_red_sin>5443.54</kwh_red_sin>
-    <demanda_maxima_kw>92.31</demanda_maxima_kw>
-    <factor_potencia_mensual>0.964</factor_potencia_mensual>
-    <cargo_energia_usd>4917.33</cargo_energia_usd>
-    <cargo_demanda_usd>1370.80</cargo_demanda_usd>
+    <kwh_facturados>9420.06</kwh_facturados>
+    <demanda_maxima_kw>24.02</demanda_maxima_kw>
+    <factor_potencia_mensual>0.959</factor_potencia_mensual>
+    <cargo_energia_usd>1466.70</cargo_energia_usd>
+    <cargo_demanda_usd>485.92</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>6288.13</total_factura_usd>
-    <emisiones_alcance2_kg_co2>1453.43</emisiones_alcance2_kg_co2>
+    <total_factura_usd>1966.94</total_factura_usd>
+    <emisiones_alcance2_kg_co2>1413.95</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-04-CDS-DRM" building_id="CDS-DRM" mes="4">
-    <kwh_facturados>34706.33</kwh_facturados>
-    <kwh_ppa_renovable>29500.38</kwh_ppa_renovable>
-    <kwh_red_sin>5205.95</kwh_red_sin>
-    <demanda_maxima_kw>90.82</demanda_maxima_kw>
-    <factor_potencia_mensual>0.958</factor_potencia_mensual>
-    <cargo_energia_usd>4702.71</cargo_energia_usd>
-    <cargo_demanda_usd>1348.68</cargo_demanda_usd>
+    <kwh_facturados>10027.14</kwh_facturados>
+    <demanda_maxima_kw>25.91</demanda_maxima_kw>
+    <factor_potencia_mensual>0.959</factor_potencia_mensual>
+    <cargo_energia_usd>1561.23</cargo_energia_usd>
+    <cargo_demanda_usd>524.16</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>6051.39</total_factura_usd>
-    <emisiones_alcance2_kg_co2>1389.99</emisiones_alcance2_kg_co2>
+    <total_factura_usd>2099.71</total_factura_usd>
+    <emisiones_alcance2_kg_co2>1505.07</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-05-CDS-DRM" building_id="CDS-DRM" mes="5">
-    <kwh_facturados>34496.41</kwh_facturados>
-    <kwh_ppa_renovable>29321.95</kwh_ppa_renovable>
-    <kwh_red_sin>5174.46</kwh_red_sin>
-    <demanda_maxima_kw>85.62</demanda_maxima_kw>
+    <kwh_facturados>9675.36</kwh_facturados>
+    <demanda_maxima_kw>25.54</demanda_maxima_kw>
     <factor_potencia_mensual>0.960</factor_potencia_mensual>
-    <cargo_energia_usd>4674.26</cargo_energia_usd>
-    <cargo_demanda_usd>1271.46</cargo_demanda_usd>
+    <cargo_energia_usd>1506.45</cargo_energia_usd>
+    <cargo_demanda_usd>516.67</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>5945.72</total_factura_usd>
-    <emisiones_alcance2_kg_co2>1381.58</emisiones_alcance2_kg_co2>
+    <total_factura_usd>2037.44</total_factura_usd>
+    <emisiones_alcance2_kg_co2>1452.27</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-06-CDS-DRM" building_id="CDS-DRM" mes="6">
-    <kwh_facturados>32488.28</kwh_facturados>
-    <kwh_ppa_renovable>27615.04</kwh_ppa_renovable>
-    <kwh_red_sin>4873.24</kwh_red_sin>
-    <demanda_maxima_kw>86.79</demanda_maxima_kw>
-    <factor_potencia_mensual>0.956</factor_potencia_mensual>
-    <cargo_energia_usd>4402.16</cargo_energia_usd>
-    <cargo_demanda_usd>1288.83</cargo_demanda_usd>
+    <kwh_facturados>9157.81</kwh_facturados>
+    <demanda_maxima_kw>23.38</demanda_maxima_kw>
+    <factor_potencia_mensual>0.958</factor_potencia_mensual>
+    <cargo_energia_usd>1425.87</cargo_energia_usd>
+    <cargo_demanda_usd>472.98</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>5690.99</total_factura_usd>
-    <emisiones_alcance2_kg_co2>1301.16</emisiones_alcance2_kg_co2>
+    <total_factura_usd>1913.17</total_factura_usd>
+    <emisiones_alcance2_kg_co2>1374.59</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-07-CDS-DRM" building_id="CDS-DRM" mes="7">
-    <kwh_facturados>33742.17</kwh_facturados>
-    <kwh_ppa_renovable>28680.84</kwh_ppa_renovable>
-    <kwh_red_sin>5061.33</kwh_red_sin>
-    <demanda_maxima_kw>88.12</demanda_maxima_kw>
-    <factor_potencia_mensual>0.957</factor_potencia_mensual>
-    <cargo_energia_usd>4572.06</cargo_energia_usd>
-    <cargo_demanda_usd>1308.58</cargo_demanda_usd>
+    <kwh_facturados>9192.75</kwh_facturados>
+    <demanda_maxima_kw>22.26</demanda_maxima_kw>
+    <factor_potencia_mensual>0.961</factor_potencia_mensual>
+    <cargo_energia_usd>1431.31</cargo_energia_usd>
+    <cargo_demanda_usd>450.32</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>5880.64</total_factura_usd>
-    <emisiones_alcance2_kg_co2>1351.37</emisiones_alcance2_kg_co2>
+    <total_factura_usd>1895.95</total_factura_usd>
+    <emisiones_alcance2_kg_co2>1379.83</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-08-CDS-DRM" building_id="CDS-DRM" mes="8">
-    <kwh_facturados>32626.14</kwh_facturados>
-    <kwh_ppa_renovable>27732.22</kwh_ppa_renovable>
-    <kwh_red_sin>4893.92</kwh_red_sin>
-    <demanda_maxima_kw>85.73</demanda_maxima_kw>
-    <factor_potencia_mensual>0.964</factor_potencia_mensual>
-    <cargo_energia_usd>4420.84</cargo_energia_usd>
-    <cargo_demanda_usd>1273.09</cargo_demanda_usd>
+    <kwh_facturados>9379.78</kwh_facturados>
+    <demanda_maxima_kw>23.27</demanda_maxima_kw>
+    <factor_potencia_mensual>0.957</factor_potencia_mensual>
+    <cargo_energia_usd>1460.43</cargo_energia_usd>
+    <cargo_demanda_usd>470.75</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>5693.93</total_factura_usd>
-    <emisiones_alcance2_kg_co2>1306.68</emisiones_alcance2_kg_co2>
+    <total_factura_usd>1945.50</total_factura_usd>
+    <emisiones_alcance2_kg_co2>1407.90</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-09-CDS-DRM" building_id="CDS-DRM" mes="9">
-    <kwh_facturados>32363.90</kwh_facturados>
-    <kwh_ppa_renovable>27509.32</kwh_ppa_renovable>
-    <kwh_red_sin>4854.58</kwh_red_sin>
-    <demanda_maxima_kw>85.45</demanda_maxima_kw>
-    <factor_potencia_mensual>0.963</factor_potencia_mensual>
-    <cargo_energia_usd>4385.31</cargo_energia_usd>
-    <cargo_demanda_usd>1268.93</cargo_demanda_usd>
+    <kwh_facturados>9307.91</kwh_facturados>
+    <demanda_maxima_kw>23.16</demanda_maxima_kw>
+    <factor_potencia_mensual>0.960</factor_potencia_mensual>
+    <cargo_energia_usd>1449.24</cargo_energia_usd>
+    <cargo_demanda_usd>468.53</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>5654.24</total_factura_usd>
-    <emisiones_alcance2_kg_co2>1296.17</emisiones_alcance2_kg_co2>
+    <total_factura_usd>1932.09</total_factura_usd>
+    <emisiones_alcance2_kg_co2>1397.12</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-10-CDS-DRM" building_id="CDS-DRM" mes="10">
-    <kwh_facturados>33253.31</kwh_facturados>
-    <kwh_ppa_renovable>28265.31</kwh_ppa_renovable>
-    <kwh_red_sin>4988.00</kwh_red_sin>
-    <demanda_maxima_kw>81.71</demanda_maxima_kw>
-    <factor_potencia_mensual>0.959</factor_potencia_mensual>
-    <cargo_energia_usd>4505.82</cargo_energia_usd>
-    <cargo_demanda_usd>1213.39</cargo_demanda_usd>
+    <kwh_facturados>9049.09</kwh_facturados>
+    <demanda_maxima_kw>22.37</demanda_maxima_kw>
+    <factor_potencia_mensual>0.962</factor_potencia_mensual>
+    <cargo_energia_usd>1408.94</cargo_energia_usd>
+    <cargo_demanda_usd>452.55</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>5719.21</total_factura_usd>
-    <emisiones_alcance2_kg_co2>1331.80</emisiones_alcance2_kg_co2>
+    <total_factura_usd>1875.81</total_factura_usd>
+    <emisiones_alcance2_kg_co2>1358.27</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-11-CDS-DRM" building_id="CDS-DRM" mes="11">
-    <kwh_facturados>31925.64</kwh_facturados>
-    <kwh_ppa_renovable>27136.79</kwh_ppa_renovable>
-    <kwh_red_sin>4788.85</kwh_red_sin>
-    <demanda_maxima_kw>85.77</demanda_maxima_kw>
-    <factor_potencia_mensual>0.960</factor_potencia_mensual>
-    <cargo_energia_usd>4325.92</cargo_energia_usd>
-    <cargo_demanda_usd>1273.68</cargo_demanda_usd>
+    <kwh_facturados>8242.54</kwh_facturados>
+    <demanda_maxima_kw>20.97</demanda_maxima_kw>
+    <factor_potencia_mensual>0.958</factor_potencia_mensual>
+    <cargo_energia_usd>1283.36</cargo_energia_usd>
+    <cargo_demanda_usd>424.22</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>5599.60</total_factura_usd>
-    <emisiones_alcance2_kg_co2>1278.62</emisiones_alcance2_kg_co2>
+    <total_factura_usd>1721.90</total_factura_usd>
+    <emisiones_alcance2_kg_co2>1237.21</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-12-CDS-DRM" building_id="CDS-DRM" mes="12">
-    <kwh_facturados>34188.12</kwh_facturados>
-    <kwh_ppa_renovable>29059.90</kwh_ppa_renovable>
-    <kwh_red_sin>5128.22</kwh_red_sin>
-    <demanda_maxima_kw>83.87</demanda_maxima_kw>
-    <factor_potencia_mensual>0.960</factor_potencia_mensual>
-    <cargo_energia_usd>4632.49</cargo_energia_usd>
-    <cargo_demanda_usd>1245.47</cargo_demanda_usd>
+    <kwh_facturados>8797.06</kwh_facturados>
+    <demanda_maxima_kw>22.72</demanda_maxima_kw>
+    <factor_potencia_mensual>0.956</factor_potencia_mensual>
+    <cargo_energia_usd>1369.70</cargo_energia_usd>
+    <cargo_demanda_usd>459.63</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
     <penalizacion_fp_usd>0.00</penalizacion_fp_usd>
-    <total_factura_usd>5877.96</total_factura_usd>
-    <emisiones_alcance2_kg_co2>1369.23</emisiones_alcance2_kg_co2>
+    <total_factura_usd>1843.65</total_factura_usd>
+    <emisiones_alcance2_kg_co2>1320.44</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-01-CDS-PLZ" building_id="CDS-PLZ" mes="1">
-    <kwh_facturados>80924.55</kwh_facturados>
-    <kwh_ppa_renovable>40462.28</kwh_ppa_renovable>
-    <kwh_red_sin>40462.27</kwh_red_sin>
-    <demanda_maxima_kw>214.10</demanda_maxima_kw>
-    <factor_potencia_mensual>0.881</factor_potencia_mensual>
-    <cargo_energia_usd>12381.46</cargo_energia_usd>
-    <cargo_demanda_usd>3179.38</cargo_demanda_usd>
-    <penalizacion_fp_usd>147.83</penalizacion_fp_usd>
-    <total_factura_usd>15708.67</total_factura_usd>
-    <emisiones_alcance2_kg_co2>7404.60</emisiones_alcance2_kg_co2>
+    <kwh_facturados>18627.76</kwh_facturados>
+    <demanda_maxima_kw>44.94</demanda_maxima_kw>
+    <factor_potencia_mensual>0.879</factor_potencia_mensual>
+    <cargo_energia_usd>2900.34</cargo_energia_usd>
+    <cargo_demanda_usd>909.14</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>38.18</penalizacion_fp_usd>
+    <total_factura_usd>3861.98</total_factura_usd>
+    <emisiones_alcance2_kg_co2>2796.03</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-02-CDS-PLZ" building_id="CDS-PLZ" mes="2">
-    <kwh_facturados>76557.73</kwh_facturados>
-    <kwh_ppa_renovable>38278.86</kwh_ppa_renovable>
-    <kwh_red_sin>38278.87</kwh_red_sin>
-    <demanda_maxima_kw>206.50</demanda_maxima_kw>
-    <factor_potencia_mensual>0.883</factor_potencia_mensual>
-    <cargo_energia_usd>11713.33</cargo_energia_usd>
-    <cargo_demanda_usd>3066.53</cargo_demanda_usd>
-    <penalizacion_fp_usd>125.63</penalizacion_fp_usd>
-    <total_factura_usd>14905.49</total_factura_usd>
-    <emisiones_alcance2_kg_co2>7005.03</emisiones_alcance2_kg_co2>
+    <kwh_facturados>20750.12</kwh_facturados>
+    <demanda_maxima_kw>62.01</demanda_maxima_kw>
+    <factor_potencia_mensual>0.882</factor_potencia_mensual>
+    <cargo_energia_usd>3230.79</cargo_energia_usd>
+    <cargo_demanda_usd>1254.46</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>45.16</penalizacion_fp_usd>
+    <total_factura_usd>4544.73</total_factura_usd>
+    <emisiones_alcance2_kg_co2>3114.59</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-03-CDS-PLZ" building_id="CDS-PLZ" mes="3">
-    <kwh_facturados>86787.53</kwh_facturados>
-    <kwh_ppa_renovable>43393.76</kwh_ppa_renovable>
-    <kwh_red_sin>43393.77</kwh_red_sin>
-    <demanda_maxima_kw>212.98</demanda_maxima_kw>
-    <factor_potencia_mensual>0.876</factor_potencia_mensual>
-    <cargo_energia_usd>13278.49</cargo_energia_usd>
-    <cargo_demanda_usd>3162.75</cargo_demanda_usd>
-    <penalizacion_fp_usd>197.29</penalizacion_fp_usd>
-    <total_factura_usd>16638.53</total_factura_usd>
-    <emisiones_alcance2_kg_co2>7941.06</emisiones_alcance2_kg_co2>
+    <kwh_facturados>22057.99</kwh_facturados>
+    <demanda_maxima_kw>57.53</demanda_maxima_kw>
+    <factor_potencia_mensual>0.881</factor_potencia_mensual>
+    <cargo_energia_usd>3434.43</cargo_energia_usd>
+    <cargo_demanda_usd>1163.83</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>44.23</penalizacion_fp_usd>
+    <total_factura_usd>4656.81</total_factura_usd>
+    <emisiones_alcance2_kg_co2>3310.90</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-04-CDS-PLZ" building_id="CDS-PLZ" mes="4">
-    <kwh_facturados>83369.49</kwh_facturados>
-    <kwh_ppa_renovable>41684.75</kwh_ppa_renovable>
-    <kwh_red_sin>41684.74</kwh_red_sin>
-    <demanda_maxima_kw>210.74</demanda_maxima_kw>
-    <factor_potencia_mensual>0.878</factor_potencia_mensual>
-    <cargo_energia_usd>12755.53</cargo_energia_usd>
-    <cargo_demanda_usd>3129.49</cargo_demanda_usd>
-    <penalizacion_fp_usd>174.74</penalizacion_fp_usd>
-    <total_factura_usd>16059.76</total_factura_usd>
-    <emisiones_alcance2_kg_co2>7628.31</emisiones_alcance2_kg_co2>
+    <kwh_facturados>23687.05</kwh_facturados>
+    <demanda_maxima_kw>65.37</demanda_maxima_kw>
+    <factor_potencia_mensual>0.879</factor_potencia_mensual>
+    <cargo_energia_usd>3688.07</cargo_energia_usd>
+    <cargo_demanda_usd>1322.44</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>55.54</penalizacion_fp_usd>
+    <total_factura_usd>5080.37</total_factura_usd>
+    <emisiones_alcance2_kg_co2>3555.43</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-05-CDS-PLZ" building_id="CDS-PLZ" mes="5">
-    <kwh_facturados>77533.43</kwh_facturados>
-    <kwh_ppa_renovable>38766.71</kwh_ppa_renovable>
-    <kwh_red_sin>38766.72</kwh_red_sin>
-    <demanda_maxima_kw>187.25</demanda_maxima_kw>
-    <factor_potencia_mensual>0.878</factor_potencia_mensual>
-    <cargo_energia_usd>11862.62</cargo_energia_usd>
-    <cargo_demanda_usd>2780.66</cargo_demanda_usd>
-    <penalizacion_fp_usd>161.08</penalizacion_fp_usd>
-    <total_factura_usd>14804.36</total_factura_usd>
-    <emisiones_alcance2_kg_co2>7094.31</emisiones_alcance2_kg_co2>
+    <kwh_facturados>22279.54</kwh_facturados>
+    <demanda_maxima_kw>55.93</demanda_maxima_kw>
+    <factor_potencia_mensual>0.879</factor_potencia_mensual>
+    <cargo_energia_usd>3468.92</cargo_energia_usd>
+    <cargo_demanda_usd>1131.46</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>47.52</penalizacion_fp_usd>
+    <total_factura_usd>4662.22</total_factura_usd>
+    <emisiones_alcance2_kg_co2>3344.16</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-06-CDS-PLZ" building_id="CDS-PLZ" mes="6">
-    <kwh_facturados>71702.58</kwh_facturados>
-    <kwh_ppa_renovable>35851.29</kwh_ppa_renovable>
-    <kwh_red_sin>35851.29</kwh_red_sin>
-    <demanda_maxima_kw>186.23</demanda_maxima_kw>
-    <factor_potencia_mensual>0.882</factor_potencia_mensual>
-    <cargo_energia_usd>10970.49</cargo_energia_usd>
-    <cargo_demanda_usd>2765.52</cargo_demanda_usd>
-    <penalizacion_fp_usd>123.62</penalizacion_fp_usd>
-    <total_factura_usd>13859.63</total_factura_usd>
-    <emisiones_alcance2_kg_co2>6560.79</emisiones_alcance2_kg_co2>
+    <kwh_facturados>21353.03</kwh_facturados>
+    <demanda_maxima_kw>54.12</demanda_maxima_kw>
+    <factor_potencia_mensual>0.881</factor_potencia_mensual>
+    <cargo_energia_usd>3324.67</cargo_energia_usd>
+    <cargo_demanda_usd>1094.85</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>41.60</penalizacion_fp_usd>
+    <total_factura_usd>4475.44</total_factura_usd>
+    <emisiones_alcance2_kg_co2>3205.09</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-07-CDS-PLZ" building_id="CDS-PLZ" mes="7">
-    <kwh_facturados>74093.69</kwh_facturados>
-    <kwh_ppa_renovable>37046.85</kwh_ppa_renovable>
-    <kwh_red_sin>37046.84</kwh_red_sin>
-    <demanda_maxima_kw>198.57</demanda_maxima_kw>
+    <kwh_facturados>21063.21</kwh_facturados>
+    <demanda_maxima_kw>54.74</demanda_maxima_kw>
     <factor_potencia_mensual>0.879</factor_potencia_mensual>
-    <cargo_energia_usd>11336.33</cargo_energia_usd>
-    <cargo_demanda_usd>2948.76</cargo_demanda_usd>
-    <penalizacion_fp_usd>149.99</penalizacion_fp_usd>
-    <total_factura_usd>14435.08</total_factura_usd>
-    <emisiones_alcance2_kg_co2>6779.57</emisiones_alcance2_kg_co2>
+    <cargo_energia_usd>3279.54</cargo_energia_usd>
+    <cargo_demanda_usd>1107.39</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>46.51</penalizacion_fp_usd>
+    <total_factura_usd>4447.76</total_factura_usd>
+    <emisiones_alcance2_kg_co2>3161.59</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-08-CDS-PLZ" building_id="CDS-PLZ" mes="8">
-    <kwh_facturados>73832.79</kwh_facturados>
-    <kwh_ppa_renovable>36916.39</kwh_ppa_renovable>
-    <kwh_red_sin>36916.40</kwh_red_sin>
-    <demanda_maxima_kw>186.70</demanda_maxima_kw>
-    <factor_potencia_mensual>0.881</factor_potencia_mensual>
-    <cargo_energia_usd>11296.42</cargo_energia_usd>
-    <cargo_demanda_usd>2772.49</cargo_demanda_usd>
-    <penalizacion_fp_usd>133.65</penalizacion_fp_usd>
-    <total_factura_usd>14202.56</total_factura_usd>
-    <emisiones_alcance2_kg_co2>6755.70</emisiones_alcance2_kg_co2>
+    <kwh_facturados>22056.06</kwh_facturados>
+    <demanda_maxima_kw>55.70</demanda_maxima_kw>
+    <factor_potencia_mensual>0.877</factor_potencia_mensual>
+    <cargo_energia_usd>3434.13</cargo_energia_usd>
+    <cargo_demanda_usd>1126.81</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>51.83</penalizacion_fp_usd>
+    <total_factura_usd>4627.09</total_factura_usd>
+    <emisiones_alcance2_kg_co2>3310.61</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-09-CDS-PLZ" building_id="CDS-PLZ" mes="9">
-    <kwh_facturados>71200.03</kwh_facturados>
-    <kwh_ppa_renovable>35600.01</kwh_ppa_renovable>
-    <kwh_red_sin>35600.02</kwh_red_sin>
-    <demanda_maxima_kw>190.01</demanda_maxima_kw>
-    <factor_potencia_mensual>0.880</factor_potencia_mensual>
-    <cargo_energia_usd>10893.60</cargo_energia_usd>
-    <cargo_demanda_usd>2821.65</cargo_demanda_usd>
-    <penalizacion_fp_usd>137.15</penalizacion_fp_usd>
-    <total_factura_usd>13852.40</total_factura_usd>
-    <emisiones_alcance2_kg_co2>6514.80</emisiones_alcance2_kg_co2>
+    <kwh_facturados>21105.39</kwh_facturados>
+    <demanda_maxima_kw>54.38</demanda_maxima_kw>
+    <factor_potencia_mensual>0.881</factor_potencia_mensual>
+    <cargo_energia_usd>3286.11</cargo_energia_usd>
+    <cargo_demanda_usd>1100.11</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>41.80</penalizacion_fp_usd>
+    <total_factura_usd>4442.34</total_factura_usd>
+    <emisiones_alcance2_kg_co2>3167.92</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-10-CDS-PLZ" building_id="CDS-PLZ" mes="10">
-    <kwh_facturados>79481.63</kwh_facturados>
-    <kwh_ppa_renovable>39740.82</kwh_ppa_renovable>
-    <kwh_red_sin>39740.81</kwh_red_sin>
-    <demanda_maxima_kw>230.15</demanda_maxima_kw>
-    <factor_potencia_mensual>0.871</factor_potencia_mensual>
-    <cargo_energia_usd>12160.69</cargo_energia_usd>
-    <cargo_demanda_usd>3417.73</cargo_demanda_usd>
-    <penalizacion_fp_usd>225.89</penalizacion_fp_usd>
-    <total_factura_usd>15804.31</total_factura_usd>
-    <emisiones_alcance2_kg_co2>7272.57</emisiones_alcance2_kg_co2>
+    <kwh_facturados>20140.73</kwh_facturados>
+    <demanda_maxima_kw>50.79</demanda_maxima_kw>
+    <factor_potencia_mensual>0.876</factor_potencia_mensual>
+    <cargo_energia_usd>3135.91</cargo_energia_usd>
+    <cargo_demanda_usd>1027.48</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>49.32</penalizacion_fp_usd>
+    <total_factura_usd>4227.03</total_factura_usd>
+    <emisiones_alcance2_kg_co2>3023.12</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-11-CDS-PLZ" building_id="CDS-PLZ" mes="11">
-    <kwh_facturados>68850.29</kwh_facturados>
-    <kwh_ppa_renovable>34425.14</kwh_ppa_renovable>
-    <kwh_red_sin>34425.15</kwh_red_sin>
-    <demanda_maxima_kw>185.84</demanda_maxima_kw>
-    <factor_potencia_mensual>0.882</factor_potencia_mensual>
-    <cargo_energia_usd>10534.09</cargo_energia_usd>
-    <cargo_demanda_usd>2759.72</cargo_demanda_usd>
-    <penalizacion_fp_usd>119.64</penalizacion_fp_usd>
-    <total_factura_usd>13413.45</total_factura_usd>
-    <emisiones_alcance2_kg_co2>6299.80</emisiones_alcance2_kg_co2>
+    <kwh_facturados>19266.84</kwh_facturados>
+    <demanda_maxima_kw>48.84</demanda_maxima_kw>
+    <factor_potencia_mensual>0.879</factor_potencia_mensual>
+    <cargo_energia_usd>2999.85</cargo_energia_usd>
+    <cargo_demanda_usd>988.03</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>41.50</penalizacion_fp_usd>
+    <total_factura_usd>4043.70</total_factura_usd>
+    <emisiones_alcance2_kg_co2>2891.95</emisiones_alcance2_kg_co2>
   </FacturaMensual>
   <FacturaMensual id_factura="FAC-2025-12-CDS-PLZ" building_id="CDS-PLZ" mes="12">
-    <kwh_facturados>76031.16</kwh_facturados>
-    <kwh_ppa_renovable>38015.58</kwh_ppa_renovable>
-    <kwh_red_sin>38015.58</kwh_red_sin>
-    <demanda_maxima_kw>188.94</demanda_maxima_kw>
-    <factor_potencia_mensual>0.881</factor_potencia_mensual>
-    <cargo_energia_usd>11632.77</cargo_energia_usd>
-    <cargo_demanda_usd>2805.76</cargo_demanda_usd>
-    <penalizacion_fp_usd>137.17</penalizacion_fp_usd>
-    <total_factura_usd>14575.70</total_factura_usd>
-    <emisiones_alcance2_kg_co2>6956.85</emisiones_alcance2_kg_co2>
+    <kwh_facturados>19612.30</kwh_facturados>
+    <demanda_maxima_kw>51.28</demanda_maxima_kw>
+    <factor_potencia_mensual>0.875</factor_potencia_mensual>
+    <cargo_energia_usd>3053.64</cargo_energia_usd>
+    <cargo_demanda_usd>1037.39</cargo_demanda_usd>
+    <cargo_fijo_usd>14.32</cargo_fijo_usd>
+    <penalizacion_fp_usd>51.87</penalizacion_fp_usd>
+    <total_factura_usd>4157.22</total_factura_usd>
+    <emisiones_alcance2_kg_co2>2943.81</emisiones_alcance2_kg_co2>
   </FacturaMensual>
 </FacturacionElectricaCampus>

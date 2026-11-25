@@ -1,0 +1,878 @@
+{
+  "version_generador": "3.0",
+  "version_parametros": "3.0",
+  "modo": "sintetico_anclado",
+  "fecha_generacion": "2026-11-24T21:02:23",
+  "semilla": 202511,
+  "parametros_archivo": "parametros_generador.json",
+  "filas_ami_raw": 4428,
+  "documentos_iot": 4380,
+  "facturas_xml": 144,
+  "defectos_inyectados": {
+    "nulos": 53,
+    "duplicados": 48,
+    "outliers_negativos": 26,
+    "picos_espurios": 18,
+    "fechas_mixtas": 110
+  },
+  "tasas_defectos_realizadas": {
+    "nulo": 0.0121,
+    "outlier_negativo": 0.00594,
+    "pico_espurio": 0.00411,
+    "fecha_mixta": 0.02511,
+    "duplicado": 0.01096
+  },
+  "eui_realizado_kwh_m2_anio": {
+    "CDS-208": 350.0,
+    "CDS-184": 240.0,
+    "CDS-227": 240.0,
+    "CDS-205": 210.0,
+    "CDS-128": 155.0,
+    "CDS-PLZ": 280.0,
+    "CDS-104": 180.0,
+    "CDS-234": 215.0,
+    "CDS-109": 215.0,
+    "CDS-108": 215.0,
+    "CDS-DRM": 110.0,
+    "CDS-202": 215.0
+  },
+  "area_total_m2": 14342,
+  "dias_no_laborables": {
+    "dias_total": 365,
+    "fines_de_semana": 104,
+    "feriados": 16,
+    "feriados_en_dia_habil": 15,
+    "total_no_laborables": 119,
+    "dias_laborables": 246
+  },
+  "feriados_aplicados": [
+    "2025-01-01",
+    "2025-01-09",
+    "2025-03-03",
+    "2025-03-04",
+    "2025-03-05",
+    "2025-04-17",
+    "2025-04-18",
+    "2025-05-01",
+    "2025-11-03",
+    "2025-11-04",
+    "2025-11-05",
+    "2025-11-10",
+    "2025-11-28",
+    "2025-12-08",
+    "2025-12-20",
+    "2025-12-25"
+  ],
+  "rangos_observados_en_datos": {
+    "cop_eficiencia": {
+      "min": 2.1,
+      "max": 3.85
+    },
+    "demanda_max_kw": {
+      "min": 8.46,
+      "max": 154.88
+    },
+    "eui_academico": {
+      "min": 240.0,
+      "max": 240.0
+    },
+    "eui_comercial": {
+      "min": 280.0,
+      "max": 280.0
+    },
+    "eui_eventos_convenciones": {
+      "min": 240.0,
+      "max": 240.0
+    },
+    "eui_hospedaje": {
+      "min": 110.0,
+      "max": 110.0
+    },
+    "eui_laboratorio": {
+      "min": 350.0,
+      "max": 350.0
+    },
+    "eui_oficinas": {
+      "min": 155.0,
+      "max": 210.0
+    },
+    "eui_recreacion_eventos": {
+      "min": 215.0,
+      "max": 215.0
+    },
+    "eui_tecnologia": {
+      "min": 215.0,
+      "max": 215.0
+    },
+    "factor_potencia_diario": {
+      "min": 0.826,
+      "max": 0.99
+    },
+    "humedad_relativa_pct": {
+      "min": 76.4,
+      "max": 97.0
+    },
+    "kwh_dia_edificio": {
+      "min": 125.41,
+      "max": 2462.15
+    },
+    "ocupacion_pct": {
+      "min": 5.0,
+      "max": 100.0
+    },
+    "pct_fuera_horario_diario": {
+      "min": 0.16784986682050462,
+      "max": 0.6194980734135488
+    },
+    "setpoint_generado_c": {
+      "min": 19.0,
+      "max": 23.0
+    },
+    "temp_exterior_c": {
+      "min": 23.7,
+      "max": 30.8
+    },
+    "voltaje_promedio_v": {
+      "min": 200.8,
+      "max": 214.6
+    }
+  },
+  "rangos_efectivos": {
+    "area_m2": {
+      "min": 500,
+      "max": 4000,
+      "unidad": "m2",
+      "ancla": "supuesto del equipo",
+      "rol": "por_edificio",
+      "valores_usados": {
+        "CDS-208": 1600,
+        "CDS-184": 1400,
+        "CDS-227": 1200,
+        "CDS-205": 1100,
+        "CDS-128": 3511,
+        "CDS-PLZ": 900,
+        "CDS-104": 700,
+        "CDS-234": 650,
+        "CDS-109": 550,
+        "CDS-108": 1027,
+        "CDS-DRM": 1000,
+        "CDS-202": 704
+      }
+    },
+    "anio_rehab": {
+      "min": 2000,
+      "max": 2020,
+      "unidad": "anio",
+      "ancla": "supuesto del equipo",
+      "rol": "por_edificio",
+      "valores_usados": {
+        "CDS-208": 2008,
+        "CDS-184": 2006,
+        "CDS-227": 2004,
+        "CDS-205": 2010,
+        "CDS-128": 2014,
+        "CDS-PLZ": 2012,
+        "CDS-104": 2011,
+        "CDS-234": 2015,
+        "CDS-109": 2016,
+        "CDS-108": 2013,
+        "CDS-DRM": 2015,
+        "CDS-202": 2012
+      }
+    },
+    "chiller_antiguedad_anios": {
+      "min": 3,
+      "max": 20,
+      "unidad": "anios",
+      "ancla": "supuesto del equipo",
+      "rol": "por_edificio",
+      "valores_usados": {
+        "CDS-208": 14,
+        "CDS-184": 15,
+        "CDS-227": 16,
+        "CDS-205": 11,
+        "CDS-128": 8,
+        "CDS-PLZ": 12,
+        "CDS-104": 9,
+        "CDS-234": 7,
+        "CDS-109": 6,
+        "CDS-108": 11,
+        "CDS-DRM": 5,
+        "CDS-202": 10
+      }
+    },
+    "pct_fuera_horario_base": {
+      "min": 0.15,
+      "max": 0.5,
+      "unidad": "fraccion del consumo diario",
+      "ancla": "supuesto del equipo",
+      "rol": "por_edificio",
+      "valores_usados": {
+        "CDS-208": 0.44,
+        "CDS-184": 0.31,
+        "CDS-227": 0.34,
+        "CDS-205": 0.29,
+        "CDS-128": 0.22,
+        "CDS-PLZ": 0.38,
+        "CDS-104": 0.26,
+        "CDS-234": 0.33,
+        "CDS-109": 0.28,
+        "CDS-108": 0.35,
+        "CDS-DRM": 0.36,
+        "CDS-202": 0.3
+      }
+    },
+    "fp_base": {
+      "min": 0.85,
+      "max": 0.97,
+      "unidad": "adimensional",
+      "ancla": "supuesto del equipo",
+      "rol": "por_edificio",
+      "valores_usados": {
+        "CDS-208": 0.87,
+        "CDS-184": 0.88,
+        "CDS-227": 0.89,
+        "CDS-205": 0.91,
+        "CDS-128": 0.94,
+        "CDS-PLZ": 0.88,
+        "CDS-104": 0.93,
+        "CDS-234": 0.92,
+        "CDS-109": 0.93,
+        "CDS-108": 0.9,
+        "CDS-DRM": 0.96,
+        "CDS-202": 0.95
+      }
+    },
+    "sensibilidad_clima": {
+      "min": 0.08,
+      "max": 0.26,
+      "unidad": "fraccion de consumo por cada escala_clima_c sobre la referencia",
+      "ancla": "supuesto del equipo",
+      "rol": "por_edificio",
+      "valores_usados": {
+        "CDS-208": 0.16,
+        "CDS-184": 0.24,
+        "CDS-227": 0.22,
+        "CDS-205": 0.19,
+        "CDS-128": 0.14,
+        "CDS-PLZ": 0.18,
+        "CDS-104": 0.15,
+        "CDS-234": 0.16,
+        "CDS-109": 0.15,
+        "CDS-108": 0.21,
+        "CDS-DRM": 0.09,
+        "CDS-202": 0.2
+      }
+    },
+    "setpoint_c": {
+      "min": 21.0,
+      "max": 23.5,
+      "unidad": "C",
+      "ancla": "supuesto del equipo",
+      "rol": "por_edificio",
+      "valores_usados": {
+        "CDS-208": 21.5,
+        "CDS-184": 21.5,
+        "CDS-227": 21.5,
+        "CDS-205": 21.5,
+        "CDS-128": 23.0,
+        "CDS-PLZ": 21.5,
+        "CDS-104": 23.0,
+        "CDS-234": 23.0,
+        "CDS-109": 23.0,
+        "CDS-108": 21.5,
+        "CDS-DRM": 23.0,
+        "CDS-202": 21.5
+      }
+    },
+    "mult_anomalia": {
+      "min": 1.2,
+      "max": 1.6,
+      "unidad": "multiplicador del consumo diario",
+      "ancla": "supuesto del equipo",
+      "rol": "por_edificio",
+      "valores_usados": {
+        "CDS-208": 1.32,
+        "CDS-184": 1.48,
+        "CDS-227": 1.36,
+        "CDS-234": 1.29,
+        "CDS-109": 1.27
+      }
+    },
+    "eui_laboratorio": {
+      "min": 300,
+      "max": 420,
+      "unidad": "kWh/m2/anio",
+      "ancla": "supuesto del equipo",
+      "rol": "por_edificio",
+      "valores_usados": {
+        "CDS-208": 350
+      }
+    },
+    "eui_eventos_convenciones": {
+      "min": 200,
+      "max": 300,
+      "unidad": "kWh/m2/anio",
+      "ancla": "supuesto del equipo",
+      "rol": "por_edificio",
+      "valores_usados": {
+        "CDS-184": 240
+      }
+    },
+    "eui_academico": {
+      "min": 190,
+      "max": 290,
+      "unidad": "kWh/m2/anio",
+      "ancla": "supuesto del equipo",
+      "rol": "por_edificio",
+      "valores_usados": {
+        "CDS-227": 240
+      }
+    },
+    "eui_oficinas": {
+      "min": 150,
+      "max": 260,
+      "unidad": "kWh/m2/anio",
+      "ancla": "supuesto del equipo",
+      "rol": "por_edificio",
+      "valores_usados": {
+        "CDS-205": 210,
+        "CDS-128": 155,
+        "CDS-104": 180
+      }
+    },
+    "eui_comercial": {
+      "min": 220,
+      "max": 330,
+      "unidad": "kWh/m2/anio",
+      "ancla": "supuesto del equipo",
+      "rol": "por_edificio",
+      "valores_usados": {
+        "CDS-PLZ": 280
+      }
+    },
+    "eui_tecnologia": {
+      "min": 170,
+      "max": 270,
+      "unidad": "kWh/m2/anio",
+      "ancla": "supuesto del equipo",
+      "rol": "por_edificio",
+      "valores_usados": {
+        "CDS-234": 215,
+        "CDS-109": 215
+      }
+    },
+    "eui_recreacion_eventos": {
+      "min": 180,
+      "max": 280,
+      "unidad": "kWh/m2/anio",
+      "ancla": "supuesto del equipo",
+      "rol": "por_edificio",
+      "valores_usados": {
+        "CDS-108": 215,
+        "CDS-202": 215
+      }
+    },
+    "eui_hospedaje": {
+      "min": 90,
+      "max": 160,
+      "unidad": "kWh/m2/anio",
+      "ancla": "supuesto del equipo",
+      "rol": "por_edificio",
+      "valores_usados": {
+        "CDS-DRM": 110
+      }
+    },
+    "factor_carga": {
+      "min": 0.45,
+      "max": 0.8,
+      "unidad": "adimensional (demanda media / demanda pico)",
+      "ancla": "supuesto del equipo",
+      "rol": "por_tipo",
+      "valores_usados": {
+        "laboratorio": 0.76,
+        "eventos_convenciones": 0.52,
+        "recreacion_eventos": 0.52,
+        "comercial": 0.64,
+        "hospedaje": 0.64,
+        "academico": 0.64,
+        "oficinas": 0.64,
+        "tecnologia": 0.64
+      }
+    },
+    "mult_finde": {
+      "min": 0.4,
+      "max": 1.2,
+      "unidad": "multiplicador",
+      "ancla": "supuesto del equipo",
+      "rol": "por_tipo",
+      "valores_usados": {
+        "laboratorio": 0.88,
+        "eventos_convenciones": 1.12,
+        "recreacion_eventos": 1.12,
+        "comercial": 0.88,
+        "hospedaje": 0.88,
+        "academico": 0.46,
+        "oficinas": 0.46,
+        "tecnologia": 0.46
+      }
+    },
+    "mult_semana": {
+      "min": 0.9,
+      "max": 1.2,
+      "unidad": "multiplicador",
+      "ancla": "supuesto del equipo",
+      "rol": "por_tipo",
+      "valores_usados": {
+        "laboratorio": 1.03,
+        "eventos_convenciones": 0.95,
+        "recreacion_eventos": 0.95,
+        "comercial": 1.03,
+        "hospedaje": 1.03,
+        "academico": 1.15,
+        "oficinas": 1.15,
+        "tecnologia": 1.15
+      }
+    },
+    "temp_media_mensual_c": {
+      "min": 25.0,
+      "max": 29.0,
+      "unidad": "C",
+      "ancla": "clima_albrook_etesa_eia_2023",
+      "rol": "por_mes",
+      "valores_usados": {
+        "1": 26.2,
+        "2": 26.8,
+        "3": 27.5,
+        "4": 28.0,
+        "5": 27.6,
+        "6": 27.1,
+        "7": 27.0,
+        "8": 27.3,
+        "9": 26.7,
+        "10": 26.5,
+        "11": 26.5,
+        "12": 26.5
+      }
+    },
+    "humedad_media_mensual_pct": {
+      "min": 85.0,
+      "max": 90.0,
+      "unidad": "%",
+      "ancla": "clima_albrook_etesa_eia_2023",
+      "rol": "por_mes",
+      "valores_usados": {
+        "1": 86.8,
+        "2": 87.5,
+        "3": 87.5,
+        "4": 87.5,
+        "5": 87.0,
+        "6": 87.5,
+        "7": 87.5,
+        "8": 88.0,
+        "9": 87.9,
+        "10": 89.2,
+        "11": 88.7,
+        "12": 85.0
+      }
+    },
+    "indice_mensual_edemet_2025": {
+      "min": 0.9,
+      "max": 1.1,
+      "unidad": "indice (promedio 1)",
+      "ancla": "edemet_ventas_mensuales_2025",
+      "rol": "por_mes",
+      "valores_usados": {
+        "1": 0.9307,
+        "2": 1.0747,
+        "3": 1.0124,
+        "4": 1.0685,
+        "5": 1.0066,
+        "6": 1.0226,
+        "7": 0.9728,
+        "8": 1.0063,
+        "9": 1.0219,
+        "10": 0.9708,
+        "11": 0.9684,
+        "12": 0.9444
+      }
+    },
+    "incremento_pct_fuera_horario_no_laborable": {
+      "min": 0.05,
+      "max": 0.2,
+      "unidad": "fraccion",
+      "ancla": "supuesto del equipo",
+      "rol": "escalar",
+      "valor_usado": 0.1
+    },
+    "temp_referencia_c": {
+      "min": 26.0,
+      "max": 28.0,
+      "unidad": "C",
+      "ancla": "supuesto del equipo",
+      "rol": "escalar",
+      "valor_usado": 27.0
+    },
+    "escala_clima_c": {
+      "min": 2.5,
+      "max": 3.5,
+      "unidad": "C",
+      "ancla": "supuesto del equipo",
+      "rol": "escalar",
+      "valor_usado": 3.0
+    },
+    "ruido_consumo_sigma": {
+      "min": 0.02,
+      "max": 0.08,
+      "unidad": "fraccion",
+      "ancla": "supuesto del equipo",
+      "rol": "escalar",
+      "valor_usado": 0.045
+    },
+    "ruido_temp_sigma_c": {
+      "min": 0.5,
+      "max": 1.5,
+      "unidad": "C",
+      "ancla": "supuesto del equipo",
+      "rol": "escalar",
+      "valor_usado": 0.9
+    },
+    "ruido_humedad_sigma_pct": {
+      "min": 2.0,
+      "max": 5.0,
+      "unidad": "%",
+      "ancla": "supuesto del equipo",
+      "rol": "escalar",
+      "valor_usado": 3.2
+    },
+    "ruido_pct_fuera_horario_sigma": {
+      "min": 0.01,
+      "max": 0.04,
+      "unidad": "fraccion",
+      "ancla": "supuesto del equipo",
+      "rol": "escalar",
+      "valor_usado": 0.02
+    },
+    "ruido_fp_sigma": {
+      "min": 0.005,
+      "max": 0.02,
+      "unidad": "adimensional",
+      "ancla": "supuesto del equipo",
+      "rol": "escalar",
+      "valor_usado": 0.012
+    },
+    "ruido_voltaje_sigma_v": {
+      "min": 1.0,
+      "max": 3.0,
+      "unidad": "V",
+      "ancla": "supuesto del equipo",
+      "rol": "escalar",
+      "valor_usado": 1.8
+    },
+    "voltaje_nominal_v": {
+      "min": 205.0,
+      "max": 211.0,
+      "unidad": "V",
+      "ancla": "supuesto del equipo",
+      "rol": "escalar",
+      "valor_usado": 208.0
+    },
+    "incremento_pct_fuera_horario_anomalia": {
+      "min": 0.05,
+      "max": 0.12,
+      "unidad": "fraccion",
+      "ancla": "supuesto del equipo",
+      "rol": "escalar",
+      "valor_usado": 0.08
+    },
+    "reduccion_fp_anomalia": {
+      "min": 0.01,
+      "max": 0.05,
+      "unidad": "adimensional",
+      "ancla": "supuesto del equipo",
+      "rol": "escalar",
+      "valor_usado": 0.03
+    },
+    "ocupacion_semana_media_pct": {
+      "min": 60,
+      "max": 90,
+      "unidad": "%",
+      "ancla": "supuesto del equipo",
+      "rol": "escalar",
+      "valor_usado": 78
+    },
+    "ocupacion_finde_media_pct": {
+      "min": 10,
+      "max": 35,
+      "unidad": "%",
+      "ancla": "supuesto del equipo",
+      "rol": "escalar",
+      "valor_usado": 22
+    },
+    "ruido_ocupacion_sigma_pct": {
+      "min": 5,
+      "max": 12,
+      "unidad": "%",
+      "ancla": "supuesto del equipo",
+      "rol": "escalar",
+      "valor_usado": 9
+    },
+    "cop_nuevo": {
+      "min": 4.0,
+      "max": 5.0,
+      "unidad": "adimensional",
+      "ancla": "supuesto del equipo",
+      "rol": "escalar",
+      "valor_usado": 4.4
+    },
+    "cop_degradacion_por_anio": {
+      "min": 0.05,
+      "max": 0.15,
+      "unidad": "COP/anio",
+      "ancla": "supuesto del equipo",
+      "rol": "escalar",
+      "valor_usado": 0.11
+    },
+    "cop_penal_anomalia": {
+      "min": 0.3,
+      "max": 0.9,
+      "unidad": "COP",
+      "ancla": "supuesto del equipo",
+      "rol": "escalar",
+      "valor_usado": 0.6
+    },
+    "cop_minimo": {
+      "min": 1.8,
+      "max": 2.4,
+      "unidad": "adimensional",
+      "ancla": "supuesto del equipo",
+      "rol": "escalar",
+      "valor_usado": 2.1
+    },
+    "horas_operacion_semana": {
+      "min": 10,
+      "max": 16,
+      "unidad": "h/dia",
+      "ancla": "supuesto del equipo",
+      "rol": "escalar",
+      "valor_usado": 13
+    },
+    "horas_operacion_finde": {
+      "min": 6,
+      "max": 12,
+      "unidad": "h/dia",
+      "ancla": "supuesto del equipo",
+      "rol": "escalar",
+      "valor_usado": 10
+    },
+    "horas_operacion_24h": {
+      "min": 24,
+      "max": 24,
+      "unidad": "h/dia",
+      "ancla": "supuesto del equipo",
+      "rol": "escalar",
+      "valor_usado": 24
+    },
+    "setpoint_anomalia_c": {
+      "min": 18.0,
+      "max": 20.0,
+      "unidad": "C",
+      "ancla": "supuesto del equipo",
+      "rol": "escalar",
+      "valor_usado": 19.0
+    },
+    "factor_pico_demanda_min": {
+      "min": 0.9,
+      "max": 1.0,
+      "unidad": "adimensional",
+      "ancla": "supuesto del equipo",
+      "rol": "escalar",
+      "valor_usado": 0.95
+    },
+    "factor_pico_demanda_max": {
+      "min": 1.0,
+      "max": 1.15,
+      "unidad": "adimensional",
+      "ancla": "supuesto del equipo",
+      "rol": "escalar",
+      "valor_usado": 1.08
+    },
+    "prob_fecha_mixta": {
+      "min": 0.01,
+      "max": 0.04,
+      "unidad": "probabilidad por fila",
+      "ancla": "supuesto del equipo",
+      "rol": "escalar",
+      "valor_usado": 0.025
+    },
+    "prob_nulo": {
+      "min": 0.005,
+      "max": 0.02,
+      "unidad": "probabilidad por fila",
+      "ancla": "supuesto del equipo",
+      "rol": "escalar",
+      "valor_usado": 0.012
+    },
+    "prob_outlier_negativo": {
+      "min": 0.002,
+      "max": 0.01,
+      "unidad": "probabilidad por fila",
+      "ancla": "supuesto del equipo",
+      "rol": "escalar",
+      "valor_usado": 0.006
+    },
+    "prob_pico_espurio": {
+      "min": 0.002,
+      "max": 0.008,
+      "unidad": "probabilidad por fila",
+      "ancla": "supuesto del equipo",
+      "rol": "escalar",
+      "valor_usado": 0.004
+    },
+    "mult_pico_espurio": {
+      "min": 5.0,
+      "max": 12.0,
+      "unidad": "multiplicador",
+      "ancla": "supuesto del equipo",
+      "rol": "escalar",
+      "valor_usado": 9.5
+    },
+    "prob_duplicado": {
+      "min": 0.005,
+      "max": 0.02,
+      "unidad": "probabilidad por fila",
+      "ancla": "supuesto del equipo",
+      "rol": "escalar",
+      "valor_usado": 0.011
+    },
+    "temp_exterior_c": {
+      "min": 22.0,
+      "max": 34.0,
+      "unidad": "C",
+      "ancla": "supuesto del equipo",
+      "rol": "cota_salida"
+    },
+    "humedad_relativa_pct": {
+      "min": 70.0,
+      "max": 97.0,
+      "unidad": "%",
+      "ancla": "supuesto del equipo",
+      "rol": "cota_salida"
+    },
+    "pct_fuera_horario_diario": {
+      "min": 0.1,
+      "max": 0.65,
+      "unidad": "fraccion",
+      "ancla": "supuesto del equipo",
+      "rol": "cota_salida"
+    },
+    "factor_potencia_diario": {
+      "min": 0.79,
+      "max": 0.99,
+      "unidad": "adimensional",
+      "ancla": "supuesto del equipo",
+      "rol": "cota_salida"
+    },
+    "ocupacion_pct": {
+      "min": 5.0,
+      "max": 100.0,
+      "unidad": "%",
+      "ancla": "supuesto del equipo",
+      "rol": "cota_salida"
+    },
+    "voltaje_promedio_v": {
+      "min": 200.0,
+      "max": 216.0,
+      "unidad": "V",
+      "ancla": "supuesto del equipo",
+      "rol": "cota_salida"
+    },
+    "demanda_max_kw": {
+      "min": 5.0,
+      "max": 1500.0,
+      "unidad": "kW",
+      "ancla": "supuesto del equipo",
+      "rol": "cota_salida"
+    },
+    "kwh_dia_edificio": {
+      "min": 50.0,
+      "max": 15000.0,
+      "unidad": "kWh/dia",
+      "ancla": "supuesto del equipo",
+      "rol": "cota_salida"
+    },
+    "cop_eficiencia": {
+      "min": 2.1,
+      "max": 4.4,
+      "unidad": "adimensional",
+      "ancla": "supuesto del equipo",
+      "rol": "cota_salida"
+    },
+    "setpoint_generado_c": {
+      "min": 18.0,
+      "max": 23.5,
+      "unidad": "C",
+      "ancla": "supuesto del equipo",
+      "rol": "cota_salida"
+    },
+    "tarifa_energia_usd_kwh": {
+      "min": 0.15,
+      "max": 0.16,
+      "unidad": "USD/kWh",
+      "ancla": "tarifa_energia_edemet_mtd",
+      "rol": "tarifa",
+      "valor_usado": 0.1557
+    },
+    "tarifa_demanda_usd_kw_mes": {
+      "min": 15.0,
+      "max": 20.5,
+      "unidad": "USD/kW-mes",
+      "ancla": "tarifa_demanda_edemet_mtd",
+      "rol": "tarifa",
+      "valor_usado": 20.23
+    },
+    "cargo_fijo_usd_cliente_mes": {
+      "min": 14.32,
+      "max": 14.32,
+      "unidad": "USD/cliente-mes",
+      "ancla": "cargo_fijo_edemet_mtd",
+      "rol": "tarifa",
+      "valor_usado": 14.32
+    },
+    "fp_umbral": {
+      "min": 0.9,
+      "max": 0.9,
+      "unidad": "adimensional",
+      "ancla": "factor_potencia_regla",
+      "rol": "tarifa",
+      "valor_usado": 0.9
+    },
+    "fp_recargo_fraccion_por_0_01": {
+      "min": 0.02,
+      "max": 0.02,
+      "unidad": "fraccion",
+      "ancla": "factor_potencia_regla",
+      "rol": "tarifa",
+      "valor_usado": 0.02
+    },
+    "factor_emision_kg_kwh": {
+      "min": 0.1501,
+      "max": 0.1501,
+      "unidad": "kg CO2/kWh",
+      "ancla": "factor_emision_sin_2024",
+      "rol": "tarifa",
+      "valor_usado": 0.1501
+    }
+  },
+  "anclas_oficiales_usadas": [
+    "areas_cds_tesis_2018",
+    "cargo_fijo_edemet_mtd",
+    "clima_albrook_etesa_eia_2023",
+    "edemet_ventas_mensuales_2025",
+    "factor_emision_sin_2024",
+    "factor_potencia_regla",
+    "feriados_2025_panama",
+    "tarifa_demanda_edemet_mtd",
+    "tarifa_energia_edemet_mtd"
+  ]
+}

@@ -1,0 +1,488 @@
+{
+  "_nota": "Anclas oficiales usadas para calibrar el generador de datos sinteticos y los calculos de costo/emisiones. Las cifras y URL provienen de la investigacion previa del equipo (brief del proyecto); el codigo NO las verifica contra internet. Cada entrada lleva tres fechas: periodo_del_dato, fecha_publicacion y fecha_consulta. Moneda: B/. a la par con USD; en todo el proyecto se escribe USD. Los datos simulados son de 2025: el factor de emision usado es el de 2024 (el mas reciente publicado) y las tarifas son las del pliego de jul-2026.",
+  "version": "2.0",
+  "fecha_consulta": "2026-11-24",
+  "fuentes": [
+    {
+      "id": "tarifa_energia_edemet_mtd",
+      "concepto": "Cargo por energia, tarifa MTD (media tension con demanda), EDEMET",
+      "valor": 0.1557,
+      "unidad": "USD/kWh (B/. 0.15570 por kWh)",
+      "anio_fecha": "2026-07 a 2030-06 (pliego vigente; los datos simulados son de 2025)",
+      "periodo_del_dato": "2026-07 a 2030-06 (pliego vigente; los datos simulados son de 2025)",
+      "fecha_publicacion": "2026-06-18 (fecha de la Res. AN No. 21781-Elec; publicacion del archivo no confirmada)",
+      "fecha_consulta": "2026-11-24",
+      "entidad": "ASEP, pliego tarifario 2026-2030 de EDEMET (Anexo A, Res. AN No. 21781-Elec), pp. ~14-15",
+      "url": "https://asep.gob.pa/wp-content/uploads/electricidad/consultas_publicas/2026/cp_008-26/EDEMET/pliego_tarifario_edemet_jul26-Jun30.pdf",
+      "estado": "confirmado con reservas",
+      "rango_sensibilidad": {
+        "min": 0.15,
+        "max": 0.16,
+        "nota": "rango del generador/sensibilidad"
+      },
+      "cota_comparacion": {
+        "concepto": "ENSA, tarifa MTD, 1-sep a 31-dic-2026",
+        "valor": 0.15672,
+        "unidad": "USD/kWh",
+        "periodo_del_dato": "2026-09-01 a 2026-12-31",
+        "fecha_publicacion": "no indicada",
+        "fecha_consulta": "2026-11-24",
+        "url": "https://ensa.com.pa/pliego-tarifario-2do-sem-26__vigencia-1er-sep-a-31-dic-2026/"
+      },
+      "nota": "Reserva: el archivo esta en la carpeta de consulta publica cp_008-26; la vigencia semestral exacta NO esta confirmada. ANACRONISMO: el pliego es de jul-2026 a jun-2030 y los datos simulados son de 2025; el consumo 2025 se valora a la tarifa vigente de 2026 (valoracion de referencia)."
+    },
+    {
+      "id": "tarifa_demanda_edemet_mtd",
+      "concepto": "Cargo por demanda maxima, tarifa MTD, EDEMET",
+      "valor": 20.23,
+      "unidad": "USD/kW-mes",
+      "anio_fecha": "2026-07 a 2030-06 (pliego vigente; los datos simulados son de 2025)",
+      "periodo_del_dato": "2026-07 a 2030-06 (pliego vigente; los datos simulados son de 2025)",
+      "fecha_publicacion": "2026-06-18 (fecha de la Res. AN No. 21781-Elec; publicacion del archivo no confirmada)",
+      "fecha_consulta": "2026-11-24",
+      "entidad": "ASEP, pliego tarifario 2026-2030 de EDEMET",
+      "url": "https://asep.gob.pa/wp-content/uploads/electricidad/consultas_publicas/2026/cp_008-26/EDEMET/pliego_tarifario_edemet_jul26-Jun30.pdf",
+      "estado": "confirmado con reservas",
+      "rango_sensibilidad": {
+        "min": 15.0,
+        "max": 20.5,
+        "nota": "ENSA MTD = 15.23 USD/kW-mes"
+      },
+      "cota_comparacion": {
+        "concepto": "ENSA, tarifa MTD",
+        "valor": 15.23,
+        "unidad": "USD/kW-mes"
+      },
+      "nota": "Mismo archivo, misma reserva y mismo anacronismo (tarifa 2026 aplicada a consumo 2025)."
+    },
+    {
+      "id": "cargo_fijo_edemet_mtd",
+      "concepto": "Cargo fijo por cliente, tarifa MTD, EDEMET",
+      "valor": 14.32,
+      "unidad": "USD/cliente-mes",
+      "anio_fecha": "2026-07 a 2030-06 (pliego vigente; los datos simulados son de 2025)",
+      "periodo_del_dato": "2026-07 a 2030-06 (pliego vigente; los datos simulados son de 2025)",
+      "fecha_publicacion": "2026-06-18 (fecha de la Res. AN No. 21781-Elec; publicacion del archivo no confirmada)",
+      "fecha_consulta": "2026-11-24",
+      "entidad": "ASEP, pliego tarifario 2026-2030 de EDEMET",
+      "url": "https://asep.gob.pa/wp-content/uploads/electricidad/consultas_publicas/2026/cp_008-26/EDEMET/pliego_tarifario_edemet_jul26-Jun30.pdf",
+      "estado": "confirmado con reservas",
+      "rango_sensibilidad": {
+        "min": 14.32,
+        "max": 14.32,
+        "nota": "sin rango alterno en la fuente"
+      },
+      "nota": "Mismo archivo y misma reserva. Supuesto del equipo: cada edificio se modela como un cliente MTD con su propio medidor."
+    },
+    {
+      "id": "factor_potencia_regla",
+      "concepto": "Recargo por bajo factor de potencia",
+      "valor": {
+        "umbral_fp_atraso": 0.9,
+        "recargo_pct_por_cada_0_01_debajo": 2.0
+      },
+      "unidad": "umbral adimensional; recargo en % por cada 0.01 por debajo del umbral",
+      "anio_fecha": "2026-07 a 2030-06 (pliego vigente; los datos simulados son de 2025)",
+      "periodo_del_dato": "2026-07 a 2030-06 (pliego vigente; los datos simulados son de 2025)",
+      "fecha_publicacion": "2026-06-18 (fecha de la Res. AN No. 21781-Elec; publicacion del archivo no confirmada)",
+      "fecha_consulta": "2026-11-24",
+      "entidad": "ASEP, pliego tarifario 2026-2030 de EDEMET (pp. 3-4)",
+      "url": "https://asep.gob.pa/wp-content/uploads/electricidad/consultas_publicas/2026/cp_008-26/EDEMET/pliego_tarifario_edemet_jul26-Jun30.pdf",
+      "estado": "confirmado con reservas",
+      "nota": "La regla real aplica SOLO a los cargos de comercializacion y distribucion y solo a tarifas con demanda. Como el proyecto no desglosa esos cargos, SIMPLIFICACION EXPLICITA: el recargo se aplica sobre el cargo por demanda y de forma continua (no por tramos de 0.01)."
+    },
+    {
+      "id": "factor_emision_sin_2024",
+      "concepto": "Factor de emision de la red (SIN), anio 2024, para huella/inventarios",
+      "valor": 0.1501,
+      "unidad": "tCO2/MWh (equivale a 0.1501 kg CO2/kWh)",
+      "anio_fecha": "2024",
+      "periodo_del_dato": "2024",
+      "fecha_publicacion": "2025-08-21 (Gaceta Oficial 30348; Res. MIPRE-2025-0030765 del 2025-08-20)",
+      "fecha_consulta": "2026-11-24",
+      "entidad": "MiAmbiente, Resolucion MIPRE-2025-0030765, Tabla VIII",
+      "url": "https://transparencia-climatica.miambiente.gob.pa/wp-content/uploads/2025/11/2024_FACTOR-DE-EMISION-DEL-SIN-PANAMA-2024.pdf",
+      "estado": "confirmado",
+      "nota": "Se usa para los datos simulados de 2025 porque es el factor mas reciente publicado (no existe factor 2025). NO se usan 0.4438 ni 0.4932 (margen combinado MDL)."
+    },
+    {
+      "id": "factor_emision_sin_2021",
+      "concepto": "Factor de emision del SIN, anio 2021",
+      "valor": 0.13,
+      "unidad": "tCO2e/MWh",
+      "anio_fecha": "2021",
+      "periodo_del_dato": "2021",
+      "fecha_publicacion": "2024-09 (archivo del documento MiAmbiente)",
+      "fecha_consulta": "2026-11-24",
+      "entidad": "MiAmbiente, 'Factores de Emision y PCG RTH Corporativo-Carbono', Tabla 19",
+      "url": "https://transparencia-climatica.miambiente.gob.pa/wp-content/uploads/2024/09/Documento-Factores-de-Emision-y-Potenciales-de-Calentamiento-Global.pdf",
+      "estado": "confirmado",
+      "nota": "Convierte la huella de la Fundacion 2021 en un tope de electricidad."
+    },
+    {
+      "id": "factor_emision_sin_2022",
+      "concepto": "Factor de emision del SIN, anio 2022",
+      "valor": 0.1079,
+      "unidad": "tCO2e/MWh",
+      "anio_fecha": "2022",
+      "periodo_del_dato": "2022",
+      "fecha_publicacion": "no indicada",
+      "fecha_consulta": "2026-11-24",
+      "entidad": "No detallada en el brief (investigacion previa del equipo)",
+      "url": null,
+      "estado": "confirmado con reservas",
+      "nota": "Fuente primaria no detallada en el brief; verificar. Se usa solo para el rango de escala (limite superior)."
+    },
+    {
+      "id": "factor_emision_sin_2023",
+      "concepto": "Factor de emision del SIN, anio 2023",
+      "valor": 0.1971,
+      "unidad": "tCO2e/MWh (2,403,211 tCO2 / 12,190,859 MWh)",
+      "anio_fecha": "2023",
+      "periodo_del_dato": "2023",
+      "fecha_publicacion": "2024-05 (SNE, mayo 2024)",
+      "fecha_consulta": "2026-11-24",
+      "entidad": "Secretaria Nacional de Energia (SNE)",
+      "url": null,
+      "estado": "confirmado con reservas",
+      "nota": "URL no indicada en el brief; verificar. Se usa solo para el rango de escala (limite inferior)."
+    },
+    {
+      "id": "huella_fundacion_2021",
+      "concepto": "Huella de carbono de la Fundacion Ciudad del Saber",
+      "valor": 450,
+      "unidad": "tCO2e",
+      "anio_fecha": "2021",
+      "periodo_del_dato": "2021",
+      "fecha_publicacion": "no indicada",
+      "fecha_consulta": "2026-11-24",
+      "entidad": "Fundacion Ciudad del Saber, pagina de sostenibilidad",
+      "url": "https://ciudaddelsaber.org/impacto/sostenibilidad",
+      "estado": "confirmado con reservas",
+      "nota": "Unica cifra real de la Fundacion; sin alcances ni anio de publicacion. Por eso solo da un techo de electricidad."
+    },
+    {
+      "id": "tope_escala_fundacion_2021",
+      "concepto": "Tope de consumo electrico anual implicado por la huella 2021 (ancla de ESCALA principal)",
+      "valor": 3462000,
+      "unidad": "kWh/anio (3,462 MWh = 450 tCO2e / 0.13 tCO2e/MWh)",
+      "anio_fecha": "2021",
+      "periodo_del_dato": "2021",
+      "fecha_publicacion": "calculo del equipo (2026-11-24)",
+      "fecha_consulta": "2026-11-24",
+      "entidad": "Calculo del equipo a partir de huella_fundacion_2021 y factor_emision_sin_2021",
+      "url": null,
+      "estado": "deduccion",
+      "rango_sensibilidad": {
+        "min": 2283000,
+        "max": 4170000,
+        "nota": "450/0.1971 y 450/0.1079"
+      },
+      "nota": "TECHO si toda la huella fuera electricidad (alcances desconocidos); NO es una cifra publicada. Rango con otros factores: 2,283 MWh (factor 2023) a 4,170 MWh (factor 2022). El consumo simulado debe quedar entre 0.5x y 1.0x de este tope."
+    },
+    {
+      "id": "areas_cds_tesis_2018",
+      "concepto": "Areas de edificios de Ciudad del Saber",
+      "valor": {
+        "128": 3511,
+        "108": 1027,
+        "202": 704
+      },
+      "unidad": "m2",
+      "anio_fecha": "2018 (Plan Maestro de CdS)",
+      "periodo_del_dato": "2018 (Plan Maestro de CdS)",
+      "fecha_publicacion": "2018",
+      "fecha_consulta": "2026-11-24",
+      "entidad": "R. Osorio, tesis TalTech 'District Cooling Potential in Panama City' (2018), Apendice 1",
+      "url": "https://digikogu.taltech.ee/en/Download/b8ddd1a2-3dfd-45fd-9a9f-129e3e4bec4f",
+      "estado": "confirmado con reservas",
+      "nota": "La tesis solo usa NUMEROS de edificio; la correspondencia 128=Casa de las Naciones Unidas, 108=Casa Club, 202=Clayton Bowling es una SUPOSICION razonable del equipo. Area de 2018, puede haber cambiado. No se usan las areas de los edificios 104, 127 ni 124 para edificios con otro nombre."
+    },
+    {
+      "id": "clima_albrook_etesa_eia_2023",
+      "concepto": "Clima de Albrook (estacion 142-002), serie historica de 66 anios (climatologia, NO el clima de 2025)",
+      "valor": {
+        "temperatura_media_mensual_c": [
+          26.2,
+          26.8,
+          27.5,
+          28.0,
+          27.6,
+          27.1,
+          27.0,
+          27.3,
+          26.7,
+          26.5,
+          26.5,
+          26.5
+        ],
+        "precipitacion_mensual_mm": [
+          44.7,
+          22.6,
+          10.5,
+          103.0,
+          136.5,
+          258.8,
+          182.8,
+          161.8,
+          223.4,
+          276.2,
+          249.8,
+          128.6
+        ],
+        "humedad_relativa_pct_meses_con_dato": {
+          "1": 86.8,
+          "5": 87.0,
+          "8": 88.0,
+          "9": 87.9,
+          "10": 89.2,
+          "11": 88.7,
+          "12": 85.0
+        }
+      },
+      "unidad": "C, mm, %",
+      "anio_fecha": "serie historica de 66 anios (climatologia)",
+      "periodo_del_dato": "serie historica de 66 anios (climatologia)",
+      "fecha_publicacion": "2023-08-08",
+      "fecha_consulta": "2026-11-24",
+      "entidad": "ETESA/IMHPA, citada por el EIA de MiAmbiente (doc 91714)",
+      "url": "https://documentoesia.miambiente.gob.pa/91714.pdf",
+      "estado": "confirmado con reservas",
+      "nota": "Fuente SECUNDARIA (EIA que cita la serie). Precipitacion total 1,798.7 mm. Humedad solo para 7 meses; los demas (feb, mar, abr, jun, jul) SIN DATO: se usa un valor supuesto dentro de 85-90 %. Estacion seca aprox. 11-dic a 26-abr; lluviosa 26-abr a 11-dic."
+    },
+    {
+      "id": "clima_weatherspark_albrook",
+      "concepto": "Temperaturas maxima y minima medias en Albrook (respaldo)",
+      "valor": {
+        "tmax_c": [
+          30.0,
+          31.7
+        ],
+        "tmin_c": [
+          24.4,
+          25.0
+        ]
+      },
+      "unidad": "C (rango entre meses)",
+      "anio_fecha": "climatologia (sin periodo indicado)",
+      "periodo_del_dato": "climatologia (sin periodo indicado)",
+      "fecha_publicacion": "no indicada",
+      "fecha_consulta": "2026-11-24",
+      "entidad": "Weather Spark (Albrook)",
+      "url": null,
+      "estado": "no confirmado",
+      "nota": "Respaldo secundario sin fecha de publicacion; no interviene en los calculos."
+    },
+    {
+      "id": "feriados_2025_panama",
+      "concepto": "Dias no laborables (feriados) de Panama, 2025",
+      "valor": [
+        "2025-01-01",
+        "2025-01-09",
+        "2025-03-03",
+        "2025-03-04",
+        "2025-03-05",
+        "2025-04-17",
+        "2025-04-18",
+        "2025-05-01",
+        "2025-11-03",
+        "2025-11-04",
+        "2025-11-05",
+        "2025-11-10",
+        "2025-11-28",
+        "2025-12-08",
+        "2025-12-20",
+        "2025-12-25"
+      ],
+      "unidad": "fechas",
+      "anio_fecha": "2025",
+      "periodo_del_dato": "2025",
+      "fecha_publicacion": "2025-01-31 (calendario Global Bank / Red ACH)",
+      "fecha_consulta": "2026-11-24",
+      "entidad": "Global Bank/Red ACH; EY; Telemetro; La Estrella",
+      "url": "https://globalbank.com.pa/sites/default/files/media/documentos/2025-02/calendario-de-dias-no-habiles-ano-2025.pdf",
+      "estado": "confirmado con reservas",
+      "nota": "5-mar con reserva (EY: el Decreto 6 de 2025 cerro oficinas publicas el 3 y el 5). 20-dic: duelo nacional, sabado. 24 y 31-dic NO son feriados. Duelo por el papa Francisco 22-24-abr (Decreto Ejecutivo 17 de 2025): sin cierre obligatorio, dia ordinario. Otras fuentes: EY https://www.ey.com/es_ce/technical/tax/tax-alerts/pa-cierre-de-oficinas-publicas-nacionales-y-municipales-el-3-y-5-de-marzo-de-2025 ; Telemetro (2025-03-28 y 2025-12-16); La Estrella (2025-10-05, 2025-10-22, 2025-11-17, 2025-12-19). Base legal: Codigo de Trabajo arts. 46, 47, 49 (citado via prensa; texto consolidado NO abierto)."
+    },
+    {
+      "id": "edemet_ventas_mensuales_2025",
+      "concepto": "Ventas mensuales de EDEMET, 2025 (indice de estacionalidad)",
+      "valor": [
+        308.76,
+        322.05,
+        335.88,
+        343.05,
+        333.97,
+        328.31,
+        322.74,
+        333.84,
+        328.09,
+        322.08,
+        310.92,
+        313.32
+      ],
+      "unidad": "GWh (ene a dic; total 3,903.01)",
+      "anio_fecha": "2025 (ene-dic)",
+      "periodo_del_dato": "2025 (ene-dic)",
+      "fecha_publicacion": "PDF creados entre 2025-03-10 y 2026-01-20",
+      "fecha_consulta": "2026-11-24",
+      "entidad": "ASEP, Estadistica del Mercado Electrico Panameno (mensual)",
+      "url": "https://asep.gob.pa/wp-content/uploads/electricidad/estadisticas_mensuales/2025/{MES}_2025.pdf",
+      "estado": "confirmado con reservas",
+      "nota": "Relacion max/min 1.11 en EDEMET (343.05/308.76) y 1.07 en el total de distribuidoras (700.14/653.86): estacionalidad plana. Alerta: las ventas de ENSA feb-abr son identicas en la fuente (probable copia). Se usa como indice mensual base (promedio diario por mes, normalizado a promedio 1) multiplicando la carga del campus."
+    },
+    {
+      "id": "utp_campus_vls_2024",
+      "concepto": "UTP, campus Victor Levi Sasso: consumo electrico mensual 2024 (CONTRASTE, no escala)",
+      "valor": [
+        809352,
+        782108,
+        921891,
+        986923,
+        1012082,
+        964135,
+        974931,
+        1005527,
+        977275,
+        1001153,
+        787453,
+        549547
+      ],
+      "unidad": "kWh (ene a dic; suma 10,772,377)",
+      "anio_fecha": "2024",
+      "periodo_del_dato": "2024",
+      "fecha_publicacion": "2025",
+      "fecha_consulta": "2026-11-24",
+      "entidad": "Universidad Tecnologica de Panama (UTP)",
+      "url": "https://utp.ac.pa/sites/default/files/documentos/2025/pdf/utp-emisiones-alcance2-tco2e-consumo-electrico-2024.pdf",
+      "estado": "confirmado",
+      "nota": "Contraste real: patron academico (cae en dic y nov). No interviene en el calculo."
+    },
+    {
+      "id": "utp_gei_2025_total",
+      "concepto": "UTP: electricidad en 15 sedes, 2025 (CONTRASTE)",
+      "valor": 15384602,
+      "unidad": "kWh/anio",
+      "anio_fecha": "2025 (Informe GEI 2025, tabla 1)",
+      "periodo_del_dato": "2025 (Informe GEI 2025, tabla 1)",
+      "fecha_publicacion": "no indicada",
+      "fecha_consulta": "2026-11-24",
+      "entidad": "Universidad Tecnologica de Panama (UTP)",
+      "url": "https://utp.ac.pa/sites/default/files/documentos/2026/pdf/01.informe_ghg_2025.pdf",
+      "estado": "confirmado",
+      "nota": "Contraste de orden de magnitud; implica ~0.1501 tCO2e/MWh."
+    },
+    {
+      "id": "precio_ocasional_2025",
+      "concepto": "Precio ocasional promedio del mercado mayorista, 2025 (complemento)",
+      "valor": 66.33,
+      "unidad": "USD/MWh (B/./MWh)",
+      "anio_fecha": "2025, 2o semestre",
+      "periodo_del_dato": "2025, 2o semestre",
+      "fecha_publicacion": "no indicada",
+      "fecha_consulta": "2026-11-24",
+      "entidad": "ASEP, estadisticas de mercado",
+      "url": "https://asep.gob.pa/wp-content/uploads/electricidad/estadisticas/2025/segundo_semestre/mercado.pdf",
+      "estado": "confirmado",
+      "nota": "Complemento de contexto; no interviene en los calculos."
+    },
+    {
+      "id": "demanda_asep_2s_2025",
+      "concepto": "Zona de servicio: EDEMET cubre el Oeste de la ciudad de Panama (evidencia geografica)",
+      "valor": "limite con ENSA: Corredor Sur, Via Ernesto T. Lefevre, Av. 12 de Octubre, Av. Simon Bolivar, Av. Ricardo J. Alfaro hacia el Lago Gatun",
+      "unidad": "descripcion",
+      "anio_fecha": "2025, 2o semestre",
+      "periodo_del_dato": "2025, 2o semestre",
+      "fecha_publicacion": "PDF creado 2026-09-14",
+      "fecha_consulta": "2026-11-24",
+      "entidad": "ASEP, estadistica de Demanda 2o semestre 2025",
+      "url": "https://asep.gob.pa/wp-content/uploads/electricidad/estadisticas/2025/segundo_semestre/demanda.pdf",
+      "estado": "confirmado con reservas",
+      "nota": "Clayton queda al oeste de ese limite, por eso se infiere EDEMET. Ningun documento nombra a Clayton."
+    }
+  ],
+  "orientaciones_no_confirmadas": [
+    {
+      "id": "eui_literatura_climas_calidos",
+      "concepto": "Orientacion de EUI para campus/edificios academicos en clima calido-humedo",
+      "valor": {
+        "min": 47,
+        "max": 628
+      },
+      "unidad": "kWh/m2/anio",
+      "referencia": "Energies 2021, 14(21), 7013",
+      "periodo_del_dato": "no indicado",
+      "fecha_publicacion": "2021",
+      "fecha_consulta": "2026-11-24",
+      "estado": "no confirmado",
+      "nota": "Cita de orientacion NO verificada por el equipo. Solo se usa para comprobar que los EUI del generador no sean absurdos; no los deriva."
+    },
+    {
+      "id": "mills_2011",
+      "concepto": "Orden de magnitud del ahorro por retrocomisionamiento (contexto de los porcentajes de ahorro)",
+      "valor": "mediana 16 % edificios existentes (13 % obra nueva)",
+      "referencia": "Mills, E. (2011). Energy Efficiency 4(2), 145-173. https://doi.org/10.1007/s12053-011-9116-8",
+      "periodo_del_dato": "estudio de 2011",
+      "fecha_publicacion": "2011",
+      "fecha_consulta": "2026-11-24",
+      "estado": "referencia de contexto",
+      "nota": "No se derivan los porcentajes de ahorro de este estudio."
+    }
+  ],
+  "inferencias": [
+    {
+      "id": "distribuidora_clayton_edemet",
+      "concepto": "La distribuidora que atiende Clayton (Ciudad del Saber) es EDEMET",
+      "estado": "probable, no confirmado",
+      "evidencia": "demanda_asep_2s_2025",
+      "periodo_del_dato": "2025, 2o semestre",
+      "fecha_publicacion": "PDF creado 2026-09-14",
+      "fecha_consulta": "2026-11-24",
+      "nota": "INFERENCIA GEOGRAFICA: EDEMET cubre el oeste de la ciudad y Clayton queda al oeste del limite con ENSA; no hay factura ni documento que nombre a Clayton. Recomendacion: pedir una factura/NIS a la Fundacion. Si fuera ENSA u otra, cambian energia y demanda (ver cotas ENSA)."
+    },
+    {
+      "id": "correspondencia_numero_nombre_edificios",
+      "concepto": "128 = Casa de las Naciones Unidas, 108 = Casa Club, 202 = Clayton Bowling",
+      "estado": "suposicion del equipo",
+      "evidencia": "areas_cds_tesis_2018",
+      "periodo_del_dato": "2018",
+      "fecha_publicacion": "2018",
+      "fecha_consulta": "2026-11-24",
+      "nota": "La tesis de 2018 solo usa numeros de edificio; la correspondencia con los nombres es una suposicion razonable."
+    }
+  ],
+  "sin_fuente_oficial": {
+    "estado": "supuesto del equipo",
+    "conceptos": [
+      "EUI por tipo de edificio (kWh/m2/anio)",
+      "areas de Ed. 205, Plaza y Hospedaje y de los edificios ilustrativos",
+      "humedad de feb, mar, abr, jun y jul (rango 85-90 %)",
+      "porcentaje de consumo fuera de horario",
+      "factor de potencia por edificio",
+      "anio de rehabilitacion, antiguedad de chillers, set-points, COP",
+      "probabilidades de defectos inyectados y ruido",
+      "porcentajes de ahorro y CAPEX"
+    ]
+  },
+  "referencias_normativas": {
+    "_nota": "Citadas como marco normativo por el equipo; NO se usan en ningun calculo y su contenido no fue verificado por el codigo (excepto que el Codigo de Trabajo arts. 46, 47, 49 se cita via prensa como base legal de los feriados).",
+    "items": [
+      {
+        "id": "ley_69_2012",
+        "referencia": "Ley 69 de 2012"
+      },
+      {
+        "id": "decreto_398_2013",
+        "referencia": "Decreto 398 de 2013"
+      },
+      {
+        "id": "res_sne_3142_2016",
+        "referencia": "Resolucion SNE 3142 de 2016"
+      },
+      {
+        "id": "res_jtia_002_2023",
+        "referencia": "Resolucion JTIA 002 de 2023"
+      }
+    ]
+  }
+}

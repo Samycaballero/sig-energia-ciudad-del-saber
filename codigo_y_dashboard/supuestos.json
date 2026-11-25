@@ -1,5 +1,5 @@
 {
-  "_nota": "Supuestos del modelo. Los datos de consumo son SINTETICOS (fines academicos). Solo se marca como 'literatura' lo que tiene referencia verificable; todo lo demas es 'supuesto del equipo' y debe validarse con datos reales antes de decidir.",
+  "_nota": "Supuestos del modelo. Los datos de consumo son SINTETICOS (fines academicos). tipo_fuente 'oficial' = cifra tomada de un documento oficial citado en fuentes_oficiales.json (con su URL y tres fechas: periodo, publicacion y consulta); 'supuesto del equipo' = sin fuente oficial, debe validarse con datos reales antes de decidir. Toda la energia se factura a tarifa EDEMET MTD (distribuidora: inferencia geografica, probable pero no confirmada). El CAPEX NO se reescalo al tamano del campus recalibrado: sigue siendo un supuesto del equipo.",
   "ahorro": {
     "bms_cargas_fantasma_pct": {
       "valor": 0.088,
@@ -18,7 +18,7 @@
       "valor": 0.95,
       "unidad": "fraccion de la penalizacion por factor de potencia",
       "tipo_fuente": "supuesto del equipo",
-      "justificacion": "Se asume que bancos de capacitores automaticos llevan el factor de potencia sobre el umbral y eliminan casi toda la penalizacion. El umbral de 0,90 y la formula de penalizacion de los datos son sinteticos; verificar contra el pliego tarifario vigente de ASEP antes de citar como regulacion."
+      "justificacion": "Se asume que bancos de capacitores automaticos llevan el factor de potencia sobre el umbral y eliminan casi toda la penalizacion. El umbral de 0,90 y el recargo de 2 % por cada 0,01 provienen del pliego de EDEMET (ver tarifas_y_emisiones), pero el recargo se aplica sobre el cargo por demanda como simplificacion; el porcentaje de eliminacion es supuesto del equipo."
     },
     "retrofit_hvac_top3_pct": {
       "valor": 0.11,
@@ -36,14 +36,83 @@
     }
   },
   "tarifas_y_emisiones": {
-    "tarifa_red_usd_kwh": {"valor": 0.178, "tipo_fuente": "supuesto del equipo", "justificacion": "Valor ilustrativo coherente con los datos sinteticos; sustituir por el pliego tarifario vigente de ASEP."},
-    "tarifa_ppa_usd_kwh": {"valor": 0.128, "tipo_fuente": "supuesto del equipo", "justificacion": "Precio ilustrativo de un PPA renovable; sustituir por el contrato real."},
-    "tarifa_demanda_usd_kw": {"valor": 14.85, "tipo_fuente": "supuesto del equipo", "justificacion": "Cargo ilustrativo por kW de demanda maxima; sustituir por pliego tarifario."},
-    "factor_emision_red_kg_kwh": {"valor": 0.165, "tipo_fuente": "supuesto del equipo", "justificacion": "Factor ilustrativo del SIN; sustituir por el factor oficial publicado por la Secretaria de Energia."},
-    "factor_emision_ppa_kg_kwh": {"valor": 0.018, "tipo_fuente": "supuesto del equipo", "justificacion": "Factor ilustrativo para energia renovable (ciclo de vida); sustituir por fuente oficial."}
+    "tarifa_energia_usd_kwh": {
+      "valor": 0.1557,
+      "unidad": "USD/kWh",
+      "tipo_fuente": "oficial",
+      "ancla": "tarifa_energia_edemet_mtd",
+      "url": "https://asep.gob.pa/wp-content/uploads/electricidad/consultas_publicas/2026/cp_008-26/EDEMET/pliego_tarifario_edemet_jul26-Jun30.pdf",
+      "justificacion": "B/. 0.15570/kWh, MTD EDEMET, pliego 2026-2030 (confirmado con reservas: vigencia semestral exacta no confirmada). Rango de sensibilidad 0.150-0.160; cota ENSA 0.15672. ANACRONISMO: pliego de jul-2026 a jun-2030 aplicado a consumo simulado de 2025 (valoracion de referencia).",
+      "periodo_del_dato": "2026-07 a 2030-06 (pliego vigente; los datos simulados son de 2025)",
+      "fecha_publicacion": "2026-06-18 (fecha de la Res. AN No. 21781-Elec; publicacion del archivo no confirmada)",
+      "fecha_consulta": "2026-11-24"
+    },
+    "tarifa_demanda_usd_kw_mes": {
+      "valor": 20.23,
+      "unidad": "USD/kW-mes",
+      "tipo_fuente": "oficial",
+      "ancla": "tarifa_demanda_edemet_mtd",
+      "url": "https://asep.gob.pa/wp-content/uploads/electricidad/consultas_publicas/2026/cp_008-26/EDEMET/pliego_tarifario_edemet_jul26-Jun30.pdf",
+      "justificacion": "MTD EDEMET (ENSA 15.23). Rango de sensibilidad 15-20.5. Misma reserva de vigencia. ANACRONISMO: pliego de jul-2026 a jun-2030 aplicado a consumo simulado de 2025 (valoracion de referencia).",
+      "periodo_del_dato": "2026-07 a 2030-06 (pliego vigente; los datos simulados son de 2025)",
+      "fecha_publicacion": "2026-06-18 (fecha de la Res. AN No. 21781-Elec; publicacion del archivo no confirmada)",
+      "fecha_consulta": "2026-11-24"
+    },
+    "cargo_fijo_usd_cliente_mes": {
+      "valor": 14.32,
+      "unidad": "USD/cliente-mes",
+      "tipo_fuente": "oficial",
+      "ancla": "cargo_fijo_edemet_mtd",
+      "url": "https://asep.gob.pa/wp-content/uploads/electricidad/consultas_publicas/2026/cp_008-26/EDEMET/pliego_tarifario_edemet_jul26-Jun30.pdf",
+      "justificacion": "MTD EDEMET. Se supone un cliente (medidor) por edificio. ANACRONISMO: pliego de jul-2026 a jun-2030 aplicado a consumo simulado de 2025 (valoracion de referencia).",
+      "periodo_del_dato": "2026-07 a 2030-06 (pliego vigente; los datos simulados son de 2025)",
+      "fecha_publicacion": "2026-06-18 (fecha de la Res. AN No. 21781-Elec; publicacion del archivo no confirmada)",
+      "fecha_consulta": "2026-11-24"
+    },
+    "fp_umbral": {
+      "valor": 0.9,
+      "unidad": "adimensional (atraso)",
+      "tipo_fuente": "oficial",
+      "ancla": "factor_potencia_regla",
+      "url": "https://asep.gob.pa/wp-content/uploads/electricidad/consultas_publicas/2026/cp_008-26/EDEMET/pliego_tarifario_edemet_jul26-Jun30.pdf",
+      "justificacion": "Umbral del pliego (pp. 3-4).",
+      "periodo_del_dato": "2026-07 a 2030-06 (pliego vigente; los datos simulados son de 2025)",
+      "fecha_publicacion": "2026-06-18 (fecha de la Res. AN No. 21781-Elec; publicacion del archivo no confirmada)",
+      "fecha_consulta": "2026-11-24"
+    },
+    "fp_recargo_fraccion_por_0_01": {
+      "valor": 0.02,
+      "unidad": "fraccion por cada 0.01 de FP bajo el umbral",
+      "tipo_fuente": "oficial",
+      "ancla": "factor_potencia_regla",
+      "url": "https://asep.gob.pa/wp-content/uploads/electricidad/consultas_publicas/2026/cp_008-26/EDEMET/pliego_tarifario_edemet_jul26-Jun30.pdf",
+      "justificacion": "2 % por cada 0.01 bajo 0.90. SIMPLIFICACION: la regla real aplica solo a comercializacion y distribucion; aqui se aplica sobre el cargo por demanda, de forma continua.",
+      "periodo_del_dato": "2026-07 a 2030-06 (pliego vigente; los datos simulados son de 2025)",
+      "fecha_publicacion": "2026-06-18 (fecha de la Res. AN No. 21781-Elec; publicacion del archivo no confirmada)",
+      "fecha_consulta": "2026-11-24"
+    },
+    "factor_emision_kg_kwh": {
+      "valor": 0.1501,
+      "unidad": "kg CO2/kWh (= tCO2/MWh)",
+      "tipo_fuente": "oficial",
+      "ancla": "factor_emision_sin_2024",
+      "url": "https://transparencia-climatica.miambiente.gob.pa/wp-content/uploads/2025/11/2024_FACTOR-DE-EMISION-DEL-SIN-PANAMA-2024.pdf",
+      "justificacion": "Factor del SIN 2024, Res. MIPRE-2025-0030765 (Gaceta 30348, Tabla VIII); uso en huella/inventarios. Se aplica a toda la energia. No se usan 0.4438/0.4932 (margen combinado MDL). Se usa el factor 2024 para datos 2025 porque es el mas reciente publicado (no hay factor 2025).",
+      "periodo_del_dato": "2024",
+      "fecha_publicacion": "2025-08-21 (Gaceta Oficial 30348; Res. MIPRE-2025-0030765 del 2025-08-20)",
+      "fecha_consulta": "2026-11-24"
+    }
   },
   "deteccion_anomalias": {
-    "z_score_umbral": {"valor": 2.1, "tipo_fuente": "supuesto del equipo", "justificacion": "Umbral de desviacion estandar sobre el consumo diario de cada edificio para generar una alerta."},
-    "outlier_multiplo_base": {"valor": 3.0, "tipo_fuente": "supuesto del equipo", "justificacion": "Una lectura AMI mayor a 3 veces el consumo base diario del catalogo (o menor o igual a 0) se considera error de medicion y se imputa con la mediana del edificio."}
+    "z_score_umbral": {
+      "valor": 2.1,
+      "tipo_fuente": "supuesto del equipo",
+      "justificacion": "Umbral de desviacion estandar sobre el consumo diario de cada edificio para generar una alerta."
+    },
+    "outlier_multiplo_base": {
+      "valor": 3.0,
+      "tipo_fuente": "supuesto del equipo",
+      "justificacion": "Una lectura AMI mayor a 3 veces el consumo base diario del catalogo (o menor o igual a 0) se considera error de medicion y se imputa con la mediana del edificio."
+    }
   }
 }

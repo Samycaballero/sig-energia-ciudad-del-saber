@@ -57,12 +57,12 @@
 <header>
   <div>
     <h1>⚡ SIG de Gestión y Eficiencia Energética · Fundación Ciudad del Saber</h1>
-    <div class="subtitle">Prototipo con <b>datos sintéticos</b> 2025 (12 edificios del catálogo) · Pipeline Python + SQLite · MongoDB, S3 y LLM opcionales</div>
+    <div class="subtitle" id="subtitulo"></div>
   </div>
   <div class="filters">
     <label>Edificio<select id="filterBldg"></select></label>
     <label>Certificación<select id="filterLeed">
-      <option value="ALL">Todos</option><option value="LEED">Solo LEED</option><option value="NO_LEED">Sin LEED</option>
+      <option value="ALL">Todos</option><option value="LEED">LEED reportado (no verificado)</option><option value="NO_LEED">Sin LEED reportado</option>
     </select></label>
     <label>Mes desde<select id="monthFrom"></select></label>
     <label>Mes hasta<select id="monthTo"></select></label>
@@ -112,7 +112,7 @@
   <div style="overflow-x:auto;">
     <table>
       <thead>
-        <tr><th>ID</th><th>Edificio</th><th>Categoría</th><th>LEED</th><th>Consumo (kWh)</th><th>EUI anualizado</th>
+        <tr><th>ID</th><th>Edificio</th><th>Categoría</th><th>Certificación (reportada*)</th><th>Consumo (kWh)</th><th>EUI anualizado</th>
             <th>Demanda pico</th><th>Factor pot.</th><th>% fuera hor.</th><th>Costo (USD)</th><th>Estado</th></tr>
       </thead>
       <tbody id="detailBody"></tbody>
@@ -122,7 +122,9 @@
 
 <footer>
   <div id="footAviso"></div>
+  <div id="footProcedencia"></div>
   <div id="footSupuestos"></div>
+  <div>* Certificación LEED: reportada por una fuente, no verificada en USGBC (Plaza: LEED Gold, ACR 2013; Complejo de Hospedaje: LEED Platinum, Revista Panorama 2023; Ed. 128: nivel sin confirmar). Los demás edificios: sin dato. Nombres: solo 6 son reales; los marcados «ilustrativo» son ficticios. Áreas: Ed. 128, 108 y 202 provienen de una tesis de 2018 (correspondencia número→nombre = suposición); las demás son ilustrativas. Temperatura: climatología histórica, no el clima de 2025.</div>
   <div>Universidad Tecnológica de Panamá · FISC · Sistemas de Información Gerencial · Equipo: Laura Saucedo (CTO), Samir Caballero (Ing. Datos), Orianis Castro (Operaciones), Javier Valdés (Finanzas/ESG)</div>
 </footer>
 
@@ -200,7 +202,7 @@ function render() {
     <div class="kpi amber"><div class="kpi-label">Costo facturado del período</div>
       <div class="kpi-val">${fmt(totCost, 0)} USD</div><div class="kpi-sub">Penalización FP: ${fmt(totPenal, 0)} USD</div></div>
     <div class="kpi"><div class="kpi-label">Intensidad energética (EUI anualizado)</div>
-      <div class="kpi-val">${fmt(avgEui, 1)} kWh/m²</div><div class="kpi-sub">Ref. LEED Platinum: ${SUMMARY.kpis_globales.eui_benchmark_leed_platinum} kWh/m²</div></div>
+      <div class="kpi-val">${fmt(avgEui, 1)} kWh/m²</div><div class="kpi-sub">Ref. interna (Complejo de Hospedaje): ${SUMMARY.kpis_globales.eui_referencia_hospedaje} kWh/m²</div></div>
     <div class="kpi purple"><div class="kpi-label">Ahorro proyectado (supuestos del equipo)</div>
       <div class="kpi-val">${fmt(ahorro, 0)} USD</div>
       <div class="kpi-sub">${full ? `Payback: ${fin.payback_meses} m · ROI 3a: ${fin.roi_3_anios_pct}%` : 'Payback/ROI solo con campus completo y 12 meses'}</div></div>`;
@@ -211,7 +213,7 @@ function render() {
     const color = x.eui >= 265 ? '#ef4444' : (x.eui >= 210 ? '#f59e0b' : '#10b981');
     const lab = f.metric === 'kwh' ? `${fmt(x.kwh / 1000, 0)} MWh` : f.metric === 'eui' ? `${fmt(x.eui, 1)} kWh/m²` :
                 f.metric === 'costo' ? `${fmt(x.costo / 1000, 1)}k USD` : `${fmt(x.pctOff, 1)}%`;
-    return `<div class="bar-row"><div style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;" title="${esc(x.b.nombre)}">${esc(x.b.building_id)} · ${esc(x.b.nombre.split(' - ').pop())}</div>
+    return `<div class="bar-row"><div style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;" title="${esc(x.b.nombre)}">${esc(x.b.building_id)} · ${esc(x.b.nombre)}</div>
       <div class="bar-track"><div class="bar-fill" style="width:${x[f.metric] / maxVal * 100}%;background:${color}"></div></div>
       <div style="text-align:right;font-weight:600;">${lab}</div></div>`;
   }).join('') : '<div class="note">Sin edificios para la combinación de filtros.</div>';
@@ -221,7 +223,7 @@ function render() {
   $('detailBody').innerHTML = list.map(x => {
     const cls = x.eui >= 265 ? 'b-crit' : (x.eui >= 210 ? 'b-warn' : 'b-ok');
     const st = x.eui >= 265 ? 'Crítico' : (x.eui >= 210 ? 'Alerta' : 'Óptimo');
-    return `<tr><td><b>${esc(x.b.building_id)}</b></td><td>${esc(x.b.nombre)}</td><td>${esc(x.b.categoria)}</td><td>${esc(x.b.cert_leed)}</td>
+    return `<tr><td><b>${esc(x.b.building_id)}</b></td><td>${esc(x.b.nombre)}</td><td>${esc(x.b.categoria)}</td><td>${esc(x.b.cert_leed)}${x.b.certificacion_estado.startsWith('reportado') ? ' *' : ''}</td>
       <td>${fmt(x.kwh)}</td><td><b>${fmt(x.eui, 1)}</b></td><td>${fmt(x.dem, 1)} kW</td>
       <td style="color:${x.fp < 0.90 ? '#fca5a5' : '#6ee7b7'}">${x.fp.toFixed(3)}</td><td>${fmt(x.pctOff, 1)}%</td>
       <td>${fmt(x.costo, 0)} USD</td><td><span class="badge ${cls}">${st}</span></td></tr>`;
@@ -279,7 +281,7 @@ function drawTrend(ids, f) {
     const inR = i + 1 >= f.m1 && i + 1 <= f.m2, x = padL + slot * i + (slot - bw) / 2;
     const bh = ((v - minV) / (maxV - minV)) * ch;
     ctx.globalAlpha = inR ? 1 : 0.25;
-    ctx.fillStyle = i + 1 <= 4 ? '#f59e0b' : '#0ea5e9'; ctx.fillRect(x, padT + ch - bh, bw, bh);
+    ctx.fillStyle = (SUMMARY.tendencia_mensual[i].temporada || '').startsWith('Seca') ? '#f59e0b' : '#0ea5e9'; ctx.fillRect(x, padT + ch - bh, bw, bh);
     ctx.fillStyle = '#cbd5e1'; ctx.fillText(MESES[i], x + 2, H - 10);
     ctx.globalAlpha = 1;
   });
@@ -293,10 +295,17 @@ function drawTrend(ids, f) {
     ctx.fillStyle = '#ef4444'; ctx.beginPath();
     ctx.arc(padL + slot * i + slot / 2, padT + ch - ((t - minT) / (maxT - minT)) * ch, 3.8, 0, Math.PI * 2); ctx.fill();
   });
-  ctx.fillStyle = '#fca5a5'; ctx.fillText(`Temp. ${minT.toFixed(1)}–${maxT.toFixed(1)} °C (línea roja)`, padL + 4, padT + 12);
+  ctx.fillStyle = '#fca5a5'; ctx.fillText(`Temp. ${minT.toFixed(1)}–${maxT.toFixed(1)} °C (línea roja; climatología histórica de Albrook)`, padL + 4, padT + 12);
 }
 
+const PROC = SUMMARY.procedencia_datos, PL = PROC.plausibilidad;
+$('subtitulo').innerHTML = (PROC.modo === 'real' ? 'Prototipo con <b>datos reales provistos por el usuario</b>' :
+  'Prototipo con <b>datos sintéticos anclados</b> (tarifa EDEMET MTD, factor de emisión 2024, áreas, clima, feriados y estacionalidad con fuente fechada)') +
+  ' 2025 (12 edificios) · Pipeline Python + SQLite · MongoDB, S3 y LLM opcionales';
 $('footAviso').textContent = SUMMARY.aviso_datos;
+$('footProcedencia').innerHTML = `Procedencia: <b>${esc(PROC.modo)}</b>${PROC.semilla !== null ? ' · semilla ' + esc(PROC.semilla) : ''} · anclas: ` +
+  PROC.anclas_usadas.map(a => `${esc(a.id)} [${esc(a.estado)}]`).join(', ') +
+  ` · Plausibilidad (orden de magnitud, no validación): ${fmt(PL.consumo_simulado_mwh)} MWh = ${PL.razon_simulado_sobre_ancla}× el tope de la huella 2021 de la Fundación (${fmt(PL.ancla_mwh)} MWh, ${esc(PL.ancla_estado)}), rango exigido ${PL.rango_aceptado[0]}–${PL.rango_aceptado[1]}×. Contraste UTP ${esc(PL.contraste_utp.periodo)}: ${fmt(PL.contraste_utp.mwh)} MWh. Fechas de las fuentes en data/gold/tabla_fechas_datos.csv (consulta ${esc(PROC.fecha_consulta_fuentes)}).`;
 $('footSupuestos').innerHTML = 'Supuestos financieros (supuestos.json): ' + Object.entries(SUP.ahorro).map(([k, v]) =>
   `${esc(k)}=${v.valor} [${esc(v.tipo_fuente)}]`).join(' · ') + ` · capex=${SUP.inversion.capex_usd.valor} USD [${esc(SUP.inversion.capex_usd.tipo_fuente)}]`;
 initControls();

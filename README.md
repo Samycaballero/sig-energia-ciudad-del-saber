@@ -1,26 +1,31 @@
 # SIG de consumo eléctrico: Fundación Ciudad del Saber (caso de estudio)
 
-Proyecto final de **Sistemas de Información Gerencial** (UTP, FISC). Pregunta gerencial: *¿qué edificios presentan mayor consumo eléctrico?*
+Proyecto final de **Sistemas de Información Gerencial** (UTP, FISC).
 
-> **Los datos son 100 % sintéticos** y se generan con `codigo_y_dashboard/generar_datos_fuente.py` con fines académicos. Los roles del equipo son una simulación académica.
+**Pregunta gerencial:** ¿qué edificios de Ciudad del Saber se desvían de su línea base de consumo y de huella de carbono, y qué intervención de eficiencia corresponde priorizar?
+
+> **Datos:** no se obtuvieron datos reales de consumo de la Fundación (no son públicos). Se usan **datos sintéticos anclados en fuentes oficiales con fecha** (tarifas ASEP, factores de emisión de MiAmbiente, huella publicada de 2021, clima, feriados y ventas de EDEMET 2025). Los hallazgos describen el modelo, no el campus real. Si llegan datos reales, el pipeline los acepta con `--fuente real`.
 
 ## Contenido
 
-| Carpeta | Qué contiene |
+| Ruta | Qué contiene |
 |---|---|
-| `codigo_y_dashboard/` | Pipeline ETL (bronze/silver/gold), SQLite en modelo estrella, MongoDB (pymongo), DAG de Airflow ejecutable, IA generativa opcional, dashboard HTML interactivo y 28 pruebas. **Instrucciones completas en su `README.md`.** |
+| `codigo_y_dashboard/` | Pipeline ETL (bronze/silver/gold), SQLite en modelo estrella, MongoDB (pymongo), DAG ejecutable, IA generativa opcional, dashboard HTML interactivo y 84 pruebas. **Instrucciones completas en su `README.md`.** |
+| `docs/metodologia_datos.md` | **Cómo se obtuvieron los datos:** qué se buscó, cómo genera los datos el script, rangos mín/máx y en qué se basan, validaciones y limitaciones. |
+| `docs/fuentes_oficiales.md` | Datos reales usados con **periodo, fecha de publicación, fecha de consulta, URL y estado**. |
+| `docs/solicitud_datos_ciudad_del_saber.md` | Borrador de la solicitud formal de datos reales (aún no enviada). |
 | `presentacion/` | Presentación grupal (sin cédulas). |
 
 ## Inicio rápido
 
 ```bash
 cd codigo_y_dashboard
-python -m venv .venv && . .venv/bin/activate   # en Windows: .venv\Scripts\activate
+python -m venv .venv && . .venv/bin/activate   # en Windows: ver nota de rutas largas en su README
 pip install -r requirements.txt
-python orquestacion_airflow_dag.py --run-local   # pipeline completo
-python -m pytest -q                              # 28 pruebas
+python orquestacion_airflow_dag.py --run-local   # pipeline completo (8 tareas)
+python -m pytest -q                              # 84 pruebas
 ```
 
 Abrir `codigo_y_dashboard/dashboard_interactivo.html` en el navegador (funciona sin conexión).
 
-Sin credenciales, MongoDB cae a un fallback JSON explícito y la IA generativa corre en «modo offline (plantilla)». S3 y el LLM real se activan solo con variables de entorno (ver README interno).
+Sin credenciales, MongoDB cae a un fallback JSON explícito y la IA generativa corre en «modo offline (plantilla)». Gemini (nivel gratuito), Ollama, Anthropic, Bedrock y S3 se activan solo con variables de entorno (ver README interno).
