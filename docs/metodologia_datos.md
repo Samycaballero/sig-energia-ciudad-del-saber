@@ -2,8 +2,7 @@
 
 ## 1. Resumen
 - **Datos reales de consumo eléctrico de Ciudad del Saber: no se obtuvieron.** La búsqueda en fuentes públicas no encontró kWh, EUI ni facturas de la Fundación ni de sus residentes (es una búsqueda de ausencia). La única cifra real propia de la Fundación es su huella publicada: **450 tCO2e en 2021** (sin alcances ni metodología).
-- Se preparó una **solicitud formal de datos** ([solicitud_datos_ciudad_del_saber.md](solicitud_datos_ciudad_del_saber.md)); no se registra envío ni respuesta.
-- Mientras tanto se usan **datos sintéticos anclados en fuentes oficiales con fecha** ([fuentes_oficiales.md](fuentes_oficiales.md)). Si llegan datos reales, el pipeline los acepta con `--fuente real` sin cambiar el resto.
+- Se usan **datos sintéticos anclados en fuentes oficiales con fecha** ([fuentes_oficiales.md](fuentes_oficiales.md)). Con datos reales de consumo (facturas y lecturas AMI), el pipeline los acepta con `--fuente real` sin cambiar el resto.
 
 ## 2. Cómo genera los datos el script
 `generar_datos_fuente.py` (v3.0) lee **69 parámetros** de `parametros_generador.json`. Cada parámetro tiene mínimo, máximo, unidad, ancla (fuente real o *supuesto del equipo*) y una justificación. Semilla fija **202511**: mismos datos en cada corrida.

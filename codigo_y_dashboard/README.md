@@ -59,7 +59,7 @@ Todas las entradas llevan **periodo del dato, fecha de publicación y fecha de c
 | Precio ocasional 2025 | 66,33 USD/MWh | 2025, 2.º semestre | no indicada | confirmado; sin uso en cálculos |
 | Zona de servicio | EDEMET cubre el oeste de la ciudad de Panamá (límite con ENSA: Corredor Sur, Vía Ernesto T. Lefevre, Av. 12 de Octubre, Av. Simón Bolívar, Av. Ricardo J. Alfaro) | 2025, 2.º semestre | PDF creado 2026-09-14 (ASEP) | evidencia geográfica |
 
-**Distribuidora (R6):** Clayton queda al oeste de ese límite, por lo que se **infiere EDEMET** (estado **«probable, no confirmado»**: ningún documento nombra a Clayton). Se recomienda pedir una factura/NIS a la Fundación.
+**Distribuidora (R6):** Clayton queda al oeste de ese límite, por lo que se **infiere EDEMET** (estado **«probable, no confirmado»**: ningún documento nombra a Clayton). Se recomienda confirmarlo con una factura/NIS.
 
 Marco normativo citado por el equipo, **no usado en ningún cálculo ni verificado por el código**: Ley 69 de 2012, Decreto 398 de 2013, Res. SNE 3142 de 2016, Res. JTIA 002 de 2023. Las URL y cifras provienen de la investigación previa del equipo; el código no las contrasta con internet.
 
