@@ -2,7 +2,7 @@
 
 Proyecto Final de **Sistemas de Información Gerencial** — Universidad Tecnológica de Panamá (FISC).
 
-Pregunta gerencial: **¿Qué edificios presentan mayor consumo eléctrico y qué acciones basadas en datos permiten reducir costos, picos de demanda y huella de carbono?**
+Pregunta gerencial: **¿Qué edificios de Ciudad del Saber presentan mayor consumo eléctrico y huella de carbono, y cuáles deben intervenirse primero?** Pregunta de seguimiento derivada: ¿qué edificios se desvían de su historial de consumo (alertas z-score) y de la referencia interna? ("línea base" = historial del propio edificio y edificio de referencia interno, el Complejo de Hospedaje; no es una línea base oficial).
 
 Equipo: Laura Saucedo (Directora de Tecnología, líder), Samir Caballero (Ing. de Datos / BI), Orianis Castro (Operaciones y Eficiencia Energética), Javier Valdés (Finanzas y Sostenibilidad).
 

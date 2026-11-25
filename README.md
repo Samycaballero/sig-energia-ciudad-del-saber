@@ -2,7 +2,7 @@
 
 Proyecto final de **Sistemas de Información Gerencial** (UTP, FISC).
 
-**Pregunta gerencial:** ¿qué edificios de Ciudad del Saber se desvían de su línea base de consumo y de huella de carbono, y qué intervención de eficiencia corresponde priorizar?
+**Pregunta gerencial:** ¿qué edificios de Ciudad del Saber presentan mayor consumo eléctrico y huella de carbono, y cuáles deben intervenirse primero? Pregunta de seguimiento derivada: ¿qué edificios se desvían de su historial de consumo (alertas z-score) y de la referencia interna? ("línea base" = historial del propio edificio y edificio de referencia interno, el Complejo de Hospedaje; no es una línea base oficial).
 
 > **Datos:** no se obtuvieron datos reales de consumo de la Fundación (no son públicos). Se usan **datos sintéticos anclados en fuentes oficiales con fecha** (tarifas ASEP, factores de emisión de MiAmbiente, huella publicada de 2021, clima, feriados y ventas de EDEMET 2025). Los hallazgos describen el modelo, no el campus real. Si llegan datos reales, el pipeline los acepta con `--fuente real`.
 
